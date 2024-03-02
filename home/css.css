@@ -106,13 +106,23 @@ border-radius: 15px;
 }
 
 .p2a{
+display: flex;
     height: 80%;
     width: 100%;
     
-    display: flex;
-    flex-direction: column;
+    
+    
     border-radius: 10px;
     padding: 0;
+    
+}
+
+.p2a-area{ /*aki escrevo para editar o texto da coluna b2a, sendo o que esta aki visivel no site*/
+    margin: auto;
+    height: 90%;
+    width: 90%;
+    padding: 0;
+    
 }
 
 .p2b{
