@@ -43,7 +43,9 @@
 
 <div class="part2a">
 
-    <div class="p2a"><div class="p2a-area"></div></div>
+    <div class="p2a"><div class="p2a-area">
+        <a>Em breve vou colocar algo aki, sei la, to com sono</a>
+    </div></div>
 
     <div class="p2b">
     <li><a href="#">sei la</a></li>
