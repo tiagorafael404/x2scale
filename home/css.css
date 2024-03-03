@@ -149,7 +149,7 @@ display: flex;
 
 .p2b li{
 	
-    background-color: rgb(255, 0, 225);
+    background: radial-gradient(circle at 10% 20%, rgb(134, 47, 199) 0%, rgb(235, 56, 137) 90%);
     /*background-color: rgba(16, 16, 16, 0.5); colocar background em cada item*/
     border-radius: 15px;
     list-style: none;
