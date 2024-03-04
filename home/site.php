@@ -33,7 +33,7 @@
             <div class="dm-info">
                 <div class="dm-name"><a>@Obama</a></div><div class="dm-date"><a>03/02/2024 03:15 PM</a></div>
             </div>
-            <div class="dm-msg"><div class="dm-text"><a>Este site não tem nada de interessante e a tua presença não contribui</a></div></div>
+            <div class="dm-msg"><div class="dm-text"><a>Este site nao tem nada de interessante e a tua presença não contribui</a></div></div>
         </div>
     </div>
 </div>
