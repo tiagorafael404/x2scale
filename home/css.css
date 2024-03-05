@@ -161,10 +161,8 @@ display: flex;
     height: 60px;
     width: 58%;
     margin: auto;
-	text-align: center;
-    display: flex;
-    align-items: center;
-   padding: 0;
+
+    
 }
 
 
@@ -176,7 +174,15 @@ display: flex;
     font-weight: bold;
     margin: auto;
    font-family: sans-serif;
-    
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.p2b li:hover {
+    background: radial-gradient(circle at 10% 20%, rgb(134, 47, 199, 0.5) 0%, rgb(235, 56, 137, 0.5) 90%); /* Nova cor de fundo quando o mouse está sobre o botão */
 }
 
 .dm{
