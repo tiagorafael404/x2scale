@@ -7,11 +7,50 @@ body {
  
 }
 
-.screen {
+.mypage {
+    display: flex;
     min-height: 500px;
     min-width: 800px;
     height: 80%;
-    width: 80%;
+    width: 100%;
+    margin: 25px auto;
+}
+
+.extra-left{
+    height: 100%;
+    width: 10%;
+    background-color: orange;
+
+}
+
+.extra-right{
+    height: 100%;
+    width: 10%;
+    background-color: orange;
+
+}
+
+.extra-left-area{
+    background-color: #5b12a8;
+    height: 97%;
+    width: 95%;
+    margin: 25px auto;
+    display: flex;
+
+}
+
+.extra-right-area{
+    background-color: #5b12a8;
+    height: 97%;
+    width: 95%;
+    margin: 25px auto;
+    display: flex;
+
+}
+
+.screen {
+    height: 100%;
+    width: 100%;
     margin: 25px auto;
     
     display: flex;

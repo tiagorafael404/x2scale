@@ -11,6 +11,13 @@
 </head>
 <body>
 
+<div class="mypage">
+
+<div class="extra-left">
+<div class="extra-left-area">
+</div>
+</div>
+
 <div class="screen">
 
 <div class="navbar">
@@ -58,8 +65,10 @@
 
 </div>
 
-
-
+<div class="extra-right">
+<div class="extra-right-area">
+</div>
+</div>
 
 </body>
 </html>
