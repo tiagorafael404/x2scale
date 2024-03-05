@@ -15,6 +15,15 @@
 
 <div class="extra-left">
 <div class="extra-left-area">
+
+    <div class="social-media">
+    <ul>
+    <li><h1>Social Media</h1></li>
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Twitter</a></li>
+    </ul>
+    </div>
+
 </div>
 </div>
 
