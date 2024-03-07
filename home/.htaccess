@@ -1,2 +1,2 @@
 RewiteEngine on
-RewiteRule ^home home.html [CN]
+RewiteRule ^site site.html [CN]
