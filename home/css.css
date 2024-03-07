@@ -12,10 +12,6 @@ body {
 
 .mypage {
     display: flex;
-    max-width: 1920px; /* Largura máxima */
-    max-height: 1080px; /* Altura máxima */
-    min-height: 600px;
-    min-width: 800px;
     height: 80%;
     width: 100%;
     margin: auto;
