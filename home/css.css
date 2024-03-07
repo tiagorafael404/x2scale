@@ -4,7 +4,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     margin: 5;
- 
+    max-width: 1920px; /* Largura máxima */
+    max-height: 1080px; /* Altura máxima */
 }
 
 .mypage {
