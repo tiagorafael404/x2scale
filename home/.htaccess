@@ -1,0 +1,2 @@
+RewiteEngine on
+RewiteRule ^home home.html [CN]
