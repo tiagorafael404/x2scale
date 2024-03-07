@@ -6,10 +6,14 @@ body {
     margin: 5;
     max-width: 1920px; /* Largura máxima */
     max-height: 1080px; /* Altura máxima */
+    min-height: 500px;
+    min-width: 800px;
 }
 
 .mypage {
     display: flex;
+    max-width: 1920px; /* Largura máxima */
+    max-height: 1080px; /* Altura máxima */
     min-height: 500px;
     min-width: 800px;
     height: 80%;
