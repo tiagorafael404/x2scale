@@ -12,9 +12,17 @@ body {
 
 .mypage {
     display: flex;
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
+    margin:  auto;
+    background-color: rgba(16, 16, 16, 0.5);
+}
+
+.mypage-area{
+    display: flex;
     margin: auto;
+    height: 100%;
+    width: 100%;
 }
 
 .extra-left{
@@ -82,8 +90,9 @@ body {
 }
 
 .screen {
+    display: flex;
     height: 100%;
-    width: 90%;
+    width: 100%;
     
    
     
@@ -95,7 +104,7 @@ body {
     height: 97%;
     width: 95%;
     margin: 25px auto;
-    display: flex;
+    
 }
 
 .navbar {
