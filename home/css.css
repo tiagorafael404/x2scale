@@ -3,11 +3,10 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 5;
-    max-width: 1920px; /* Largura máxima */
-    max-height: 1080px; /* Altura máxima */
-    min-height: 600px;
-    min-width: 800px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
 }
 
 .mypage {
