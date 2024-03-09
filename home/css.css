@@ -6,13 +6,14 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
     
 }
 
 .mypage {
     display: flex;
     height: 80%;
-    width: 100%;
+    width: 80%;
     margin: auto;
 }
 
@@ -82,12 +83,19 @@ body {
 
 .screen {
     height: 100%;
-    width: 100%;
-    margin: 25px auto;
+    width: 90%;
     
+   
+    
+}
+
+.screen-area {
     display: flex;
     flex-direction: column;
-    
+    height: 97%;
+    width: 95%;
+    margin: 25px auto;
+    display: flex;
 }
 
 .navbar {
