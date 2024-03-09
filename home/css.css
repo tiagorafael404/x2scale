@@ -5,24 +5,23 @@ body {
     background-repeat: no-repeat;
     margin: auto;
     padding: 0;
-  
     
 }
 
 .mypage {
-    
     min-width: 50%;
     min-height: 50%;
     max-width: 125%;
     max-height: 125%;
     margin: auto;
     background-color: rgba(16, 16, 16, 0.5);
+    display: block;
 }
 
 .mypage-area{
     display: flex;
     margin: auto;
-    height: 90%;
+    height: 80%;
     width: 100%;
 }
 
@@ -146,7 +145,7 @@ border-radius: 15px;
 .navbar a{
     text-decoration: none;
     color: #fff;
-    font-size: 25px;
+    font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
     margin: auto;
