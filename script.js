@@ -27,3 +27,14 @@ window.addEventListener('resize', function() {
         largePage.style.display = 'block';
     }
 });
+
+// Adicionamos esta parte para garantir que a página volte para a versão "mypage-large"
+window.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth > 768) {
+        var smallPage = document.querySelector('.mypage-small');
+        if (smallPage) {
+            smallPage.parentNode.removeChild(smallPage);
+            document.querySelector('.mypage-large').style.display = 'block';
+        }
+    }
+});
