@@ -540,7 +540,7 @@ margin: auto;
     .navbar a{
         text-decoration: none;
         color: #fff;
-        font-size: 16px;
+        font-size: 14px;
         text-transform: uppercase;
         font-weight: bold;
         margin: auto;
@@ -618,7 +618,7 @@ margin: auto;
     
     .p2a-area a{
         color: #fff;
-        font-size: 16px;
+        font-size: 14px;
         text-transform: uppercase;
         font-weight: bold;
        font-family: sans-serif;
@@ -652,7 +652,7 @@ margin: auto;
     .p2b a{
         text-decoration: none;
         color: #000000;
-        font-size: 23px;
+        font-size: 20px;
         text-transform: uppercase;
         font-weight: bold;
         margin: auto;
@@ -736,7 +736,7 @@ margin: auto;
     .dm-name a{
        text-align: center;
         color: #fff;
-        font-size: 23px;
+        font-size: 20px;
         text-transform: uppercase;
         font-weight: bold;
        font-family: sans-serif;
@@ -746,7 +746,7 @@ margin: auto;
     .dm-date a{
         
         color: #b8b8b8;
-        font-size: 13px;
+        font-size: 11px;
         text-transform: uppercase;
         font-weight: bold;
        font-family: sans-serif;
@@ -765,7 +765,7 @@ margin: auto;
     
     .dm-text a{
         color: #fff;
-        font-size: 13px;
+        font-size: 11px;
         text-transform: uppercase;
         font-weight: bold;
         font-family: sans-serif;
