@@ -1,12 +1,16 @@
-body {
-    background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: auto;
-    padding: 0;
-    
-}
+
+
+@media screen and (min-width: 769px) {
+
+    body {
+        background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: auto;
+        padding: 0;
+        
+    }
 
 .mypage {
     min-width: 50%;
@@ -102,7 +106,7 @@ body {
     flex-direction: column;
     height: 97%;
     width: 95%;
-    margin: 25px auto;
+    margin: 15 auto auto auto;
     
 }
 
@@ -385,4 +389,402 @@ margin: auto;
     50% {
         opacity: 0;
     }
+}
+}
+
+@media screen and (max-width: 769px) {
+
+    body {
+        background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: auto;
+        padding: 0;
+        width: auto;
+        height: auto;
+        
+    }
+
+    .mypage {
+        min-width: 50%;
+        min-height: 50%;
+        width: auto;
+        margin: auto;
+        display: flex;
+    }
+    
+    .mypage-area{
+        display: flex;
+        margin: auto;
+        height: 80%;
+        width: 100%;
+    }
+    
+    .extra-left{
+        height: 100%;
+        width: 10%;
+        display: none;
+    }
+    
+    .extra-right{
+        height: 100%;
+        width: 10%;
+        display: none;
+    }
+    
+    .extra-left-area{
+        height: 97%;
+        width: 95%;
+        margin: 25px auto;
+        display: flex;
+    
+    }
+    
+    .extra-right-area{
+        height: 97%;
+        width: 95%;
+        margin: 25px auto;
+    }
+    
+    .social-media{
+        margin: auto auto 0 0;
+        width: 100%;
+        height: 10%;
+    }
+    
+    .social-media h1{
+        text-decoration: none;
+        color: black;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: sans-serif;
+        line-height: 0;
+    }
+    
+    
+    .social-media a{
+        text-decoration: none;
+        color: #c5c5c5;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: sans-serif;
+       line-height: 20px;
+     
+       list-style-type: none;
+    }
+    
+    .social-media a:hover{
+        color: #ffffff;
+        
+    }
+    
+    .social-media li{
+        list-style-type: none;
+    }
+    
+    .screen {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+       margin: auto;
+        
+    }
+    
+    .screen-area {
+        display: flex;
+        flex-direction: column;
+        height: 97%;
+        width: 95%;
+        margin: 10 auto auto auto;
+        background-color: pink;
+    }
+    
+    .navbar {
+    
+    /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
+    border-radius: 15px;
+        height: 60px;
+       
+    }
+    
+    .navbar ul{
+       
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+       align-items: center;
+    }
+    
+    .navbar li{
+        
+        background-color: rgba(16, 16, 16);
+        /*background-color: rgba(16, 16, 16); colocar background em cada item*/
+        border-radius: 15px;
+        list-style: none;
+        height: 100%;
+        width: 20%;
+       
+    }
+    
+    .navbar li:hover {
+        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+    }
+    
+    .navbar a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: auto;
+        font-family: sans-serif;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        margin: 5;
+        /*margin: 20px 20px 20px 5px; para diminuir o tamanho e deixar um espaço entre o header*/
+    }
+    
+    .part1 {
+        display: flex;
+        /*background-color: rgba(16, 16, 16, 0.5); colocar background na part1*/
+        width: 100%;
+       height: 100%;
+    
+    
+       
+    }
+    
+    .part2 {
+       
+        background-color: rgba(16, 16, 16, 0.5);
+        /*background-color: rgba(16, 16, 16, 0.5); colocar background na part2*/
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        display: flex;
+
+    }   
+    
+    .part1a{
+        display: flex;
+      width: 100%;
+        height: 100%;
+        background-color: rgba(16, 16, 16);
+        margin-right: 20px;
+        /*margin-right: 20px; para diminuir o tamanho e deixar um espaco entre o part1 e o part2*/
+        border-radius: 10px;
+        
+    }
+    
+    .p2a{
+        display: flex;
+        height: 80%;
+        width: 100%;
+        background-color: rgba(16, 16, 16, 0.5);
+        /*background-color: rgba(16, 16, 16, 0.5); colocar background na p2a*/
+        border-radius: 10px;
+       
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .p2a-area{ /*aki escrevo para editar o texto da coluna b2a, sendo o que esta aki visivel no site*/
+        display: flex; /*desativar/ativar para o conteudo ser ou nao ser centralizado*/
+        margin: auto;
+        height: 90%;
+        width: 90%;
+        padding: 0;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        
+    }
+    
+    .p2a-area a{
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+       font-family: sans-serif;
+    
+     
+     line-height: 1.5;
+    }
+    
+    .p2b{
+        display: flex;
+        
+        width: 100%;
+        height: 20%;
+        border-radius: 10px;
+    }
+    
+    .p2b li{
+        
+        background: radial-gradient(circle at 10% 20%, rgb(134, 47, 199) 0%, rgb(235, 56, 137) 90%);
+        /*background-color: rgba(16, 16, 16, 0.5); colocar background em cada item*/
+        border-radius: 13px;
+        list-style: none;
+        height: 60px;
+        width: 58%;
+        margin: auto;
+    
+        
+    }
+    
+    
+    .p2b a{
+        text-decoration: none;
+        color: #000000;
+        font-size: 23px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: auto;
+       font-family: sans-serif;
+       height: 100%;
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    
+    .p2b li:hover {
+        background: radial-gradient(circle at 10% 20%, rgb(134, 47, 199, 0.5) 0%, rgb(235, 56, 137, 0.5) 90%); /* Nova cor de fundo quando o mouse está sobre o botão */
+    }
+    
+    .dm{
+        display: flex;
+        height: 130;
+        width: 70%;
+        
+        /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
+        margin: 40 auto auto 0;
+    }
+    
+    .dm1{
+        height: 100%;
+        width: 25%;
+        
+    }
+    
+    .dm2{
+        height: 100%;
+        width: 75%;
+        
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .pp{
+        background-image: url('pp.gif');
+        background-size: cover;
+        background-position-x: 50%;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+    
+    .dm-info{
+        height: 30%;
+        width: 100%;
+        
+        display: flex;
+        
+       
+    }
+    
+    .dm-msg{
+        height: 70%;
+        width: 100%;
+     display: flex;
+        border-radius: 10px;
+    }
+    
+    .dm-name{
+        display: flex;
+        height: 100%;
+        margin-left: 20;
+      
+        border-radius: 10px;
+        padding: 0;
+    }
+    
+    .dm-date{
+        display: flex;
+        height: 100%;
+        width: auto;
+        margin-left: 20;
+        border-radius: 10px;
+    }
+    
+    .dm-name a{
+       text-align: center;
+        color: #fff;
+        font-size: 23px;
+        text-transform: uppercase;
+        font-weight: bold;
+       font-family: sans-serif;
+      margin: auto;
+    }
+    
+    .dm-date a{
+        
+        color: #b8b8b8;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: bold;
+       font-family: sans-serif;
+     
+    margin: auto;
+    }
+    
+    
+    .dm-text{
+        height: 100%;
+        width: 100%;
+        margin-left: 20;
+        margin-top: 20;
+        
+    }
+    
+    .dm-text a{
+        color: #fff;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: sans-serif;
+        line-height: 1.5;
+    }
+    
+    .dm-text a::after {
+        content: "|";
+        animation: blink-caret 1s step-end infinite;
+    }
+    
+    @keyframes blink-caret {
+        50% {
+            opacity: 0;
+        }
+    }
+
 }
