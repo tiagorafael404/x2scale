@@ -487,11 +487,11 @@ margin: auto;
     
     .screen {
         display: flex;
-        height: 100%;
         width: 100%;
+        height: 500;
         flex-direction: column;
        margin: auto;
-        
+        background-color: #b8b8b8;
     }
     
     .screen-area {
@@ -553,34 +553,37 @@ margin: auto;
     }
     
     .content {
-        height: auto;
+        height: 500;
         width: 100%;
         display: flex;
         flex-direction: column;
         
         margin: 5 auto auto auto;
         /*margin: 5 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+        background-color: aqua;
     }
     
     .part1 {
+        margin: 0 auto auto auto;
+
         display: flex;
+        flex-direction: row;
         /*background-color: rgba(16, 16, 16, 0.5); colocar background na part1*/
         width: 100%;
-       height: 100%;
-    margin: auto;
+       height: 300;
     
        
     }
     
     .part2 {
-       
+       background-color: #1a5bcd;
         /*background-color: rgba(16, 16, 16, 0.5); colocar background na part2*/
         width: 100%;
-        height: 300px;
+        height: 100%;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-
+        margin: auto;
     }   
     
     .part1a{
@@ -618,7 +621,7 @@ margin: auto;
     
     .p2a-area a{
         color: #fff;
-        font-size: 14px;
+        font-size: 12px;
         text-transform: uppercase;
         font-weight: bold;
        font-family: sans-serif;
@@ -652,7 +655,7 @@ margin: auto;
     .p2b a{
         text-decoration: none;
         color: #000000;
-        font-size: 20px;
+        font-size: 16px;
         text-transform: uppercase;
         font-weight: bold;
         margin: auto;
@@ -670,42 +673,45 @@ margin: auto;
     
     .dm{
         display: flex;
-        height: 130;
-        width: 70%;
-        
+        flex-direction: row;
+        height: 80%;
+        width: 100%;
+        background-color: rgb(58, 5, 84, 0.5);
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-        margin: 40 auto auto 0;
     }
     
     .dm1{
-        height: 100%;
+        height: 100;
         width: 25%;
-        
+        display: flex;
+        margin: auto;
     }
     
     .dm2{
         height: 100%;
         width: 75%;
-        
+        margin: 10 auto auto auto;
         display: flex;
         flex-direction: column;
     }
     
     .pp{
+        display: flex;
+        margin: auto;
+        height: 100;
+        width: 100;
         background-image: url('pp.gif');
-        background-size: cover;
-        background-position-x: 50%;
-        height: 100%;
-        width: 100%;
+        background-position: center;
+        background-size: 100%;
         border-radius: 50%;
+        
     }
     
     .dm-info{
         height: 30%;
         width: 100%;
-        
         display: flex;
-        
+        flex-direction: row;
        
     }
     
@@ -719,7 +725,7 @@ margin: auto;
     .dm-name{
         display: flex;
         height: 100%;
-        margin-left: 20;
+        margin-left: 5;
       
         border-radius: 10px;
         padding: 0;
@@ -729,14 +735,14 @@ margin: auto;
         display: flex;
         height: 100%;
         width: auto;
-        margin-left: 20;
+        margin-left: 10;
         border-radius: 10px;
     }
     
     .dm-name a{
        text-align: center;
         color: #fff;
-        font-size: 20px;
+        font-size: 16px;
         text-transform: uppercase;
         font-weight: bold;
        font-family: sans-serif;
@@ -758,14 +764,15 @@ margin: auto;
     .dm-text{
         height: 100%;
         width: 100%;
-        margin-left: 20;
+        margin-left: 5;
+        display: flex;
         margin-top: 20;
         
     }
     
     .dm-text a{
         color: #fff;
-        font-size: 11px;
+        font-size: 10px;
         text-transform: uppercase;
         font-weight: bold;
         font-family: sans-serif;
