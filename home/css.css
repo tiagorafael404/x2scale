@@ -414,7 +414,7 @@ margin: auto;
         
         height: 100%;
         width: 100%;
-        margin: 0 auto auto auto;
+        margin: auto;
         display: flex;
     }
     
@@ -437,63 +437,13 @@ margin: auto;
         display: none;
     }
     
-    .extra-left-area{
-        height: 97%;
-        width: 95%;
-        margin: 25px auto;
-        display: flex;
     
-    }
-    
-    .extra-right-area{
-        height: 97%;
-        width: 95%;
-        margin: 25px auto;
-    }
-    
-    .social-media{
-        margin: auto auto 0 0;
-        width: 100%;
-        height: 10%;
-    }
-    
-    .social-media h1{
-        text-decoration: none;
-        color: black;
-        font-size: 11px;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-family: sans-serif;
-        line-height: 0;
-    }
-    
-    
-    .social-media a{
-        text-decoration: none;
-        color: #c5c5c5;
-        font-size: 10px;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-family: sans-serif;
-       line-height: 20px;
-     
-       list-style-type: none;
-    }
-    
-    .social-media a:hover{
-        color: #ffffff;
-        
-    }
-    
-    .social-media li{
-        list-style-type: none;
-    }
     
     .screen {
         
         display: flex;
         width: 100%;
-        height: 700;
+        height: 600;
         flex-direction: column;
        margin: auto auto auto 0;
         background-color: #b8b8b8;
@@ -558,7 +508,7 @@ margin: auto;
     }
     
     .content {
-        height: 500;
+        height: 400;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -584,11 +534,11 @@ margin: auto;
        background-color: #1a5bcd;
         /*background-color: rgba(16, 16, 16, 0.5); colocar background na part2*/
         width: 100%;
-        height: 300;
+        height: 150;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        margin: auto;
+        margin: 0 auto auto auto;
     }   
     
     .part1a{
@@ -603,7 +553,7 @@ margin: auto;
     
     .p2a{
         display: flex;
-        height: 80%;
+        height: 60px;
         width: 100%;
         background-color: rgba(16, 16, 16, 0.5);
         /*background-color: rgba(16, 16, 16, 0.5); colocar background na p2a*/
@@ -682,7 +632,7 @@ margin: auto;
         flex-direction: row;
         height: 100;
         width: 100%;
-        background-color: rgb(58, 5, 84, 0.5);
+        background-color: rgba(0, 255, 81, 0.5);
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
     }
     
