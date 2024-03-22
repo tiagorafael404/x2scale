@@ -515,7 +515,6 @@ margin: auto;
         
         margin: 5 auto auto auto;
         /*margin: 5 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
-        background-color: aqua;
     }
     
     .part1 {
@@ -632,7 +631,6 @@ margin: auto;
         flex-direction: row;
         height: 100;
         width: 100%;
-        background-color: rgba(0, 255, 81, 0.5);
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
     }
     
