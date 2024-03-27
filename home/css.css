@@ -1,7 +1,4 @@
 html, body {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     padding: 0px;
     overflow-x: hidden;
     
@@ -17,35 +14,40 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     margin: auto;
-   
+    width: 100%;
+    height: 100%;
 }
+
 
 @media screen and (min-width: 769px) {
 
 
-.mypage {
-    min-width: 50%;
-    min-height: 50%;
-    max-width: 125%;
-    max-height: 125%;
-    margin: auto;
-    width: 100%;
-}
+    .mypage {
+      
+        min-width: 50%;
+        min-height: 50%;
+        max-width: 1920px;
+        max-height: 1080px;
+        margin: auto;
+    }
 
 .mypage-area{
     display: flex;
+    flex-direction: row;
     margin: auto;
     height: 80%;
-    width: 100%;
+    width: 80%;
 }
 
 .extra-left{
+    display: none;
     height: 100%;
     width: 10%;
 
 }
 
 .extra-right{
+    display: none;
     height: 100%;
     width: 10%;
 
@@ -116,7 +118,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 97%;
-    width: 95%;
+    width: 100%;
     margin: 15 auto auto auto;
     
 }
@@ -134,7 +136,7 @@ border-radius: 15px;
     display: flex;
     justify-content: space-between;
     height: 100%;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     text-align: center;
@@ -176,7 +178,6 @@ border-radius: 15px;
     width: 100%;
     margin: 0 auto;
     display: flex;
-    flex: 1;
     
     margin: 20 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
