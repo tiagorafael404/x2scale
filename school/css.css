@@ -4,8 +4,7 @@ html, body {
     
 }
 
-html{
-}
+
 
 
 
@@ -205,24 +204,23 @@ html{
         margin: auto;
         width: 100%;
         height: 100%;
-
     }    
 
     .mypage {
         display: flex;
-       
+        flex-direction: column;
         margin: auto;
         height: 100%;
         width: 100%;
     }
     
     .mypage-area{
-        
+        background-color: greenyellow;
         display: flex;
         flex-direction: column;
-        margin: 15 auto auto auto;
         height: 100%;
         width: 100%;
+
     }
     
     
@@ -237,6 +235,7 @@ html{
     .navbar ul{
        
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         height: 100%;
         width: 100%;
@@ -282,27 +281,22 @@ html{
         width: 100%;
         display: flex;
         flex-direction: row;
-        margin: 20 auto auto auto;
         /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
     }
   
     .class {
         height: 600;
-        width: 400;
+        width: 50%;
         background-color:  rgba(16, 16, 16, 0.5);
         border-radius: 15px;
         display: flex;
-        margin-top: 0;
 
     }
     
  .p1 {
-    display: flex;
     background-color: rgba(16, 16, 16);
     height: 400;
     width: 350;
-    margin: auto;
-    margin-top: 0;
     border-radius: 15px;
    
  }
@@ -321,18 +315,16 @@ html{
     flex-wrap: wrap;
     height: 70px;
     width: 100%;
-
-    
+    justify-content: space-between;    
 }
 
 .p1 li{
+    display: flex;
     background-color: #1a5bcd;
     /*background-color: rgba(16, 16, 16); colocar background em cada item*/
     border-radius: 15px;
     list-style: none;
-    height: 70px;
-    width: 100px;
-    margin: auto;
+ 
 
   
 }
