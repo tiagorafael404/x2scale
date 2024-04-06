@@ -7,19 +7,21 @@ html, body {
 html{
 }
 
-body {
-    background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-}
+
 
 
 @media screen and (min-width: 769px) {
+
+    body {
+        background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
 
     .mypage {
         min-width: 50%;
@@ -186,5 +188,355 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+}
+
+@media screen and (max-width: 769px) {
+
+    .mypage {
+        min-width: 50%;
+        min-height: 50%;
+        max-width: 125%;
+        max-height: 125%;
+        margin: auto;
+        width: 100%;
+    }
+    
+    .mypage-area{
+        
+        display: flex;
+        flex-direction: column;
+        margin: 15 auto auto auto;
+        height: 80%;
+        width: 80%;
+    }
+    
+    
+    .navbar {
+    
+    /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
+    border-radius: 15px;
+        height: 60px;
+       
+    }
+    
+    .navbar ul{
+       
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+       align-items: center;
+    }
+    
+    .navbar li{
+        
+        background-color: rgba(16, 16, 16);
+        /*background-color: rgba(16, 16, 16); colocar background em cada item*/
+        border-radius: 15px;
+        list-style: none;
+        height: 100%;
+        width: 20%;
+       
+    }
+    
+    .navbar li:hover {
+        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+    }
+    
+    .navbar a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: auto;
+        font-family: sans-serif;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .content {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 15px;
+        margin: 20 auto auto auto;
+        /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    }
+  
+    .class {
+        height: 600;
+        width: 400;
+        background-color:  rgba(16, 16, 16, 0.5);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+ .p1 {
+    background-color: rgba(16, 16, 16);
+    height: 400;
+    width: 350;
+    margin: auto;
+    border-radius: 15px;
+   
+ }
+
+ .p2 {
+    background-color: rgba(16, 16, 16);
+    height: 100;
+    width: 350;
+    margin: auto;
+    border-radius: 15px;
+
+ }
+    
+.p1 ul{
+    display: flex;
+    flex-wrap: wrap;
+    height: 70px;
+    width: 100%;
+    padding: 0px;
+    margin: auto auto auto auto;
+    justify-content: space-between;
+
+    
+}
+
+.p1 li{
+    background-color: #1a5bcd;
+    /*background-color: rgba(16, 16, 16); colocar background em cada item*/
+    border-radius: 15px;
+    list-style: none;
+    height: 70px;
+    width: 100px;
+    margin: 5 5 5 5;
+    display: flex;
+
+  
+}
+
+.p1 li:hover {
+    background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+}
+
+.p1 a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: auto;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p2 h1{
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: auto;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+}
+
+
+@media screen and (max-width: 769px) {
+
+    html, body {
+        background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        margin: auto;
+        width: 100%;
+    }
+
+
+    .mypage {
+      
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .mypage-area{
+        
+        display: flex;
+        flex-direction: corolumn;
+        margin: 15 auto auto auto;
+        height: 100%;
+        width: 80%;
+    }
+    
+    
+   
+    
+    .navbar ul{
+        background-color: rgba(16, 16, 16);
+        display: flex;
+        justify-content: space-between;
+        height: 50;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+       align-items: center;
+       border-radius: 15px;
+
+    }
+    
+    .navbar li{
+        
+       
+        /*background-color: rgba(16, 16, 16); colocar background em cada item*/
+        border-radius: 15px;
+        list-style: none;
+        height: 100%;
+        width: 20%;
+       
+    }
+    
+    .navbar li:hover {
+        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+    }
+    
+    .navbar a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: auto;
+        font-family: sans-serif;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 15px;
+        margin: 20 auto auto auto;
+        /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    }
+  
+    .class {
+        background: none;
+        height: 3033200;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30;
+    }
+    
+ .p1 {
+    display: flex;
+    background-color: rgba(16, 16, 16);
+    height: 400;
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    
+   
+ }
+
+ .p2 {
+    background-color: rgba(16, 16, 16);
+    height: 100;
+    width: 100%;
+    margin: auto;
+    margin-top: 10;
+    border-radius: 15px;
+
+ }
+    
+.p1 ul{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+   
+    
+}
+
+.p1 li{
+    background-color: #1a5bcd;
+    /*background-color: rgba(16, 16, 16); colocar background em cada item*/
+    border-radius: 15px;
+    list-style: none;
+    height: 70px;
+    width: 30%;
+  
+
+  
+}
+
+.p1 li:hover {
+    background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+}
+
+.p1 a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 10;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: auto;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p2 h1{
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: auto;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 }

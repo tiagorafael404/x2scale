@@ -167,55 +167,7 @@ body {
 
 @media screen and (max-width: 769px) {
 
-.navbar {
-    background-color: rgba(16, 16, 16);
-    /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
-    border-radius: 15px;
-        height: 60px;
-       
-    }
-    
-    .navbar ul{
-       
-        display: flex;
-        justify-content: space-between;
-        height: 100%;
-        width: 90%;
-        margin: 0 auto;
-        padding: 0;
-        text-align: center;
-       align-items: center;
-    }
-    
-    .navbar li{
-        
-        background-color: rgba(16, 16, 16);
-        /*background-color: rgba(16, 16, 16); colocar background em cada item*/
-        border-radius: 15px;
-        list-style: none;
-        height: 100%;
-        width: 20%;
-       
-    }
-    
-    .navbar li:hover {
-        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
-    }
-    
-    .navbar a{
-        text-decoration: none;
-        color: #fff;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin: auto;
-        font-family: sans-serif;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
 
 
 }
