@@ -10,7 +10,7 @@ html{
 
 
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1201px) {
 
     body {
         background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
@@ -193,14 +193,26 @@ html{
 
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1200px) {
+
+    body {
+
+        background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+
+    }    
 
     .mypage {
-        min-width: 50%;
-        min-height: 50%;
-        max-width: 125%;
-        max-height: 125%;
+        display: flex;
+       
         margin: auto;
+        height: 100%;
         width: 100%;
     }
     
@@ -209,8 +221,8 @@ html{
         display: flex;
         flex-direction: column;
         margin: 15 auto auto auto;
-        height: 80%;
-        width: 80%;
+        height: 100%;
+        width: 100%;
     }
     
     
@@ -265,13 +277,11 @@ html{
     }
     
     .content {
+        background-color: #fff;
         height: 100%;
         width: 100%;
-        margin: 0 auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        border-radius: 15px;
         margin: 20 auto auto auto;
         /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
     }
@@ -282,14 +292,17 @@ html{
         background-color:  rgba(16, 16, 16, 0.5);
         border-radius: 15px;
         display: flex;
-        
+        margin-top: 0;
+
     }
     
  .p1 {
+    display: flex;
     background-color: rgba(16, 16, 16);
     height: 400;
     width: 350;
     margin: auto;
+    margin-top: 0;
     border-radius: 15px;
    
  }
