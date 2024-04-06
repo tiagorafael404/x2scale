@@ -366,7 +366,7 @@ html{
 }
 
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1200px) {
 
     html, body {
         background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
