@@ -282,8 +282,7 @@ html{
         background-color:  rgba(16, 16, 16, 0.5);
         border-radius: 15px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        
     }
     
  .p1 {
@@ -309,9 +308,6 @@ html{
     flex-wrap: wrap;
     height: 70px;
     width: 100%;
-    padding: 0px;
-    margin: auto auto auto auto;
-    justify-content: space-between;
 
     
 }
@@ -323,8 +319,7 @@ html{
     list-style: none;
     height: 70px;
     width: 100px;
-    margin: 5 5 5 5;
-    display: flex;
+    margin: auto;
 
   
 }
@@ -405,10 +400,8 @@ html{
         justify-content: space-between;
         height: 50;
         width: 100%;
-        margin: 0 auto;
         padding: 0;
-        text-align: center;
-       align-items: center;
+        
        border-radius: 15px;
 
     }
@@ -421,7 +414,7 @@ html{
         list-style: none;
         height: 100%;
         width: 20%;
-       
+        margin: auto;
     }
     
     .navbar li:hover {
@@ -500,7 +493,7 @@ html{
     list-style: none;
     height: 70px;
     width: 30%;
-  
+    margin: auto;  
 
   
 }
