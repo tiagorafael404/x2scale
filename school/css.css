@@ -20,10 +20,7 @@
     }
 
     .mypage {
-        min-width: 50%;
-        min-height: 50%;
-        max-width: 125%;
-        max-height: 125%;
+       
         margin: auto;
         width: 100%;
     }
