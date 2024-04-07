@@ -212,12 +212,11 @@ html, body {
         margin: auto;
         width: 100%;
         height: 100vh;
-        height: -webkit-fill-available;
     }
 
 
     .mypage {
-        background-color: rgb(255, 238, 127);
+        background-color: rgb(255, 127, 249);
         margin: auto;
         width: 100%;
         height: auto;
@@ -298,7 +297,7 @@ html, body {
     .class {
         height: auto;
         width: 90%;
-        background-color:  rgba(154, 21, 21);
+        background-color:  rgb(21, 154, 92);
         border-radius: 15px;
         display: flex;
         flex-direction: column;
