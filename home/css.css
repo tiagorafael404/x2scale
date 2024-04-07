@@ -4,7 +4,9 @@ html, body {
     
 }
 
-html{
+*{
+    padding: 0;
+
 }
 
 body {
@@ -138,7 +140,6 @@ border-radius: 15px;
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    padding: 0;
     text-align: center;
    align-items: center;
 }
@@ -404,7 +405,7 @@ margin: auto;
 }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1200px) {
 
    body{
     display: flex;
@@ -416,11 +417,9 @@ margin: auto;
         height: 100%;
         width: 100%;
         margin: auto;
-        display: flex;
     }
     
     .mypage-area{
-        display: flex;
         margin: auto;
         height: 100%;
         width: 100%;
@@ -444,7 +443,7 @@ margin: auto;
         
         display: flex;
         width: 100%;
-        height: 600;
+        height: auto;
         flex-direction: column;
        margin: auto auto auto 0;
     }
@@ -458,28 +457,28 @@ margin: auto;
     }
     
     .navbar {
-    background-color: rgba(16, 16, 16);
-    /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
-    border-radius: 15px;
-        height: 60px;
        
     }
     
     .navbar ul{
        
         display: flex;
-        justify-content: space-between;
-        height: 100%;
-        width: 90%;
-        margin: 0 auto;
-        padding: 0;
+        justify-content: space-around;
+        margin: auto;
         text-align: center;
        align-items: center;
+       background-color: rgba(16, 16, 16);
+       /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
+       border-radius: 15px;
+           height: 60px;
+           width: 100%;
+           padding: 0;
     }
     
     .navbar li{
-        
-        background-color: rgba(16, 16, 16);
+        display: flex;
+        justify-content: space-between;
+        background-color: red;
         /*background-color: rgba(16, 16, 16); colocar background em cada item*/
         border-radius: 15px;
         list-style: none;
@@ -503,7 +502,7 @@ margin: auto;
         height: 100%;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
     
