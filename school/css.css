@@ -395,6 +395,8 @@ html, body {
     }
 
     body {
+        display: flex;
+        flex-direction: column;
         background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
         background-size: cover;
         background-position: center;
@@ -455,7 +457,7 @@ html, body {
     
     .navbar a{
         text-decoration: none;
-        color: #fff;
+        color: #cc23d1;
         font-size: 14px;
         text-transform: uppercase;
         font-weight: bold;
@@ -469,6 +471,7 @@ html, body {
     }
     
     .content {
+        overflow: scroll;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -479,7 +482,7 @@ html, body {
   
     .class {
         background: none;
-        height: 3033200;
+        height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
