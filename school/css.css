@@ -196,8 +196,14 @@ html, body {
 
 @media screen and (max-width: 1200px) {
 
-    body {
+   
+    html{
+        height: -webkit-fill-available;
+    }
 
+    body {
+        display: flex;
+        flex-direction: column;
         background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
         background-size: cover;
         background-position: center;
@@ -205,25 +211,27 @@ html, body {
         background-repeat: no-repeat;
         margin: auto;
         width: 100%;
-        height: 100%;
-    }    
+        height: 100vh;
+        height: -webkit-fill-available;
+    }
+
 
     .mypage {
-        display: flex;
-        flex-direction: column;
+        background-color: aquamarine;
         margin: auto;
-        height: 100%;
         width: 100%;
+        height: auto;
     }
     
     .mypage-area{
-        background-color: greenyellow;
+        
         display: flex;
         flex-direction: column;
-        height: 100%;
+       
+        height: auto;
         width: 100%;
-
     }
+    
     
     
     .navbar {
@@ -278,50 +286,61 @@ html, body {
     }
     
     .content {
-        background-color: #fff;
-        height: 100%;
+        background-color: #9d1fcf;
+        height: auto;
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
     }
   
     .class {
-        height: 600;
-        width: 50%;
-        background-color:  rgba(16, 16, 16, 0.5);
+        height: auto;
+        width: 90%;
+        background-color:  rgba(154, 21, 21);
         border-radius: 15px;
         display: flex;
+        flex-direction: column;
+        
+        align-items: center;
 
     }
     
  .p1 {
+    display: flex;
     background-color: rgba(16, 16, 16);
     height: 400;
-    width: 350;
+    width: 100%;
     border-radius: 15px;
    
+   align-items: center;
+
  }
 
  .p2 {
     background-color: rgba(16, 16, 16);
     height: 100;
-    width: 350;
+    width: 100%;
     margin: auto;
     border-radius: 15px;
 
  }
     
 .p1 ul{
+    margin: 20 20 auto 20; 
+    background-color: #9d1fcf;
     display: flex;
     flex-wrap: wrap;
-    height: 70px;
+    height: auto;
     width: 100%;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
 .p1 li{
-    display: flex;
+    margin: 5 auto auto auto;
+    height: 80;
+    width: 30%;
     background-color: #1a5bcd;
     /*background-color: rgba(16, 16, 16); colocar background em cada item*/
     border-radius: 15px;
@@ -388,194 +407,3 @@ html, body {
 
 
 
-
-
-@media screen and (max-width: 1200px) {
-
-    html{
-        height: -webkit-fill-available;
-    }
-
-    body {
-        display: flex;
-        flex-direction: column;
-        background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        margin: auto;
-        width: 100%;
-        height: 100vh;
-        height: -webkit-fill-available;
-    }
-
-
-    .mypage {
-      
-        margin: auto;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .mypage-area{
-        
-        display: flex;
-        flex-direction: corolumn;
-       
-        height: 100%;
-        width: 100%;
-    }
-    
-    
-    .navbar {
-        background-color: rgba(16, 16, 16);
-        /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
-        border-radius: 15px;
-            height: 60px;
-            width: 100%;
-           
-        }
-        
-        .navbar ul{
-           
-            display: flex;
-            justify-content: space-around;
-            height: 100%;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0;
-            text-align: center;
-           align-items: center;
-        }
-        
-        .navbar li{
-            display: flex;
-            justify-content: space-between;
-            background-color: red;
-            /*background-color: rgba(16, 16, 16); colocar background em cada item*/
-            border-radius: 15px;
-            list-style: none;
-            height: 100%;
-            width: 20%;
-           
-        }
-    
-    .navbar li:hover {
-        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
-    }
-    
-    .navbar a{
-        text-decoration: none;
-        color: #fff;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin: auto;
-        font-family: sans-serif;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    .content {
-        overflow: scroll;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 15px;
-        margin: 20 auto auto auto;
-        /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
-    }
-  
-    .class {
-        background: none;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 30;
-    }
-    
- .p1 {
-    display: flex;
-    background-color: rgba(16, 16, 16);
-    height: 400;
-    width: 100%;
-    margin: auto;
-    border-radius: 15px;
-    
-   
- }
-
- .p2 {
-    background-color: rgba(16, 16, 16);
-    height: 100;
-    width: 100%;
-    margin: auto;
-    margin-top: 10;
-    border-radius: 15px;
-
- }
-    
-.p1 ul{
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    padding: 0px;
-   
-    
-}
-
-.p1 li{
-    background-color: #1a5bcd;
-    /*background-color: rgba(16, 16, 16); colocar background em cada item*/
-    border-radius: 15px;
-    list-style: none;
-    height: 70px;
-    width: 30%;
-    margin: auto;  
-
-  
-}
-
-.p1 li:hover {
-    background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
-}
-
-.p1 a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 10;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: auto;
-    font-family: sans-serif;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.p2 h1{
-    color: #fff;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: auto;
-    font-family: sans-serif;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-}
