@@ -228,7 +228,7 @@ html, body {
         flex-direction: column;
        
         height: auto;
-        width: 100%;
+        width: 80%;
     }
     
     
@@ -285,7 +285,7 @@ html, body {
     }
     
     .content {
-        background-color: #9d1fcf;
+        background-color: #0091ff;
         height: auto;
         width: 100%;
         display: flex;
@@ -328,7 +328,7 @@ html, body {
     
 .p1 ul{
     margin: 20 20 auto 20; 
-    background-color: #9d1fcf;
+    background-color: #06acd5;
     display: flex;
     flex-wrap: wrap;
     height: auto;
