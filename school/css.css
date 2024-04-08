@@ -42,7 +42,6 @@ body {
         max-height: 125%;
         margin: auto auto auto auto;
         width: 100%;
-        background-color: #5b12a8;
     }
     
     .mypage-area{
@@ -126,7 +125,7 @@ body {
     }
     
  .p1 {
-    background-color: rgba(16, 16, 16);
+    background-color: #313131;
     height: 400;
     width: 350;
     margin: auto;
@@ -156,7 +155,7 @@ body {
 }
 
 .p1 li{
-    background-color: #1acd4a;
+    background-color: rgba(16, 16, 16);
     /*background-color: rgba(16, 16, 16); colocar background em cada item*/
     border-radius: 15px;
     list-style: none;
