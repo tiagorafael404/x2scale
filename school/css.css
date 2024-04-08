@@ -207,8 +207,7 @@ html, body {
     }
 
     body {
-        display: flex;
-        flex-direction: column;
+        
         background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
         background-size: cover;
         background-position: center;
@@ -231,7 +230,7 @@ html, body {
         flex-direction: column;
        
         height: auto;
-        width: 90%;
+        width: 100%;
     }
     
     
