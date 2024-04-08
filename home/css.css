@@ -1,12 +1,12 @@
-html, body {
+html {
     padding: 0px;
     overflow-x: hidden;
-    
-}
-
-*{
-    padding: 0;
-
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;           /* 100vw e 100vh para 100% da janela */
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: auto;
 }
 
 body {
@@ -15,10 +15,15 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    width: 98%;
     margin: auto;
-    width: 100%;
-    height: 100%;
 }
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 
 @media screen and (min-width: 769px) {
@@ -445,15 +450,15 @@ margin: auto;
         width: 100%;
         height: auto;
         flex-direction: column;
-       margin: auto auto auto 0;
+       margin: auto;
     }
     
     .screen-area {
         display: flex;
         flex-direction: column;
-        height: 97%;
-        width: 95%;
-        margin: 10 auto auto auto;
+        height: auto;
+        width: 100%;
+        margin: auto;
     }
     
     .navbar {
@@ -461,7 +466,7 @@ margin: auto;
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
         border-radius: 15px;
             height: 60px;
-           
+           margin-bottom: 10px;
         }
         
         .navbar ul{
@@ -495,7 +500,7 @@ margin: auto;
         .navbar a{
             text-decoration: none;
             color: #fff;
-            font-size: 18px;
+            font-size: 12px;
             text-transform: uppercase;
             font-weight: bold;
             margin: auto;
@@ -507,27 +512,8 @@ margin: auto;
             align-items: center;
         }
     
-    .navbar li:hover {
-        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
-    }
-    
-    .navbar a{
-        text-decoration: none;
-        color: #fff;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin: auto;
-        font-family: sans-serif;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
     .content {
-        height: 400;
+        height: auto;
         width: 100%;
         display: flex;
         flex-direction: column;
