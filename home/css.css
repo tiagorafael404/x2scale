@@ -31,16 +31,15 @@ body {
 
     .mypage {
       
-        min-width: 50%;
-        min-height: 50%;
+        
         max-width: 1920px;
         max-height: 1080px;
-        margin: auto;
+        margin: 15 auto auto auto;
     }
 
 .mypage-area{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: auto;
     height: 80%;
     width: 80%;
@@ -112,29 +111,12 @@ body {
     list-style-type: none;
 }
 
-.screen {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    
-   
-    
-}
 
-.screen-area {
-    display: flex;
-    flex-direction: column;
-    height: 97%;
-    width: 100%;
-    margin: 15 auto auto auto;
-    
-}
 
 .navbar {
 
 /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
-border-radius: 15px;
-    height: 60px;
+
    
 }
 
@@ -142,7 +124,7 @@ border-radius: 15px;
    
     display: flex;
     justify-content: space-between;
-    height: 100%;
+    height: 60;
     width: 100%;
     margin: 0 auto;
     text-align: center;
