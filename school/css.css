@@ -42,12 +42,10 @@ body {
     }
 
 .mypage-area{
-    display: flex;
-    flex-direction: column;
+    
     margin: auto;
-    height: 80%;
     width: 80%;
-   
+   height: auto;
     
 }
 
@@ -107,9 +105,8 @@ body {
     }
     
     .content {
-        height: 100%;
-        width: 100%;
-        margin: 0 auto;
+        height: auto;
+        width: auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -149,19 +146,18 @@ body {
      }
 
     .p1-area{
-       width: 400;
-       height: auto;
+       
        background-color: #313131;
        border-radius: 15px;
-
+       
     }
         
     .p1 ul{
-        margin: auto auto 10 auto; 
+        margin: 15 10 15 10; 
         display: flex;
-        flex-wrap: rpw;
+        flex-direction: row;
         height: auto;
-        width: 400;
+        width: auto;
         justify-content: space-between;
         border-radius: 15px;
     
@@ -169,16 +165,13 @@ body {
     }
     
     .p1 li{
-        display: flex;
         height: 80;
         width: 100;
         background-color: rgba(16, 16, 16);
         /*background-color: rgba(16, 16, 16); colocar background em cada item*/
         border-radius: 15px;
         list-style: none;
-        justify-content: space-between;
-    
-      
+        margin: auto 5 auto 5;    
     }
     
     .p1 li:hover {
@@ -190,14 +183,12 @@ body {
         color: #fff;
         font-size: 10;
         text-transform: uppercase;
-        font-weight: bold;
-        margin: auto;
         font-family: sans-serif;
         height: 100%;
         width: 100%;
-        display: flex;
         justify-content: center;
         align-items: center;
+        display: flex;
     }
     
     .p2 h1{
