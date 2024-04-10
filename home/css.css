@@ -228,6 +228,7 @@ display: flex;
     text-transform: uppercase;
     font-weight: bold;
    font-family: sans-serif;
+   text-shadow: 3px 3px 1px black;
 
  
  line-height: 1.5;
@@ -243,21 +244,30 @@ display: flex;
 
 .p2b li{
 	
-    background: radial-gradient(circle at 10% 20%, rgb(134, 47, 199) 0%, rgb(235, 56, 137) 90%);
+    background: linear-gradient(
+        to bottom,
+        rgb(255, 0, 157) 0%,
+        rgb(255, 0, 157) 50%,
+        rgb(170, 0, 105) 50%,
+        rgb(170, 0, 105) 100%
+      );
+   
+    
     /*background-color: rgba(16, 16, 16, 0.5); colocar background em cada item*/
     border-radius: 15px;
     list-style: none;
     height: 60px;
     width: 58%;
     margin: auto;
-
+    border-color: black;
+    border-style: solid;
     
 }
 
 
 .p2b a{
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-size: 25px;
     text-transform: uppercase;
     font-weight: bold;
@@ -268,6 +278,8 @@ display: flex;
    display: flex;
    justify-content: center;
    align-items: center;
+   text-shadow: 3px 3px 1px black;
+
 }
 
 .p2b li:hover {
@@ -613,20 +625,34 @@ margin: auto;
     
     .p2b li{
         
-        background: radial-gradient(circle at 10% 20%, rgb(134, 47, 199) 0%, rgb(235, 56, 137) 90%);
+        
         /*background-color: rgba(16, 16, 16, 0.5); colocar background em cada item*/
         border-radius: 13px;
         list-style: none;
         height: 50px;
         width: 100;
         margin: 5 auto 5 auto;
+
+        background: linear-gradient(
+            to bottom,
+            rgb(255, 0, 157) 0%,
+            rgb(255, 0, 157) 50%,
+            rgb(170, 0, 105) 50%,
+            rgb(170, 0, 105) 100%
+          );
+       
+        
+        /*background-color: rgba(16, 16, 16, 0.5); colocar background em cada item*/
+       
+        border-color: black;
+        border-style: solid;
         
     }
     
     
     .p2b a{
         text-decoration: none;
-        color: #000000;
+        color: #ffffff;
         font-size: 12px;
         text-transform: uppercase;
         font-weight: bold;
@@ -637,6 +663,7 @@ margin: auto;
        display: flex;
        justify-content: center;
        align-items: center;
+       text-shadow: 1px 2px 1px black;
     }
     
     .p2b li:hover {
