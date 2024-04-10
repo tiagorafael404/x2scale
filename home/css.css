@@ -288,6 +288,7 @@ display: flex;
 
 .dm{
     display: flex;
+    flex-direction: row;
     height: auto;
     width: auto;
     
@@ -296,12 +297,12 @@ display: flex;
 }
 
 .dm1{
-    height: auto;
-    width: auto;
+    height: 150;
+    width: 150;
 }
 
 .dm2{
-    height: auto;
+    height: 150;
     width: 500;
     margin: auto auto auto 20;
     display: flex;
@@ -322,30 +323,28 @@ display: flex;
     width: auto;
     
     display: flex;
+    flex-direction: row;
    
 }
 
 .dm-msg{
     height: 70%;
     width: auto;
- display: flex;
     border-radius: 10px;
 }
 
 .dm-name{
-    display: flex;
     height: auto;
-    margin: auto auto auto 0;
-  
+    margin: auto 35 auto 0;
+    width: 100;
     border-radius: 10px;
     padding: 0;
 }
 
 .dm-date{
-    display: flex;
-    height: 100%;
+    height: auto;
     width: auto;
-    margin-left: 20;
+    margin: auto auto auto 0;
     border-radius: 10px;
 }
 
