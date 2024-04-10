@@ -261,7 +261,7 @@ display: flex;
     margin: auto;
     border-color: black;
     border-style: solid;
-    
+    border-width: 3;
 }
 
 
@@ -646,7 +646,7 @@ margin: auto;
        
         border-color: black;
         border-style: solid;
-        
+        border-width: 1;
     }
     
     
