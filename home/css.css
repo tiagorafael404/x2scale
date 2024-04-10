@@ -447,6 +447,8 @@ margin: auto;
         border-radius: 15px;
             height: 60px;
            margin-bottom: 10px;
+           background-color: rgb(16, 16, 16);
+
         }
         
         .navbar ul{
@@ -611,38 +613,33 @@ margin: auto;
     
     .dm{
         display: flex;
-        margin: auto auto auto auto;
-        flex-direction: row;
-        height: 100;
-        width: 100%;
+        height: auto;
+        width: auto;
+        
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
+        margin: auto auto auto 50;
     }
     
     .dm1{
-        height: 100;
-        width: 25%;
-        display: flex;
-        margin: auto;
+        height: auto;
+        width: auto;
     }
     
     .dm2{
-        height: 100%;
-        width: 75%;
-        margin: 10 auto auto auto;
+        height: 100;
+        width: 500;
+        margin: auto auto auto 0;
         display: flex;
         flex-direction: column;
     }
     
     .pp{
-        display: flex;
-        margin: auto;
+        background-image: url('pp.gif');
+        background-size: cover;
+        background-position-x: 50%;
         height: 100;
         width: 100;
-        background-image: url('pp.gif');
-        background-position: center;
-        background-size: 100%;
         border-radius: 50%;
-        
     }
     
     .dm-info{
