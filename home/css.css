@@ -162,8 +162,8 @@ body {
 }
 
 .content {
-    height: 100%;
-    width: 100%;
+    height: 500;
+    width: auto;
     margin: 0 auto;
     display: flex;
     
@@ -176,7 +176,6 @@ body {
     /*background-color: rgba(16, 16, 16, 0.5); colocar background na part1*/
     width: 70%;
    height: 100%;
-
 
    
 }
@@ -198,7 +197,7 @@ body {
     margin-right: 20px;
     /*margin-right: 20px; para diminuir o tamanho e deixar um espaco entre o part1 e o part2*/
     border-radius: 10px;
-    
+
 }
 
 .p2a{
@@ -278,23 +277,22 @@ display: flex;
 
 .dm{
     display: flex;
-    height: 170;
-    width: 700;
+    height: auto;
+    width: auto;
     
     /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-    margin: 20% auto auto 0;
+    margin: auto auto auto 50;
 }
 
 .dm1{
-    height: 100%;
-    width: 25%;
-    
+    height: auto;
+    width: auto;
 }
 
 .dm2{
-    height: 100%;
-    width: 75%;
-    
+    height: 100;
+    width: 500;
+    margin: auto auto auto 0;
     display: flex;
     flex-direction: column;
 }
@@ -303,8 +301,8 @@ display: flex;
     background-image: url('pp.gif');
     background-size: cover;
     background-position-x: 50%;
-    height: 100%;
-    width: 100%;
+    height: 150;
+    width: 150;
     border-radius: 50%;
 }
 
