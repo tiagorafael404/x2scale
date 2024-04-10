@@ -521,6 +521,8 @@ margin: auto;
         display: flex;
         flex-direction: row;
         margin: 10 auto auto auto;
+        background-color: rgba(16, 16, 16, 0.5);
+
     }   
 
     .part2a{
@@ -529,15 +531,13 @@ margin: auto;
         flex-direction: row;
         height: auto;
         width: 100%;
-        background-color: rgba(16, 16, 16, 0.5);
         border-radius: 15px;
-    
     }
     
     .part1a{
         display: flex;
       width: 100%;
-        height: 100%;
+        height: auto;
         background-color: rgba(16, 16, 16);
         /*margin-right: 20px; para diminuir o tamanho e deixar um espaco entre o part1 e o part2*/
         border-radius: 10px;
@@ -545,8 +545,7 @@ margin: auto;
     }
     
     .p2a{
-        display: flex;
-        flex-direction: row;
+        
         height: auto;
         width: auto;
         /*background-color: rgba(16, 16, 16, 0.5); colocar background na p2a*/
@@ -558,6 +557,7 @@ margin: auto;
                         /*desativar/ativar para o conteudo ser ou nao ser centralizado*/
         margin: auto;
         height: auto;
+        width: auto;
         padding: 0;
         text-align: center;
         align-items: center;
@@ -577,8 +577,8 @@ margin: auto;
     
     .p2b{
         
-        width: 100;
-        height: 30;
+        width: auto;
+        height: auto;
         border-radius: 10px;
         margin: auto 20 auto auto;
     }
