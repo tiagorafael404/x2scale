@@ -492,6 +492,7 @@ margin: auto;
         }
     
     .content {
+        
         height: auto;
         width: 100%;
         display: flex;
@@ -502,14 +503,13 @@ margin: auto;
     }
     
     .part1 {
-        margin: 0 auto auto auto;
-
-        display: flex;
-        flex-direction: row;
+        margin: auto auto auto auto;
+        background-color: rgba(16, 16, 16);
+        border-radius: 15px;
+        
         /*background-color: rgba(16, 16, 16, 0.5); colocar background na part1*/
         width: 100%;
-       height: 150px;
-    
+       height: auto;
        
     }
     
@@ -535,10 +535,8 @@ margin: auto;
     }
     
     .part1a{
-        display: flex;
       width: 100%;
         height: auto;
-        background-color: rgba(16, 16, 16);
         /*margin-right: 20px; para diminuir o tamanho e deixar um espaco entre o part1 e o part2*/
         border-radius: 10px;
         
@@ -591,7 +589,7 @@ margin: auto;
         list-style: none;
         height: 50px;
         width: 100;
-    
+        margin: 5 auto 5 auto;
         
     }
     
@@ -617,22 +615,23 @@ margin: auto;
     
     .dm{
         display: flex;
+        flex-direction: row;
         height: auto;
         width: auto;
         
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-        margin: auto auto auto 10;
+        margin: 30 auto 30 10;
     }
     
     .dm1{
-        height: auto;
+        height: 100px;
         width: auto;
     }
     
     .dm2{
-        height: 100;
+        height: 100px;
         width: auto;
-        margin: auto auto auto 20;
+        margin: auto auto auto 5;
         display: flex;
         flex-direction: column;
     }
@@ -647,32 +646,29 @@ margin: auto;
     }
     
     .dm-info{
-        height: 30%;
-        width: 100%;
+        margin: auto auto auto 0;
+        height: auto;
+        width: auto;
         display: flex;
         flex-direction: row;
        
     }
     
     .dm-msg{
-        height: 70%;
-        width: 100%;
-     display: flex;
+        height: auto;
+        width: auto;
         border-radius: 10px;
+        margin: auto auto auto 0;
     }
     
     .dm-name{
-        display: flex;
-        height: 100%;
-        margin-left: 5;
-      
-        border-radius: 10px;
+        height: auto;
+        width: auto;
         padding: 0;
     }
     
     .dm-date{
-        display: flex;
-        height: 100%;
+        height: auto;
         width: auto;
         margin-left: 10;
         border-radius: 10px;
@@ -703,8 +699,7 @@ margin: auto;
     .dm-text{
         height: auto;
         width: 80%;
-        margin: 5 auto auto 5;
-        display: flex;
+        margin: auto auto auto 5;
         
     }
     
