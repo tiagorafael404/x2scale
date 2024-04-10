@@ -166,7 +166,6 @@ body {
     width: auto;
     margin: 0 auto;
     display: flex;
-    
     margin: 20 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
 }
@@ -385,6 +384,37 @@ margin: auto;
         opacity: 0;
     }
 }
+
+@media screen and (max-width: 1610px) {
+
+    .dm a{
+        font-size: 14;
+    }
+
+    .dm-name a{
+
+        font-size: 18px;
+    }
+
+    .dm{
+        display: flex;
+        height: auto;
+        width: auto;
+        
+        /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
+        margin: auto auto auto 20;
+    }
+
+    .content {
+        height: 400;
+        width: auto;
+        margin: 0 auto;
+        display: flex;
+        margin: 20 auto auto auto;
+        /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    }
+
+}    
 }
 
 @media screen and (max-width: 1200px) {
