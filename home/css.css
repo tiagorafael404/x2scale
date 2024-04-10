@@ -598,7 +598,8 @@ margin: auto;
         text-transform: uppercase;
         font-weight: bold;
        font-family: sans-serif;
-    
+       text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+
      
      line-height: 1.5;
     }
@@ -650,7 +651,7 @@ margin: auto;
         width: auto;
         
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-        margin: 30 auto 30 10;
+        margin: 21 auto 28 10;
     }
     
     .dm1{
