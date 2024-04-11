@@ -33,21 +33,15 @@ body {
 
 
     .mypage {
-       
-        max-width: 1920px;
-        max-height: 1080px;
+       width: auto;
+       height: auto;
+        width: 80%;
        
        margin: 15 auto auto auto;
 
     }
 
-.mypage-area{
-    
-    margin: auto;
-    width: 80%;
-   height: auto;
-    
-}
+
 
     
     

@@ -1,0 +1,95 @@
+html {
+    padding: 0px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;           /* 100vw e 100vh para 100% da janela */
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: auto;
+}
+
+body {
+    background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 98%;
+    margin: 3 auto auto auto;
+}
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+@media screen and (min-width: 769px) {
+
+
+    .mypage {
+      
+        height: auto;
+    width: 80%;
+        
+        margin: 15 auto auto auto;
+    }
+
+        
+    
+    .navbar{
+        display: flex;
+        /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
+        border-radius: 15px;
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+           
+        }
+        
+        .navbar ul{
+            
+    
+            display: flex;
+            justify-content: space-between;
+            height: 60;
+            width: 100%;
+            
+            margin: auto;
+            padding: 0;
+           
+        }
+        
+        .navbar li{
+            
+            background-color: rgba(16, 16, 16);
+            /*background-color: rgba(16, 16, 16); colocar background em cada item*/
+            border-radius: 15px;
+            list-style: none;
+            height: 100%;
+            width: 20%;
+           
+        }
+        
+        .navbar li:hover {
+            background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+        }
+        
+        .navbar a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: auto;
+            font-family: sans-serif;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+}
