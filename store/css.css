@@ -15,8 +15,9 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    width: 98%;
-    margin: 3 auto auto auto;
+    width: 100%;
+    margin: 0 auto auto auto;
+    
 }
 
 *{
@@ -24,72 +25,134 @@ body {
     box-sizing: border-box;
 }
 
+h1{
+    font-family: "Fjalla One", sans-serif;
+}
+
+a{
+    font-family: "Space Mono", monospace;
+}
+
+.navbar a{
+    font-family: "Fjalla One", sans-serif;
+}
 
 
 @media screen and (min-width: 769px) {
 
+   
 
     .mypage {
-      
-        height: auto;
-    width: 80%;
-        
-        margin: 15 auto auto auto;
+        display: inherit;
+        height: inherit;
+        margin: auto;
+        width: 80%;
+        padding: 0px;
+        flex-direction: inherit;
+        justify-content: inherit;
     }
 
         
     
     .navbar{
-        display: flex;
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
-        border-radius: 15px;
         min-width: 100%;
         max-width: 100%;
-        width: 100%;
-           
-        }
+        width: auto;
+        height: 100px;
+        background-color: rgb(37, 37, 37);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         
-        .navbar ul{
-            
-    
+        }
+
+        .menu{
+            width: 30%;
+            height: 100;
             display: flex;
-            justify-content: space-between;
-            height: 60;
-            width: 100%;
-            
-            margin: auto;
-            padding: 0;
-           
+            flex-direction: row;
         }
         
-        .navbar li{
+        .menu ul{
             
-            background-color: rgba(16, 16, 16);
+            justify-content: left;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            width: auto;
+            margin: auto auto auto 0;
+            padding: 0;
+
+        }
+        
+        .menu ul li{
+            
             /*background-color: rgba(16, 16, 16); colocar background em cada item*/
             border-radius: 15px;
             list-style: none;
             height: 100%;
-            width: 20%;
-           
+            width: 100px;
         }
         
-        .navbar li:hover {
+        .menu li:hover {
             background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
         }
         
         .navbar a{
             text-decoration: none;
             color: #fff;
-            font-size: 18px;
+            font-size: 20px;
             text-transform: uppercase;
-            font-weight: bold;
             margin: auto;
-            font-family: sans-serif;
             height: 100%;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
+  
+
+    .logo {
+            margin: auto auto auto auto;
+            width: 30%;
+            height: 100;
+        }
+
+
+        .more {
+                width: 30%;
+                height: 100;
+                align-items: right;
+                justify-content: right;
+            }
+
+
+        .more-area{
+            width: 100;
+            height: 100%;
+            
+            margin: auto 0 auto auto;
+        }
+
+        .more a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin: auto;
+            height: 100%;
+            width: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .more a:hover {
+            background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+        }
+    
+     
 
 }
