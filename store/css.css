@@ -160,7 +160,7 @@ a{
         
         .slider-wrapper {
             position: relative;
-            width: 100%;
+            width: 48rem;
             margin: 0 auto;
             background-color: aqua;
         }
