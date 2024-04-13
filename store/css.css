@@ -155,14 +155,14 @@ a{
     
         .container {
             padding: 0;
-            background-color: #5b12a8;
+            background-color: #12a835;
         }
         
         .slider-wrapper {
             position: relative;
-            width: 48rem;
+            width: 100vw;
             margin: 0 auto;
-            background-color: aqua;
+            background-color: rgb(255, 0, 221);
         }
         
         .slider {
