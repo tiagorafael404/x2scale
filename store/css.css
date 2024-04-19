@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to right, #5b12a8 0%, #1a5bcd 100%);
+    background-color: rgb(21, 21, 21);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -60,7 +60,7 @@ a{
         max-width: 100%;
         width: auto;
         height: 100px;
-        background-color: rgb(37, 37, 37);
+        background-color: rgb(46, 46, 46);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -153,64 +153,119 @@ a{
             background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
         }
     
-        .container {
-            padding: 0;
-            background-color: #12a835;
-        }
+       
+
+
+    .introdution {
+        width: 80%;
+        background-image: url("introdution.png");
+        background-size: fill;
+        aspect-ratio: 5 / 1;
+        margin: auto auto 25 auto;
         
-        .slider-wrapper {
-            position: relative;
-            width: 100vw;
-            margin: 0 auto;
-            background-color: rgb(255, 0, 221);
-        }
+    }
+
         
-        .slider {
-            display: flex;
-            aspect-ratio: 3 / 1;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-            border-radius: 0.5rem;
-            -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-            scrollbar-width: none; /* Hide scrollbar Firefox */
-        }
+     .products {
+        width: 100%;
+        height: 500;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        background-color: #262626;
         
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .slider::-webkit-scrollbar {
-            display: none;
-        }
+
+
+
+    }
+
+    .products ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        height: auto;
+        margin: auto;
         
-        .slider img {
-            flex: 1 0 100%;
-            scroll-snap-align: start;
-            object-fit: cover;
-        }
+    }
+
+    .products li{
+        list-style: none;
+        width: auto;
+        height: auto;
+        background-color: rgb(24, 24, 24);
+        padding: 15;
+        border-radius: 15px;
+        margin: auto;
+       
+    }
+
+    .products .image{
+        width: 250;
+        height: 250;
+        background-color: #ffffff;
+        border-radius: 15px;
+        margin: auto;
+        padding: 0;
+    }
+
+    .products .info{
+        width: 100%;
+        height: 100;
+    }
+
+    .name{
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: sans-serif;
+        margin: auto;
+        width: 100%;
+        height: 50%;
+    }
+
+    .price{
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: sans-serif;
+        margin: auto;
+        width: 100%;
+        height: 50%;
         
-        .slider-nav {
-            display: flex;
-            column-gap: 1rem;
-            position: absolute;
-            bottom: 1.25rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-        }
+    }
+
+    .name a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
         
-        .slider-nav a {
-            width: 0.5rem;
-            height: 0.5rem;
-            border-radius: 50%;
-            background-color: #fff;
-            opacity: 0.75;
-            transition: opacity ease 250ms;
-        }
+    }
+
+    .price a{
+        text-decoration: none;
+        color: #ff0000;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: lighter;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 100%;
+        font-family: 'Times New Roman', Times, serif;
         
-        .slider-nav a:hover {
-            opacity: 1;
-        }
-        
-     
+    }
 
 }
