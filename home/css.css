@@ -161,7 +161,6 @@ body {
     display: flex;
     margin: 20 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
-    background-color: antiquewhite;
 }
 
 .part1 {
@@ -418,7 +417,7 @@ margin: auto;
     background-color: rgb(255, 0, 0);
     border-radius: 50%;
     border-style: solid;
-    border-color: #ffffff;
+    border-color: #000000;
     border-width: 3px;
 }
 
@@ -440,19 +439,12 @@ margin: auto;
 
 
 .projects li:hover {
-    background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+    background-color: rgb(16, 16, 16, 0.5);
 }
 
-.projects .first{
-    background-color: rgb(0, 4, 130); /* Nova cor de fundo quando o mouse está sobre o botão */
-}
 
-.projects .second{
-    background-color: rgb(97, 30, 255); /* Nova cor de fundo quando o mouse está sobre o botão */
-}
-
-.projects .third{
-    background-color: rgb(255, 0, 98); /* Nova cor de fundo quando o mouse está sobre o botão */
+.projects li{
+    background-color: rgb(43, 43, 43);
 }
 
 
@@ -904,15 +896,16 @@ margin: auto;
     
     
     .projects li{
-    
+        background-color: #323232;
         height: 100px;
         aspect-ratio: 1 / 1;
-        background-color: rgb(255, 0, 0);
         border-radius: 50%;
         border-style: solid;
-        border-color: #ffffff;
+        border-color: #000000;
         border-width: 3px;
     }
+
+  
     
     .projects a{
         text-decoration: none;
@@ -935,16 +928,7 @@ margin: auto;
         background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
     }
     
-    .projects .first{
-        background-color: rgb(0, 4, 130); /* Nova cor de fundo quando o mouse está sobre o botão */
-    }
-    
-    .projects .second{
-        background-color: rgb(97, 30, 255); /* Nova cor de fundo quando o mouse está sobre o botão */
-    }
-    
-    .projects .third{
-        background-color: rgb(255, 0, 98); /* Nova cor de fundo quando o mouse está sobre o botão */
-    }
+ 
+
 
 }
