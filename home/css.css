@@ -306,8 +306,8 @@ display: flex;
     background-image: url('pp.gif');
     background-size: cover;
     background-position-x: 50%;
-    height: 150;
-    width: 150;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
 }
 
@@ -469,7 +469,7 @@ margin: auto;
 
 
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1600px) {
 
     .dm a{
         font-size: 14;
@@ -483,11 +483,25 @@ margin: auto;
 
     .dm{
         display: flex;
-        height: auto;
+        flex-direction: row;
+        height: 150;
         width: auto;
-        
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
         margin: auto auto auto 20;
+    }
+    
+    .dm1{
+        height: 100%;
+        aspect-ratio: 1 / 1;
+    }
+    
+    .dm2{
+        height: 100%;
+        aspect-ratio: 7 / 2;
+        display: flex;
+        flex-direction: column;
+        margin: auto auto auto 20;
+        background-color: #5b12a8;
     }
 
     .content {
@@ -498,11 +512,13 @@ margin: auto;
         margin: 20 auto auto auto;
         /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
     }
-}
+
+
+
 }    
+}
 
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
 
    body{
     display: flex;
@@ -746,21 +762,22 @@ margin: auto;
     .dm{
         display: flex;
         flex-direction: row;
-        height: auto;
-        width: auto;
+        height: 100px;
+        aspect-ratio: 4 / 1;
         
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
         margin: 21 auto 28 10;
+        padding: 0;
     }
     
     .dm1{
-        height: 100px;
-        width: auto;
+        height: 100%;
+        aspect-ratio: 1 / 1;
     }
     
     .dm2{
-        height: 100px;
-        width: auto;
+        height: 100%;
+        width: 100%;
         margin: auto auto auto 5;
         display: flex;
         flex-direction: column;
