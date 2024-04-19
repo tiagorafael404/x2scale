@@ -391,30 +391,61 @@ margin: auto;
     width: 100%;
     margin: 20 auto auto auto;
     border-radius: 15px;
+    position: relative;
 }
 
-.projects ul{
+
+.projects .image{
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.projects .name{
+    width: 100%;
+    height: 150;
+    position: absolute;
+    margin: auto;
+    
+    
+}
+
+.projects .image ul{
     width: auto;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     list-style: none;
+    margin: auto;
+    
 
 }
 
-.projects li{
+.projects .name ul{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin: auto;
+    
+    
+}
+
+.projects .image li{
 
     height: 150px;
     width: 150px;
-    background-color: black;
+    background-color: rgb(255, 0, 0);
     border-radius: 50%;
     border-style: solid;
     border-color: #ffffff;
     border-width: 3px;
 }
 
-.projects a{
+.projects .name a{
     text-decoration: none;
     color: #ffffff;
     font-size: 25px;
@@ -434,6 +465,7 @@ margin: auto;
 .projects li:hover {
     background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
 }
+
 
 @keyframes blink-caret {
     50% {
