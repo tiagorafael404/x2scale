@@ -26,7 +26,7 @@ body {
 
 
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
 
 
     .mypage {
@@ -155,12 +155,13 @@ body {
 }
 
 .content {
-    height: 500;
-    width: auto;
-    margin: 0 auto;
+    aspect-ratio: 6/2;
+    width: 100%;
+    
     display: flex;
     margin: 20 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    background-color: antiquewhite;
 }
 
 .part1 {
@@ -284,7 +285,6 @@ display: flex;
     flex-direction: row;
     height: auto;
     width: auto;
-    
     /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
     margin: auto auto auto 50;
 }
@@ -296,10 +296,10 @@ display: flex;
 
 .dm2{
     height: 150;
-    width: 500;
-    margin: auto auto auto 20;
+    aspect-ratio: 7 / 2;
     display: flex;
     flex-direction: column;
+    margin: auto auto auto 20;
 }
 
 .pp{
@@ -395,22 +395,10 @@ margin: auto;
 }
 
 
-.projects .image{
-    width: 100%;
-    height: auto;
-    position: absolute;
-}
-
-.projects .name{
-    width: 100%;
-    height: 150;
-    position: absolute;
-    margin: auto;
     
-    
-}
 
-.projects .image ul{
+
+.projects ul{
     width: auto;
     height: auto;
     display: flex;
@@ -418,23 +406,12 @@ margin: auto;
     justify-content: space-around;
     list-style: none;
     margin: auto;
-    
 
 }
 
-.projects .name ul{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-    margin: auto;
-    
-    
-}
 
-.projects .image li{
+
+.projects li{
 
     height: 150px;
     width: 150px;
@@ -445,7 +422,7 @@ margin: auto;
     border-width: 3px;
 }
 
-.projects .name a{
+.projects a{
     text-decoration: none;
     color: #ffffff;
     font-size: 25px;
@@ -466,6 +443,18 @@ margin: auto;
     background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
 }
 
+.projects .first{
+    background-color: rgb(0, 4, 130); /* Nova cor de fundo quando o mouse está sobre o botão */
+}
+
+.projects .second{
+    background-color: rgb(97, 30, 255); /* Nova cor de fundo quando o mouse está sobre o botão */
+}
+
+.projects .third{
+    background-color: rgb(255, 0, 98); /* Nova cor de fundo quando o mouse está sobre o botão */
+}
+
 
 @keyframes blink-caret {
     50% {
@@ -480,14 +469,15 @@ margin: auto;
 
 
 
-@media screen and (max-width: 1610px) {
+@media screen and (max-width: 1300px) {
 
     .dm a{
         font-size: 14;
+        color: rgb(0, 153, 255);
     }
 
     .dm-name a{
-
+        color: #1a5bcd;
         font-size: 18px;
     }
 
@@ -501,16 +491,16 @@ margin: auto;
     }
 
     .content {
-        height: 400;
+        aspect-ratio: 6 / 2;
         width: auto;
         margin: 0 auto;
         display: flex;
         margin: 20 auto auto auto;
         /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
     }
-
-}    
 }
+}    
+
 
 @media screen and (max-width: 1200px) {
 
