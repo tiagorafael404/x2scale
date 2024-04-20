@@ -386,7 +386,7 @@ a{
         display: inherit;
         height: inherit;
         margin: auto;
-        width: 98%;
+        width: 100%;
         padding: 0px;
         flex-direction: inherit;
         justify-content: inherit;
@@ -406,23 +406,23 @@ a{
         }
 
         .menu{
-            width: 33.3%;
+            width: 40%;
             height: 100%;
             display: flex;
             flex-direction: row;
-            margin: auto auto auto auto
+            margin: auto auto auto auto;
         }
 
         .logo {
             margin: auto auto auto auto;
-            width: 33.3%;
+            width: 20%;
             height: 100%;
             display: flex;
         }
 
 
         .more {
-                width: 33.3%;
+                width: 40%;
                 height: 100%;
                 align-items: right;
                 justify-content: right;
@@ -435,7 +435,7 @@ a{
             display: flex;
             flex-direction: row;
             height: 100%;
-            width: 98%;
+            width: auto;
             margin: auto auto auto 5;
             padding: 0;
 
@@ -448,7 +448,7 @@ a{
             border-radius: 15px;
             list-style: none;
             height: 100%;
-            width: 33.33%;
+            width: 50;
         }
         
         .menu li:hover {
