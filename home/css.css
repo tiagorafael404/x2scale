@@ -1,5 +1,5 @@
 html {
-    padding: 0px;
+    padding: 5px;
     overflow-x: hidden;
     box-sizing: border-box;
     height: 100vh;
@@ -518,10 +518,7 @@ margin: auto;
 
 @media screen and (max-width: 1250px) {
 
-   body{
-  
-    width: 98%;
-   }
+ 
 
     .mypage {
         
