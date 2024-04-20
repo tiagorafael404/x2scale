@@ -38,6 +38,8 @@ a{
 }
 
 
+
+
 @media screen and (min-width: 1251px) {
 
    
@@ -402,7 +404,7 @@ a{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
+
         }
 
         .menu{
@@ -580,7 +582,7 @@ a{
         .name a{
             text-decoration: none;
             color: inherit;
-            font-size: 15px;
+            font-size: 14px;
             margin: auto;
             display: flex;
             justify-content: left;
@@ -589,12 +591,15 @@ a{
             width: 100%;
             color: #fff;
             text-shadow: 1px 2px 1px black;
+            font-family: "Fjalla One", sans-serif;
+            font-weight: normal;
+
         }
 
         .price a{
             text-decoration: none;
             color: inherit;
-            font-size: 15px;
+            font-size: 14px;
             margin: auto;
             display: flex;
             justify-content: left;
@@ -603,6 +608,7 @@ a{
             width: 100%;
             color: red;
             text-shadow: 1px 2px 1px black;
+            font-weight: lighter;
 
         }
 
