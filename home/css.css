@@ -462,14 +462,7 @@ margin: auto;
 
 
 @media screen and (max-width: 1600px) {
-
-    .mypage {
-       
-       height: auto; 
-       width: 98%;
-       margin: auto;
-
-    }
+    
 
     .dm a{
         font-size: 14;
@@ -532,7 +525,7 @@ margin: auto;
     .mypage {
         
         height: auto;
-        width: 100vw;
+        width: 98%;
         margin: 0 auto auto auto;
     }
     
