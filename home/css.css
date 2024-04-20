@@ -589,7 +589,7 @@ margin: auto;
         
         height: auto;
         width: 100%;
-        display: flex;
+        display: none;
         flex-direction: column;
         
         margin: 5 auto auto auto;
