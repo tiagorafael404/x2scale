@@ -507,9 +507,88 @@ a{
         }
 
         .products {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #262626;
+        }
+        
+        .products ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .products li {
+            flex: 0 0 calc(50% - 10px); /* Duas colunas, com margem entre elas */
+            list-style: none;
+            background-color: rgb(24, 24, 24);
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px; /* Espaço entre as linhas */
+        }
+        
+        .products .image {
+            width: 100px;
+            height: 100px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            margin: auto;
+        }
+        
+        .products .info {
+            width: 100%;
+            height: 50px;
+            margin: auto;
+        }
+        
+        .name {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: sans-serif;
+            margin: auto;
+            height: 50%;
+            width: 100%;
+        }
 
-            display: none;
+        .price {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: sans-serif;
+            margin: auto;
+            height: 50%;
+            width: 100%;
+        }
+        
+        .name a{
+            text-decoration: none;
+            color: inherit;
+            font-size: 15px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            color: #fff;
 
+        }
+
+        .price a{
+            text-decoration: none;
+            color: inherit;
+            font-size: 15px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            color: red;
         }
 
 }
