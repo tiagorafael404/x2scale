@@ -502,7 +502,7 @@ a{
             background-image: url("introdution.png");
             background-size: cover;
             aspect-ratio: 5 / 1;
-            margin: 15 auto auto auto;
+            margin: 15 auto 15 auto;
 
         }
 
