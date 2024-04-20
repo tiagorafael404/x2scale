@@ -529,38 +529,6 @@ margin: auto;
         margin: 0 auto auto auto;
     }
     
-
-    
-    .extra-left{
-        height: 100%;
-        width: 10%;
-        display: none;
-    }
-    
-    .extra-right{
-        height: 100%;
-        width: 10%;
-        display: none;
-    }
-    
-    
-    
-    .screen {
-        
-        display: flex;
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-       margin: auto;
-    }
-    
-    .screen-area {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        width: 100%;
-        margin: auto;
-    }
     
     .navbar {
     
