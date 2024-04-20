@@ -576,6 +576,7 @@ margin: auto;
             width: 100vw;
            margin-bottom: 10px;
            background-color: rgb(16, 16, 16);
+           display: none;
 
         }
         
@@ -626,7 +627,7 @@ margin: auto;
         
         height: auto;
         width: 100%;
-        display: flex;
+        display: none;
         flex-direction: column;
         
         margin: 5 auto auto auto;
