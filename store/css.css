@@ -46,7 +46,7 @@ a{
         display: inherit;
         height: inherit;
         margin: auto;
-        width: 80%;
+        width: 70%;
         padding: 0px;
         flex-direction: inherit;
         justify-content: inherit;
@@ -157,7 +157,7 @@ a{
 
 
     .introdution {
-        width: 80%;
+        width: 70%;
         background-image: url("introdution.png");
         background-size: fill;
         aspect-ratio: 5 / 1;
@@ -184,7 +184,7 @@ a{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         height: auto;
         margin: auto;
         
@@ -272,10 +272,10 @@ a{
 
         .products {
             width: 100%;
-            height: 400;
+            height: 380;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             margin: auto;
             background-color: #262626;
             
@@ -287,8 +287,8 @@ a{
         .products ul{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            width: 90%;
+            justify-content: space-around;
+            width: 100%;
             height: auto;
             margin: auto;
             
@@ -522,7 +522,7 @@ a{
         }
         
         .products li {
-            flex: 0 0 calc(50% - 10px); /* Duas colunas, com margem entre elas */
+            flex: 0 0 calc(50% - 1); /* Duas colunas, com margem entre elas */
             list-style: none;
             padding: 5px;
             border-radius: 15px;
@@ -534,7 +534,7 @@ a{
             background-color: rgb(24, 24, 24);
             border-radius: 15px;
             height: 240;
-            width: 180;
+            width: 160;
             margin: auto;
             align-items: center;
             justify-content: center;
