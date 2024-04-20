@@ -379,6 +379,7 @@ a{
     body{
         display: flex;
         flex-direction: column;
+        background-color: #191919;
        }
     
        .mypage {
@@ -397,7 +398,7 @@ a{
         max-width: 100%;
         width: 100vw;
         height: 60px;
-        background-color: rgb(41, 41, 41);
+        background-color: rgb(39, 39, 39);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
