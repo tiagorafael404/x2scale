@@ -533,8 +533,8 @@ a{
         .products .background {
             background-color: rgb(24, 24, 24);
             border-radius: 15px;
-            height: 190;
-            width: 140;
+            height: 240;
+            width: 180;
             margin: auto;
             align-items: center;
             justify-content: center;
@@ -543,8 +543,8 @@ a{
         }
         
         .products .image {
-            width: 100px;
-            height: 100px;
+            width: 140px;
+            height: 140;
             background-color: #ffffff;
             border-radius: 15px;
             margin: 15 auto 5 auto;
