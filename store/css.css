@@ -384,8 +384,8 @@ a{
        .mypage {
         display: inherit;
         height: inherit;
-        margin: inherit;
-        width: 95%;
+        margin: auto;
+        width: 98%;
         padding: 0px;
         flex-direction: inherit;
         justify-content: inherit;
