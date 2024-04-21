@@ -468,7 +468,9 @@ a{
                 width: 100%;   
                 font-size: 14;  
                 font-weight: normal;    
-                letter-spacing: 0.5;   
+                letter-spacing: 1;  
+                font-family: Muli, sans-serif;
+ 
             }
     
             .product_price{
