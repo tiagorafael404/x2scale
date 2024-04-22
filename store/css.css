@@ -271,7 +271,7 @@ a{
         justify-content: center;
         display: flex;
         height: 100%;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Space Mono", monospace;
         
     }
 
@@ -372,14 +372,13 @@ a{
             color: #ff0000;
             font-size: 20px;
             text-transform: uppercase;
-            font-weight: lighter;
             margin: auto;
             align-items: center;
             justify-content: center;
             display: flex;
             height: 100%;
-            font-family: 'Times New Roman', Times, serif;
-            
+            font-weight: lighter;
+            font-family: "Space Mono", monospace;            
         }
 }
 }
@@ -628,6 +627,8 @@ a{
             color: red;
             text-shadow: 1px 2px 1px black;
             font-weight: lighter;
+            font-family: "Space Mono", monospace;
+
 
         }
 
