@@ -170,7 +170,7 @@ a{
         
      .products {
         width: 100%;
-        height: 500;
+        height: auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -185,10 +185,10 @@ a{
     .products ul{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         height: auto;
-        margin: auto;
+        margin: 20 auto 20 auto;
         
     }
 
@@ -279,11 +279,11 @@ a{
 
         .products {
             width: 100%;
-            height: 380;
+            height: auto;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            margin: auto;
+            margin: 15auto auto auto;
             background-color: #262626;
             
     
@@ -297,7 +297,7 @@ a{
             justify-content: space-around;
             width: 100%;
             height: auto;
-            margin: auto;
+            margin: 20 auto 20 auto;
             
         }
     
@@ -306,17 +306,17 @@ a{
             width: auto;
             height: auto;
             background-color: rgb(24, 24, 24);
-            padding: 15;
+            padding: 0;
             border-radius: 15px;
             margin: auto;
            
         }
     
         .products .image{
-            width: 210;
-            height: 210;
+            width: 170;
+            height: 170;
             border-radius: 15px;
-            margin: auto;
+            margin: 10 10 10 10;
             padding: 0;
             background-size: cover;
 
@@ -357,7 +357,7 @@ a{
         .name a{
             text-decoration: none;
             color: #fff;
-            font-size: 20px;
+            font-size: 17px;
             text-transform: uppercase;
             font-weight: bold;
             display: flex;
@@ -370,7 +370,7 @@ a{
         .price a{
             text-decoration: none;
             color: #ff0000;
-            font-size: 20px;
+            font-size: 17;
             text-transform: uppercase;
             margin: auto;
             align-items: center;

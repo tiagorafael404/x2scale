@@ -25,11 +25,27 @@ body {
     box-sizing: border-box;
 }
 
-h1{
-    font-family: "Fjalla One", sans-serif;
+
+
+.product_name a{
+    font-family: "Space Mono", monospace;
 }
 
-a{
+.product_description a{
+    font-family: "Space Mono", monospace;
+}
+
+.product_price a{
+    font-family: "Fjalla One", sans-serif;
+    letter-spacing: 2px;
+
+}
+
+.choice_title a{
+    font-family: "Space Mono", monospace;
+}
+
+.choice li a{
     font-family: "Space Mono", monospace;
 }
 
@@ -237,6 +253,21 @@ a{
 
         }
 
+        .product_price a{
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            margin: auto;
+            height: 100%;
+            width: 100%;   
+            font-size: 18;  
+            font-weight: normal;
+            display: flex;
+            justify-content: left;
+
+                  
+        }
+
         .gallery{
             width: 15%;
             height: 100%;
@@ -260,9 +291,35 @@ a{
             height: auto;
             margin: 10 auto 15 0;
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .choice ul{
+        .choice_title{
+            width: 100%;
+            height:auto;
+            margin: auto auto 10 0;
+        }
+
+        .choice_title a{
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            font-size: 20;
+            font-weight: normal;
+        }
+
+        .choices{
+            width: 100%;
+            height: auto;
+        }
+
+        .choices ul{
             list-style: none;
             width: 100%;
             height: auto;
@@ -271,7 +328,7 @@ a{
             margin: auto auto auto 0; 
         }
 
-        .choice li{
+        .choices li{
 
             width: 70;
             height: 45;
@@ -279,9 +336,24 @@ a{
             margin: auto;
             border-style: solid;
             border-color: black;
-            border-width: 3;
+            border-width: 2;
             border-radius: 15px;
             margin: 0 5 10 0;
+        }
+
+        .choices li a{
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18;
+            font-weight: normal;
+
         }
 
               
