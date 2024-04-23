@@ -204,8 +204,8 @@ a{
     }
 
     .products .image {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         background-color: #ffffff;
         border-radius: 15px;
         margin: auto;
@@ -518,27 +518,25 @@ a{
 
         .products {
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            height: auto;
             background-color: #202020;
         }
         
         .products ul {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            width: 98%;
+            width: auto;
             height: auto;
+            margin: auto;
         }
         
         .products li {
-            flex: 0 0 calc(50% - 1); /* Duas colunas, com margem entre elas */
             list-style: none;
             padding: 5px;
             border-radius: 15px;
-            margin: 02 auto 02 auto; /* Espaço entre as linhas */
-            width: auto;
+            margin: 02 auto 02 0; /* Espaço entre as linhas */
+            width: 50%;
+            height: auto;
         }
 
         .products .background {
@@ -550,6 +548,7 @@ a{
             justify-content: center;
             display: flex;
             flex-direction: column;
+            background-color: #262626;
         }
         
         .products .image {
