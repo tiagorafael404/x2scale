@@ -29,6 +29,8 @@ body {
 
 .product_name a{
     font-family: "Space Mono", monospace;
+    text-shadow: 1px 2px 1px black;
+
 }
 
 .product_description a{
@@ -38,11 +40,15 @@ body {
 .product_price a{
     font-family: "Fjalla One", sans-serif;
     letter-spacing: 2px;
+    text-shadow: 1px 2px 1px black;
+
 
 }
 
 .choice_title a{
     font-family: "Space Mono", monospace;
+    text-shadow: 1px 2px 1px black;
+
 }
 
 .choice li a{
