@@ -285,11 +285,28 @@ body {
         .photo{
             width: 82%;
             height: 100%;
-            background-image: url("photo.png");
             background-size: cover;
 
             border-radius: 10px;
             margin: auto 0 auto auto;
+        }
+
+
+        .gallery ul{
+            list-style: none;
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin: 15 auto 15 auto;
+        }
+
+        .gallery li{
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 10px;
+            background-size: cover;
+            margin: 0 auto 15 auto;
         }
 
         .choice{
@@ -510,7 +527,11 @@ body {
                 height: 100;
                 margin: 10 auto 10 auto;
                 background-color: rgb(42, 42, 42);
-                border-radius: 10px;        }
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
     
             .photo{
                 width: 100%;
@@ -588,6 +609,28 @@ body {
                 height: 60;
                 margin: auto auto 25 auto;
     
+            }
+
+            .gallery ul{
+                list-style: none;
+                height: 90%;
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin: auto;       
+            
+            }
+    
+            .gallery li{
+                height: 100%;
+                aspect-ratio: 1 / 1;
+                border-radius: 10px;
+                background-size: cover;
+                align-items: center;
+                justify-content: space-around;
+               
             }
     
     }
