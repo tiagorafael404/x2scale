@@ -122,17 +122,110 @@ body {
     .content li{
         text-decoration: none;
         width: 300;
-        height: 500;
+        height: 400;
         background-color: rgb(16, 16, 16);
         border-radius: 15px;
         list-style: none;
-
+        display: flex;
+        flex-direction: column;
     }
     
+    .title{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 auto 0 auto;
+        font-family: sans-serif;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: auto;
+        font-family: sans-serif;
+        height: 20%;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #c40045;
+        border-radius: 10px;
+        margin: auto;
+        border-color: #fff;    
+        border-width: 1px;
+        border-style: solid;
+    }
     
 
 @media screen and (max-width: 1610px) {
 
+    .content ul{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        background-color: rgba(16, 16, 16, 0.5);
+        margin: auto;
+        justify-content: space-between;
+        padding: 30;
+    }
+
+    .content li{
+        text-decoration: none;
+        width: 250;
+        height: 350;
+        background-color: rgb(16, 16, 16);
+        border-radius: 15px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .title{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 auto 0 auto;
+        font-family: sans-serif;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: auto;
+        font-family: sans-serif;
+        height: 20%;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #c40045;
+        border-radius: 10px;
+        margin: auto;
+        border-color: #fff;    
+        border-width: 1px;
+        border-style: solid;
+    }
     
 
 }
