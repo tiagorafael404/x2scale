@@ -145,7 +145,7 @@ body {
         align-items: center;
     }
     
-    .button{
+    .button {
         text-decoration: none;
         color: #fff;
         font-size: 18px;
@@ -164,6 +164,12 @@ body {
         border-color: #fff;    
         border-width: 1px;
         border-style: solid;
+        text-decoration: none;
+    }
+
+    .button a:visited, .button a:hover, .button a:active, .button a{
+        color: #fff;
+        text-decoration: none;
     }
     
 
@@ -316,7 +322,10 @@ body {
         /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
     }
   
-    
+    .button a:visited, .button a:hover, .button a:active, .button a{
+        color: #fff;
+        text-decoration: none;
+    }    
 
 }
 
