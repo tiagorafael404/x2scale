@@ -108,19 +108,19 @@ height: 100px;
 }
 
 .content {
-
-    
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
     margin: 20 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
 }
 
 .part1 {
-    
+
     display: flex;
     width: auto;
-      aspect-ratio: 4/1;
-      background-color: rgb(16, 16, 16);
+      height: auto;
       margin-right: 20px;
       /*margin-right: 20px; para diminuir o tamanho e deixar um espaco entre o part1 e o part2*/
       border-radius: 15px;
@@ -128,27 +128,24 @@ height: 100px;
    
 }
 
- 
-
-
-
-
-
 
 
 .dm{
+    background-color: rgb(16, 16, 16);
+    border-radius: 15px;
+
     display: flex;
     flex-direction: row;
     height: 150;
-    aspect-ratio: 4/1;
+    aspect-ratio: 14/3.4;
     /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-    margin: auto auto auto 20;
+    margin: 0 auto auto auto;
 }
 
 .dm1{
-    height: 85%;
+    height: 80%;
     aspect-ratio: 1/1;
-    margin: auto;
+    margin: auto auto auto 20;
 }
 
 .dm2{
@@ -157,6 +154,8 @@ height: 100px;
     display: flex;
     flex-direction: column;
     margin: auto auto auto 20;
+    border-radius: 15px;
+    
 }
 
 .pp{
@@ -185,7 +184,7 @@ height: 100px;
 
 .dm-name{
     height: auto;
-    margin: auto 35 2 0;
+    margin: auto 22 2 0;
     width: 100;
     border-radius: 10px;
     padding: 0;
@@ -201,7 +200,7 @@ height: 100px;
 .dm-name a{
    text-align: center;
     color: #fff;
-    font-size: 25px;
+    font-size: 22px;
     text-transform: uppercase;
     font-weight: bold;
    font-family: sans-serif;
@@ -229,7 +228,7 @@ margin: auto;
 
 .dm-text a{
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
     font-family: sans-serif;
     line-height: 1.5;
@@ -243,26 +242,46 @@ margin: auto;
 
 .projects{
 
-    
+    background-color: rgb(29, 29, 29);
     height: auto;
     width: 100%;
-    margin: 20 auto auto auto;
+    margin: auto auto auto auto;
     border-radius: 15px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .title{
+    width: 100%;
+    height: 50px;
+    margin: 5 auto auto auto;
 }
 
 
-    
+.projects .title a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+   font-family: sans-serif;
+   height: 100%;
+   width: 100%;
+   justify-content: left;
+   align-items: center;
+   text-shadow: 3px 3px 1px black;
+    margin: auto auto auto 20;
+} 
 
 
 .projects ul{
     width: auto;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     list-style: none;
-    margin: auto;
+    margin: 15 auto auto 20;
 
 }
 
@@ -270,13 +289,14 @@ margin: auto;
 
 .projects li{
 
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
     background-color: rgb(255, 0, 0);
     border-radius: 50%;
     border-style: solid;
     border-color: #000000;
     border-width: 3px;
+    margin: auto auto 15 auto;
 }
 
 .projects a{
@@ -301,9 +321,7 @@ margin: auto;
 }
 
 
-.projects li{
-    background-color: rgb(43, 43, 43);
-}
+
 
 
 @keyframes blink-caret {
