@@ -43,7 +43,7 @@ body {
 .navbar {
     display: flex;
     flex-direction: row;
-background-color: #161616;
+background-color: rgb(22, 22, 22);
 
 height: 100px;
 /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
@@ -242,7 +242,7 @@ margin: auto;
 
 .projects{
 
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(22, 22, 22);
     height: auto;
     width: 100%;
     margin: auto auto auto auto;
@@ -269,7 +269,7 @@ margin: auto;
    width: 100%;
    justify-content: left;
    align-items: center;
-   text-shadow: 3px 3px 1px black;
+   text-shadow: 2px 2px 1px #ff0042;
     margin: auto auto auto 20;
 } 
 
@@ -291,7 +291,6 @@ margin: auto;
 
     height: 130px;
     width: 130px;
-    background-color: rgb(255, 0, 0);
     border-radius: 50%;
     border-style: solid;
     border-color: #000000;
