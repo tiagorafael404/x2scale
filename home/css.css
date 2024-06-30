@@ -288,13 +288,10 @@ margin: auto;
 
 
 .projects li{
-
+    background-size: cover;
     height: 130px;
     width: 130px;
     border-radius: 50%;
-    border-style: solid;
-    border-color: #000000;
-    border-width: 3px;
     margin: auto auto 15 auto;
 }
 
