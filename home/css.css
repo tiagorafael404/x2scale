@@ -118,19 +118,10 @@ height: 100px;
     height: auto;
     margin: 20 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    background-color: #0a3e99;
 }
 
-.part1 {
 
-    display: flex;
-    width: auto;
-      height: auto;
-      margin-right: 20px;
-      /*margin-right: 20px; para diminuir o tamanho e deixar um espaco entre o part1 e o part2*/
-      border-radius: 15px;
-
-   
-}
 
 
 
@@ -143,7 +134,7 @@ height: 100px;
     height: 150;
     aspect-ratio: 14/3.4;
     /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-    margin: 0 auto auto auto;
+    margin: 0 20 auto 0;
 }
 
 .dm1{
@@ -247,9 +238,9 @@ margin: auto;
 .projects{
 
     background-color: rgb(22, 22, 22);
-    height: auto;
     width: 100%;
-    margin: auto auto auto auto;
+    aspect-ratio: 3/3;
+    margin: 0 auto 0 auto;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -258,7 +249,7 @@ margin: auto;
 .projects .title{
     width: 100%;
     height: 50px;
-    margin: auto auto auto auto;
+    margin: 15 auto 30 auto;
     align-content: center;
 }
 
@@ -276,7 +267,7 @@ margin: auto;
    align-items: center;
    justify-content: center;
    text-shadow: 2px 2px 1px #ff0042;
-    margin: auto auto auto 20;
+    margin: auto auto auto 25;
     letter-spacing: 0.5;
 
 } 
@@ -289,7 +280,7 @@ margin: auto;
     flex-direction: column;
     justify-content: space-around;
     list-style: none;
-    margin: 15 auto auto 0;
+    margin: 0 auto auto 0;
 
 }
 
@@ -405,54 +396,119 @@ flex-direction: column;
 @media screen and (max-width: 1600px) {
     
 
-    .dm a{
-        font-size: 14;
-    }
-
-    .dm-name a{
-        font-size: 18px;
-    }
-
-    .projects a{
-        font-size: 20;
-    }
-
     .dm{
+        background-color: rgb(16, 16, 16);
+        border-radius: 15px;
+    
         display: flex;
         flex-direction: row;
-        height: 150;
-        width: auto;
+        height: 120;
+        aspect-ratio: 14/3.4;
         /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-        margin: auto auto auto 20;
+        margin: 0 20 auto 0;
     }
     
     .dm1{
-        height: 100%;
-        aspect-ratio: 1 / 1;
+        height: 80%;
+        aspect-ratio: 1/1;
+        margin: auto auto auto 20;
     }
     
     .dm2{
         height: 100%;
-        aspect-ratio: 7 / 2;
+        width: 80%;
         display: flex;
         flex-direction: column;
         margin: auto auto auto 20;
+        border-radius: 15px;
+        
     }
-
-    .content {
-        aspect-ratio: 6 / 2;
-        width: auto;
-        margin: 0 auto;
+    
+    .pp{
+        background-image: url('pp.gif');
+        background-size: cover;
+        background-position-x: 50%;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+    
+    .dm-info{
+        height: 30%;
+        width: 100%;
+        
         display: flex;
-        margin: 20 auto auto auto;
-        /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+        flex-direction: row;
+       
+    }
+    
+    .dm-msg{
+        height: 70%;
+        width: auto;
+        border-radius: 10px;
+    }
+    
+    .dm-name{
+        height: auto;
+        margin: auto 0 2 0;
+        width: 100;
+        border-radius: 10px;
+        padding: 0;
+    }
+    
+    .dm-date{
+        height: auto;
+        width: 200;
+        margin: auto 0 4 0;
+        border-radius: 10px;
+    }
+    
+    .dm-name a{
+       text-align: center;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+       font-family: sans-serif;
+      margin: auto;
+    }
+    
+    .dm-date a{
+        
+        color: #b8b8b8;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+       font-family: sans-serif;
+     
+    margin: auto;
+    }
+    
+    
+    .dm-text{
+        height: 100%;
+        width: 100%;
+        margin: 10 auto auto 0;
+        
+    }
+    
+    .dm-text a{
+        color: #fff;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        line-height: 1.5;
+    }
+    
+    .dm-text a::after {
+        content: "|";
+        animation: blink-caret 1s step-end infinite;
     }
 
 
-
-}    
+  
 }
-
+}
 
 
 /* --- phones --- */
