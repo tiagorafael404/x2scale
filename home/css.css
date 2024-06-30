@@ -43,12 +43,9 @@ body {
 .navbar {
     display: flex;
     flex-direction: row;
-background-color: #4a2655;
-min-width: 100%;
-max-width: 100%;
-width: auto;
+background-color: #161616;
+
 height: 100px;
-margin: auto;
 /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
 
    
@@ -57,13 +54,20 @@ margin: auto;
 .navbar .logo{
     height: 100%;
     aspect-ratio: 1/1;
-    background-color: #000000;
+    margin: auto auto auto 0;
+    background-size: cover;
+
 }
 
 .navbar .menu{
     height: 100%;
     width: auto;
     background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    margin: auto 0 auto auto;
+    align-items: center;
+
 }
 
 .navbar .menu ul{
@@ -74,6 +78,7 @@ margin: auto;
     height: 100%;
     width: auto;
     background-color: brown;
+    
 }
 
 .navbar .menu ul li{
