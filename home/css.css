@@ -338,7 +338,7 @@ margin: auto;
     height: 80%;
     aspect-ratio: 1/1;
     background-size: cover;
-    margin: auto 0 auto 20;
+    margin: 0 0 auto 20;
 }
 
 .projects .info{
