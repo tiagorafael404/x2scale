@@ -738,10 +738,14 @@ flex-direction: column;
         }
     }
 
+    .content{
+        display: none;
+    }
+
     .projects{
         display: none;
     }
  
-
+    
 
 }
