@@ -575,7 +575,7 @@ flex-direction: column;
     .navbar .menu{
 
         height: 100%;
-        width: 80%;
+        width: auto;
         background-color: #990a5d;
     
     }
@@ -586,8 +586,9 @@ flex-direction: column;
         flex-direction: row;
         height: 70px;
         width: auto;
-        margin: auto auto auto 0;
+        margin: auto auto auto auto;
         background-color: #00eeff;
+        justify-content: right;
         
     }
     
@@ -598,8 +599,6 @@ flex-direction: column;
         height: 70;
         width: 60px;
         background-color: #0a3e99;
-        margin: auto 0 auto auto;
-       
     }
     
     .navbar li:hover {
