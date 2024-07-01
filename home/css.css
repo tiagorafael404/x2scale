@@ -115,7 +115,7 @@ height: 100px;
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: auto;
+    aspect-ratio: 2/1;
     margin: 20 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
 }
@@ -238,7 +238,7 @@ margin: auto;
 
     background-color: rgb(22, 22, 22);
     width: 100%;
-    aspect-ratio: 3/3;
+    height: 100%;
     margin: 0 auto 0 auto;
     border-radius: 15px;
     display: flex;
@@ -504,7 +504,150 @@ flex-direction: column;
         animation: blink-caret 1s step-end infinite;
     }
 
+    .projects{
 
+        background-color: rgb(22, 22, 22);
+        width: 100%;
+        height: 100%;
+        margin: 0 auto 0 auto;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .projects .title{
+        width: 100%;
+        height: 50px;
+        margin: 15 auto 30 auto;
+        align-content: center;
+    }
+    
+    
+    .projects .title a{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+       font-family: sans-serif;
+       height: 100%;
+       width: 100%;
+       justify-content: left;
+       align-items: center;
+       justify-content: center;
+       text-shadow: 2px 2px 1px #ff0042;
+        margin: auto auto auto 25;
+        letter-spacing: 0.5;
+    
+    } 
+    
+    
+    .projects ul{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        list-style: none;
+        margin: 0 auto auto 0;
+    
+    }
+    
+    
+    
+    .projects li{
+        background-size: cover;
+        height: 130px;
+        width: 100%;
+        margin: auto auto 15 0;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .projects .info .title2 a{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+       font-family: sans-serif;
+       height: 100%;
+       width: 100%;
+       justify-content: left;
+       align-items: center;
+    
+       text-shadow: 2px 2px 1px #ff0042;
+        margin: auto auto auto 20;
+        letter-spacing: 0.5;
+    }
+    
+    
+    
+    .projects .imagem a{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: auto;
+       font-family: sans-serif;
+       height: 100%;
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       text-shadow: 3px 3px 1px black;
+    }
+    
+    
+    .projects .imagem:hover {
+        background-color: rgb(16, 16, 16, 0.5);
+    }
+    
+    .projects li .imagem{
+        height: 80%;
+        aspect-ratio: 1/1;
+        background-size: cover;
+        margin: auto 0 auto 20;
+    }
+    
+    .projects .info{
+    height: 100%;
+    width: 70%;
+    margin: auto auto auto 0;
+    display: flex;
+    flex-direction: column;
+    
+    }
+    
+    .projects .info .title2{
+        height: 50;
+        width: 100%;
+        margin: 0 auto auto auto;
+    }
+    
+    .projects .info .text{
+        height: 100%;
+        width: 100%;
+        margin: 0 auto auto auto;
+    }
+    
+    .projects .text a{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: auto;
+       font-family: sans-serif;
+       height: 100%;
+       width: 100%;
+       display: flex;
+       justify-content: left;
+       letter-spacing: 0.5;
+       line-height: 1.5;
+       margin: auto auto auto 20;
+    }
   
 }
 }
