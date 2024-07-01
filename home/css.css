@@ -568,8 +568,8 @@ flex-direction: column;
         height: 90%;
         aspect-ratio: 1/1;
         background-size: cover;
-        background-color: #0a3e99;
-    
+        margin: auto auto auto 0;
+ 
     }
     
     .navbar .menu{
