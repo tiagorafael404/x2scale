@@ -115,9 +115,10 @@ height: 100px;
     display: flex;
     flex-direction: row;
     width: 100%;
-    aspect-ratio: 2/1;
+    aspect-ratio: 50/22;
     margin: 20 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    background-color: #ff0042;
 }
 
 
