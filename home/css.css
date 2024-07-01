@@ -294,22 +294,7 @@ margin: auto;
     flex-direction: row;
 }
 
-.projects .info .title2 a{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-   font-family: sans-serif;
-   height: 100%;
-   width: 100%;
-   justify-content: left;
-   align-items: center;
 
-   text-shadow: 2px 2px 1px #ff0042;
-    margin: auto auto auto 20;
-    letter-spacing: 0.5;
-}
 
 
 
@@ -327,6 +312,7 @@ margin: auto;
    justify-content: center;
    align-items: center;
    text-shadow: 3px 3px 1px black;
+    
 }
 
 
@@ -354,6 +340,23 @@ flex-direction: column;
     height: 50;
     width: 100%;
     margin: 0 auto auto auto;
+    display: flex;
+}
+
+.projects .info .title2 a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+   font-family: sans-serif;
+   height: auto;
+   width: 100%;
+   justify-content: left;
+   align-items: center;;
+   text-shadow: 2px 2px 1px #ff0042;
+    margin: 5 auto auto 20;
+    letter-spacing: 0.5;
 }
 
 .projects .info .text{
