@@ -576,7 +576,6 @@ flex-direction: column;
 
         height: 100%;
         width: auto;
-        background-color: #990a5d;
     
     }
     
@@ -587,7 +586,6 @@ flex-direction: column;
         height: 70px;
         width: auto;
         margin: auto auto auto auto;
-        background-color: #00eeff;
         justify-content: right;
         
     }
@@ -598,7 +596,6 @@ flex-direction: column;
         list-style: none;
         height: 70;
         width: 60px;
-        background-color: #0a3e99;
     }
     
     .navbar li:hover {
@@ -632,7 +629,7 @@ flex-direction: column;
    
     
     .dm{
-        display: flex;
+        display: none;
         flex-direction: row;
         height: 100px;
         aspect-ratio: 4 / 1;
@@ -742,65 +739,8 @@ flex-direction: column;
     }
 
     .projects{
-
-    
-        height: auto;
-        width: 100%;
-        margin: 20 auto auto auto;
-        border-radius: 15px;
-        position: relative;
+        display: none;
     }
-    
-    
-        
-    
-    
-    .projects ul{
-        width: auto;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        list-style: none;
-        margin: auto;
-    
-    }
-    
-    
-    
-    .projects li{
-        background-color: #323232;
-        height: 100px;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        border-style: solid;
-        border-color: #000000;
-        border-width: 3px;
-    }
-
-  
-    
-    .projects a{
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 16px;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin: auto;
-       font-family: sans-serif;
-       height: 100%;
-       width: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       text-shadow: 3px 3px 1px black;
-    }
-    
-    
-    .projects li:hover {
-        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
-    }
-    
  
 
 
