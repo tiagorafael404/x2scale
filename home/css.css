@@ -544,67 +544,83 @@ flex-direction: column;
  
 
     .mypage {
-        
-        height: auto;
-        width: 98%;
-        margin: 0 auto auto auto;
+        display: inherit;
+        height: inherit;
+        margin: auto;
+        width: 70%;
+        padding: 0px;
+        flex-direction: inherit;
+        justify-content: inherit;
     }
     
     
     .navbar {
+        display: flex;
+        flex-direction: row;
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+    height: 70px;
     
-        /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
-        border-radius: 15px;
-            height: 60px;
-            width: 100%;
-           margin-bottom: 10px;
-           background-color: rgb(16, 16, 16);
-           
+       
+    }
+    
+    .navbar .logo{
+        height: 90%;
+        aspect-ratio: 1/1;
+        margin: auto auto auto 0;
+        background-size: cover;
+        background-color: #0a3e99;
+        display: flex;
+    
+    }
+    
+    .navbar .menu{
 
-        }
+        height: 100%;
+        width: 80%;
+        margin: auto 0 auto 0;
+        align-items: center;
+        background-color: #990a5d;
+    
+    }
+    
+    .navbar .menu ul{
+       
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        height: 70;
+        width: auto;
+        margin: auto;
         
-        .navbar ul{
-           
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            height: 100%;
-            width: 90%;
-            margin: auto;
-            padding: 0;
-            text-align: center;
-           align-items: center;
-        }
-        
-        .navbar li{
-            
-            background-color: rgba(16, 16, 16);
-            /*background-color: rgba(16, 16, 16); colocar background em cada item*/
-            border-radius: 15px;
-            list-style: none;
-            height: 100%;
-            width: 20%;
-           
-        }
-        
-        .navbar li:hover {
-            background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
-        }
-        
-        .navbar a{
-            text-decoration: none;
-            color: #fff;
-            font-size: 12px;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin: auto;
-            font-family: sans-serif;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    }
+    
+    .navbar .menu ul li{
+        display: none;
+        /*background-color: rgba(16, 16, 16); colocar background em cada item*/
+        border-radius: 15px;
+        list-style: none;
+        height: 70;
+        width: 50px;
+       
+    }
+    
+    .navbar li:hover {
+        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+    }
+    
+    .navbar a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
     .content {
         
@@ -617,28 +633,6 @@ flex-direction: column;
         /*margin: 5 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
     }
     
-    .part1 {
-        margin: auto auto auto auto;
-        background-color: rgba(16, 16, 16);
-        border-radius: 15px;
-        
-        /*background-color: rgba(16, 16, 16, 0.5); colocar background na part1*/
-        width: 100%;
-       height: auto;
-       
-    }
-    
-   
-    
-    .part1a{
-      width: 100%;
-        height: auto;
-        /*margin-right: 20px; para diminuir o tamanho e deixar um espaco entre o part1 e o part2*/
-        border-radius: 10px;
-        
-    }
-    
-   
    
     
     .dm{
