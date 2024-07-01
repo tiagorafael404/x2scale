@@ -547,7 +547,7 @@ flex-direction: column;
         display: inherit;
         height: inherit;
         margin: auto;
-        width: 70%;
+        width: 100%;
         padding: 0px;
         flex-direction: inherit;
         justify-content: inherit;
@@ -560,17 +560,15 @@ flex-direction: column;
     background-color: rgb(22, 22, 22);
     width: 100%;
     height: 70px;
-    
+    justify-content: space-between;
        
     }
     
     .navbar .logo{
         height: 90%;
         aspect-ratio: 1/1;
-        margin: auto auto auto 0;
         background-size: cover;
         background-color: #0a3e99;
-        display: flex;
     
     }
     
@@ -578,30 +576,29 @@ flex-direction: column;
 
         height: 100%;
         width: 80%;
-        margin: auto 0 auto 0;
-        align-items: center;
         background-color: #990a5d;
     
     }
     
     .navbar .menu ul{
        
-        display: none;
+        display: flex;
         flex-direction: row;
-        justify-content: center;
-        height: 70;
+        height: 70px;
         width: auto;
-        margin: auto;
+        margin: auto auto auto 0;
+        background-color: #00eeff;
         
     }
     
     .navbar .menu ul li{
-        display: none;
         /*background-color: rgba(16, 16, 16); colocar background em cada item*/
         border-radius: 15px;
         list-style: none;
         height: 70;
-        width: 50px;
+        width: 60px;
+        background-color: #0a3e99;
+        margin: auto 0 auto auto;
        
     }
     
@@ -612,7 +609,7 @@ flex-direction: column;
     .navbar a{
         text-decoration: none;
         color: #fff;
-        font-size: 12px;
+        font-size: 10px;
         text-transform: uppercase;
         margin: auto;
         height: 100%;
