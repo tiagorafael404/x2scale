@@ -163,6 +163,43 @@ body {
                 width: 1280px;
                 margin: auto;
             }
+
+
+            .contain{
+                width: 1000px;
+                aspect-ratio: 50/22;
+
+                background-color: #000000;
+                margin: auto;
+                display: grid;
+                border: 1px solid #000;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+
+            }
+            
+            
+            .primeiro{
+                background-color: #1a5bcd;
+                grid-column: 1;
+                grid-row: 1;
+                border: 1px solid #000; /* Para visualização */
+            }
+
+            .segundo {
+                border-top: none; /* Remover a borda superior para evitar duplicidade */
+                background-color: red;
+                grid-column: 1;
+                grid-row: 2;
+                border: 1px solid #000; /* Para visualização */
+            }
+            
+            .terceiro{
+                background-color: green;
+                grid-column: 2;
+                grid-row: 2 span;
+                border: 1px solid #000; /* Para visualização */
+            }
 }
 
 @media screen and (max-width: 769px) {
