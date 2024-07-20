@@ -441,9 +441,7 @@ margin: auto;
 }
 
 
-.projects .imagem:hover {
-    background-color: rgb(16, 16, 16, 0.5);
-}
+
 
 .projects li .imagem{
     height: 80%;
