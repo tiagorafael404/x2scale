@@ -436,6 +436,10 @@ margin: auto;
     
 }
 
+.projects li:hover {
+    background-color: rgb(16, 16, 16, 0.5);
+}
+
 
 .projects .imagem:hover {
     background-color: rgb(16, 16, 16, 0.5);
@@ -460,7 +464,7 @@ flex-direction: column;
 .projects .info .title2{
     height: 50;
     width: 100%;
-    margin: 0 auto auto auto;
+    margin: 10 auto auto auto;
     display: flex;
 }
 
