@@ -33,6 +33,9 @@ body {
 
 @media screen and (min-width: 1251px) {
 
+    .dm-phone{
+        display: none;
+    }
 
     .mypage {
         display: inherit;
@@ -1038,79 +1041,78 @@ flex-direction: column;
         align-items: center;
     }
     
-    .content {
-        
-        height: auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        
-        margin: 5 auto auto auto;
-        /*margin: 5 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
-    }
     
-   
+   .dm-area{
+    display: none;
+   }
     
-    .dm{
-        display: none;
-        flex-direction: row;
-        height: 100px;
-        aspect-ratio: 4 / 1;
-        
-        /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-        margin: 21 auto 28 10;
-        padding: 0;
-    }
+   .dm{
+    background-color: rgb(16, 16, 16);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: row;
+    height: 100;
+    aspect-ratio: 14/3.4;
+    /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
+    margin: 0 0 20 0;
+}
     
     .dm1{
-        height: 100%;
-        aspect-ratio: 1 / 1;
+        height: 80%;
+        aspect-ratio: 1/1;
+        margin: auto 0 auto 10;
     }
     
     .dm2{
         height: 100%;
-        width: 100%;
-        margin: auto auto auto 5;
+        width: 80%;
         display: flex;
         flex-direction: column;
+        margin: auto auto auto 10;
+        border-radius: 15px;
+        
     }
     
     .pp{
         background-image: url('pp.gif');
         background-size: cover;
         background-position-x: 50%;
-        height: 100;
-        width: 100;
+        height: 100%;
+        width: 100%;
         border-radius: 50%;
     }
     
     .dm-info{
-        margin: auto auto auto 0;
-        height: auto;
+        height: 30%;
         width: auto;
+        
         display: flex;
         flex-direction: row;
-       
+        background-color: #0a3e99;
     }
     
     .dm-msg{
-        height: auto;
+        height: 70%;
         width: auto;
         border-radius: 10px;
-        margin: auto auto auto 0;
     }
     
     .dm-name{
         height: auto;
+        margin: auto 0 2 0;
         width: auto;
+        border-radius: 10px;
         padding: 0;
+        
     }
     
     .dm-date{
         height: auto;
         width: auto;
-        margin-left: 10;
+        margin: auto 0 4 10;
         border-radius: 10px;
+        
     }
     
     .dm-name a{
@@ -1120,31 +1122,31 @@ flex-direction: column;
         text-transform: uppercase;
         font-weight: bold;
        font-family: sans-serif;
-      margin: auto;
+      margin: auto 0 auto 0;
     }
     
     .dm-date a{
         
         color: #b8b8b8;
-        font-size: 11px;
+        font-size: 14px;
         text-transform: uppercase;
         font-weight: bold;
        font-family: sans-serif;
      
-    margin: auto;
+       margin: auto 0 auto 0;
     }
     
     
     .dm-text{
-        height: auto;
-        width: 80%;
-        margin: auto auto auto 5;
+        height: 100%;
+        width: 100%;
+        margin: 10 auto auto 0;
         
     }
     
     .dm-text a{
         color: #fff;
-        font-size: 10px;
+        font-size: 12px;
         text-transform: uppercase;
         font-family: sans-serif;
         line-height: 1.5;
@@ -1160,15 +1162,6 @@ flex-direction: column;
             opacity: 0;
         }
     }
-
-    .content{
-        display: none;
-    }
-
-    .projects{
-        display: none;
-    }
- 
     
 
 
@@ -1179,10 +1172,9 @@ flex-direction: column;
 
 .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     width: 100%;
-    aspect-ratio: 50/22;
-    margin: 20 auto auto auto;
+    margin: 10 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
 }
 
@@ -1190,27 +1182,9 @@ flex-direction: column;
 
 
 
-.dm{
-    background-color: rgb(16, 16, 16);
-    border-radius: 15px;
-
-    display: flex;
-    flex-direction: row;
-    height: 150;
-    aspect-ratio: 14/3.4;
-    /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-    margin: 0 0 20 0;
-}
 
 
 
-.left{
-    display: flex;
-    flex-direction: column;
-    margin: auto 20 auto 0;
-    height: 100%;
-    
-}
 
 .activity{
     display: flex;
@@ -1224,7 +1198,7 @@ flex-direction: column;
 }
 
 .activity .title{
-    height: 100;
+    height: 80;
     width: 90%;
     margin: 0 auto 0 auto;
     border-bottom: 2px solid #f5f5f5;
@@ -1303,7 +1277,7 @@ flex-direction: column;
 .activity .summary{
     width: 90%;
     height: auto;
-    margin: 0 auto auto auto;
+    margin: 0 auto 15 20;
 }
 
 .activity .summary ul{
@@ -1324,102 +1298,7 @@ flex-direction: column;
     line-height: 1.5;
 }
 
-.dm1{
-    height: 80%;
-    aspect-ratio: 1/1;
-    margin: auto auto auto 20;
-}
 
-.dm2{
-    height: 100%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    margin: auto auto auto 20;
-    border-radius: 15px;
-    
-}
-
-.pp{
-    background-image: url('pp.gif');
-    background-size: cover;
-    background-position-x: 50%;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-}
-
-.dm-info{
-    height: 30%;
-    width: auto;
-    
-    display: flex;
-    flex-direction: row;
-   
-}
-
-.dm-msg{
-    height: 70%;
-    width: auto;
-    border-radius: 10px;
-}
-
-.dm-name{
-    height: auto;
-    margin: auto 22 2 0;
-    width: 100;
-    border-radius: 10px;
-    padding: 0;
-}
-
-.dm-date{
-    height: auto;
-    width: auto;
-    margin: auto auto 4 0;
-    border-radius: 10px;
-}
-
-.dm-name a{
-   text-align: center;
-    color: #fff;
-    font-size: 22px;
-    text-transform: uppercase;
-    font-weight: bold;
-   font-family: sans-serif;
-  margin: auto;
-}
-
-.dm-date a{
-    
-    color: #b8b8b8;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
-   font-family: sans-serif;
- 
-margin: auto;
-}
-
-
-.dm-text{
-    height: 100%;
-    width: 100%;
-    margin: 10 auto auto 0;
-    
-}
-
-.dm-text a{
-    color: #fff;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    line-height: 1.5;
-}
-
-.dm-text a::after {
-    content: "|";
-    animation: blink-caret 1s step-end infinite;
-}
 
 
 .projects{
@@ -1427,7 +1306,7 @@ margin: auto;
     background-color: rgb(22, 22, 22);
     width: 100%;
     height: 100%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 15 auto;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -1436,7 +1315,7 @@ margin: auto;
 .projects .title{
     width: 100%;
     height: 50px;
-    margin: 15 auto 30 auto;
+    margin: 15 auto 5 auto;
     align-content: center;
 }
 
@@ -1444,7 +1323,7 @@ margin: auto;
 .projects .title a{
     text-decoration: none;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
    font-family: sans-serif;
@@ -1454,7 +1333,7 @@ margin: auto;
    align-items: center;
    justify-content: center;
    text-shadow: 2px 2px 1px #ff0042;
-    margin: auto auto auto 25;
+    margin: auto auto auto 15;
     letter-spacing: 0.5;
 
 } 
@@ -1475,7 +1354,7 @@ margin: auto;
 
 .projects li{
     background-size: cover;
-    height: 130px;
+    height: 100px;
     width: 100%;
     margin: auto auto 15 0;
     display: flex;
@@ -1486,22 +1365,7 @@ margin: auto;
 
 
 
-.projects .imagem a{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: auto;
-   font-family: sans-serif;
-   height: 100%;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-shadow: 3px 3px 1px black;
-    
-}
+
 
 .projects li:hover {
     background-color: rgb(16, 16, 16, 0.5);
@@ -1514,7 +1378,7 @@ margin: auto;
     height: 80%;
     aspect-ratio: 1/1;
     background-size: cover;
-    margin: 0 0 auto 20;
+    margin: 0 0 auto 5;
 }
 
 .projects .info{
@@ -1536,7 +1400,7 @@ flex-direction: column;
 .projects .info .title2 a{
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
    font-family: sans-serif;
@@ -1545,7 +1409,7 @@ flex-direction: column;
    justify-content: left;
    align-items: center;;
    text-shadow: 2px 2px 1px #ff0042;
-    margin: 5 auto auto 20;
+    margin: 5 auto auto 10;
     letter-spacing: 0.5;
 }
 
@@ -1558,7 +1422,7 @@ flex-direction: column;
 .projects .text a{
     text-decoration: none;
     color: #ffffff;
-    font-size: 12px;
+    font-size: 10px;
     text-transform: uppercase;
     font-weight: bold;
     margin: auto;
@@ -1569,7 +1433,7 @@ flex-direction: column;
    justify-content: left;
    letter-spacing: 0.5;
    line-height: 1.5;
-   margin: auto auto auto 20;
+   margin: auto auto auto 10;
 }
 
 }
