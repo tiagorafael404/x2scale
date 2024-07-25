@@ -1052,10 +1052,10 @@ flex-direction: column;
 
     display: flex;
     flex-direction: row;
-    height: 100;
-    aspect-ratio: 14/3.4;
+    height: 120;
+    width: 100%;
     /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-    margin: 0 0 20 0;
+    margin: 0 0 10 0;
 }
     
     .dm1{
@@ -1089,12 +1089,11 @@ flex-direction: column;
         
         display: flex;
         flex-direction: row;
-        background-color: #0a3e99;
     }
     
     .dm-msg{
         height: 70%;
-        width: auto;
+        width: 98%;
         border-radius: 10px;
     }
     
