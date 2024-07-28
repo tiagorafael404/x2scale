@@ -241,11 +241,14 @@ height: 100px;
     width: 90%;
     height: auto;
     margin: 0 auto auto auto;
+
 }
 
 .activity .summary ul{
     display: flex;
     flex-direction: column;
+    list-style: none;
+
 }
 
 .activity .summary li{
