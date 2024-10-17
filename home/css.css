@@ -25,7 +25,9 @@ body {
 }
 
 .navbar a{
-        font-family: "Fjalla One", sans-serif;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
 
 }
 
@@ -47,12 +49,23 @@ body {
         justify-content: inherit;
     }
 
+    .line{
+        height: 15px;
+        width: 100%;
+        background-color: ff0042;
+    }
+
 
 .introducion{
     display: flex;
     flex-direction: column;
     background-image: url('../navbarsky.png');
     background-size: contain;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    background-color: aqua;
+    margin: 0 0 0 0;
 }
 
 .navbar {
@@ -61,11 +74,10 @@ body {
 
 height: 100px;
 /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
+position: relative;
+
 }
 
-.navbar2{
-    height: 150px;
-}
 
 .navbar .logotitle{
     display: flex;
@@ -78,7 +90,6 @@ height: 100px;
 .navbar .domain a{
       text-decoration: none;
     color: #fff;
-    font-size: 18px;
     text-transform: uppercase;
     margin: auto;
     height: 100%;
@@ -111,6 +122,8 @@ height: 100px;
     justify-content: center;
     height: 100%;
     width: auto;
+    text-transform: none;
+
     
 }
 
@@ -121,6 +134,8 @@ height: 100px;
     list-style: none;
     height: 100%;
     width: 130px;
+    text-transform: none;
+
    
 }
 
@@ -131,23 +146,27 @@ height: 100px;
 .navbar a{
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
-    text-transform: uppercase;
+    font-size: 22px;
     margin: auto;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: none;
+
 }
 
 .content {
+    background-color: aquamarine;
     display: flex;
     flex-direction: row;
     width: 100%;
     aspect-ratio: 50/22;
     margin: 20 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
+
 }
 
 
@@ -424,7 +443,7 @@ margin: auto;
     text-decoration: none;
     color: #ffffff;
     font-size: 20px;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: bold;
    font-family: sans-serif;
    height: 100%;
@@ -472,7 +491,7 @@ margin: auto;
     text-decoration: none;
     color: #ffffff;
     font-size: 20px;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: bold;
     margin: auto;
    font-family: sans-serif;
@@ -522,7 +541,7 @@ flex-direction: column;
     text-decoration: none;
     color: #ffffff;
     font-size: 18px;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: bold;
    font-family: sans-serif;
    height: auto;
@@ -543,8 +562,8 @@ flex-direction: column;
 .projects .text a{
     text-decoration: none;
     color: #ffffff;
-    font-size: 12px;
-    text-transform: uppercase;
+    font-size: 14px;
+    text-transform: none;
     font-weight: bold;
     margin: auto;
    font-family: sans-serif;
@@ -625,7 +644,6 @@ flex-direction: column;
         text-decoration: none;
         color: #fff;
         font-size: 16px;
-        text-transform: uppercase;
         margin: auto;
         height: 100%;
         width: 100%;
@@ -903,7 +921,7 @@ flex-direction: column;
         text-decoration: none;
         color: #ffffff;
         font-size: 18px;
-        text-transform: uppercase;
+        text-transform: none;
         font-weight: bold;
        font-family: sans-serif;
        height: 100%;
@@ -970,7 +988,7 @@ flex-direction: column;
         text-decoration: none;
         color: #ffffff;
         font-size: 16px;
-        text-transform: uppercase;
+        text-transform: none;
         font-weight: bold;
        font-family: sans-serif;
        height: auto;
@@ -991,8 +1009,8 @@ flex-direction: column;
     .projects .text a{
         text-decoration: none;
         color: #ffffff;
-        font-size: 10px;
-        text-transform: uppercase;
+        font-size: 11px;
+        text-transform: none;
         font-weight: bold;
         margin: auto;
        font-family: sans-serif;
