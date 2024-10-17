@@ -64,7 +64,6 @@ body {
     height: 150px;
     width: 100%;
     position: absolute;
-    background-color: aqua;
     margin: 0 0 0 0;
 }
 
@@ -161,7 +160,6 @@ position: relative;
     border: 3px solid #fff;}
 
 .content {
-    background-color: aquamarine;
     display: flex;
     flex-direction: row;
     width: 100%;
