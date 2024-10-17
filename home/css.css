@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to right, #4a2655 0%, #0a3e99 100%);
+    background-color: #151515;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -48,15 +48,44 @@ body {
     }
 
 
+.introducion{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../navbarsky.png');
+    background-size: contain;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
-background-color: rgb(22, 22, 22);
 
 height: 100px;
-/*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
+/*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
+}
 
-   
+.navbar2{
+    height: 150px;
+}
+
+.navbar .logotitle{
+    display: flex;
+    flex-direction: row;
+    margin: auto auto auto 0;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar .domain a{
+      text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
 .navbar .logo{
@@ -64,7 +93,6 @@ height: 100px;
     aspect-ratio: 1/1;
     margin: auto auto auto 0;
     background-size: cover;
-
 }
 
 .navbar .menu{
@@ -74,7 +102,6 @@ height: 100px;
     flex-direction: row;
     margin: auto 0 auto auto;
     align-items: center;
-
 }
 
 .navbar .menu ul{
@@ -152,7 +179,7 @@ height: 100px;
 .activity{
     display: flex;
     flex-direction: column;
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(40, 40, 40);
     width: 100%;
     height: 100%;
     border-radius: 15px;
@@ -374,7 +401,7 @@ margin: auto;
 
 .projects{
 
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(40, 40, 40);
     width: 100%;
     height: 100%;
     margin: 0 auto 0 auto;
@@ -548,7 +575,6 @@ flex-direction: column;
     .navbar {
         display: flex;
         flex-direction: row;
-    background-color: rgb(22, 22, 22);
     
     height: 80px;
     /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
@@ -646,7 +672,7 @@ flex-direction: column;
     .activity{
         display: flex;
         flex-direction: column;
-        background-color: rgb(22, 22, 22);
+        background-color: rgb(40, 40, 40);
         width: 100%;
         height: 100%;
         border-radius: 15px;
@@ -856,7 +882,7 @@ flex-direction: column;
     
     .projects{
     
-        background-color: rgb(22, 22, 22);
+        background-color: rgb(40, 40, 40);
         width: 100%;
         height: 100%;
         margin: 0 auto 0 auto;
@@ -1000,16 +1026,49 @@ flex-direction: column;
         flex-direction: inherit;
         justify-content: inherit;
     }
+
+    .introducion{
+        display: flex;
+        flex-direction: column;
+        background-image: url('../navbarsky.png');
+        background-size: contain;
+        margin: 0 0 0 0;
+    }
     
     
     .navbar {
         display: flex;
         flex-direction: row;
-    background-color: rgb(22, 22, 22);
     width: 100%;
     height: 50px;
     justify-content: space-between;
-       
+    margin: 0 0 0 0;
+    
+    }
+
+    .navbar2{
+        height: 50px;
+    }
+    
+    .navbar .logotitle{
+        display: flex;
+        flex-direction: row;
+        margin: auto auto auto 0;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .navbar .domain a{
+          text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
     }
     
     .navbar .logo{
@@ -1075,9 +1134,9 @@ flex-direction: column;
     display: flex;
     flex-direction: row;
     height: 120;
-    width: 100%;
+    width: 95%;
     /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-    margin: 0 0 10 0;
+    margin: 0 auto 0 auto;
 }
     
     .dm1{
