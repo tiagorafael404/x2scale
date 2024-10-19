@@ -231,6 +231,40 @@ position: relative;
     color: grey;
 }
 
+.fw{
+    width: 100%;
+    height: 500px;
+    background-color: #292f5e;
+    display: flex;
+    flex-direction: column;
+}
+
+.fw .title{
+    width: 100%;
+    height: auto;
+    align-content: center;
+    text-align: center;
+    margin: 20 auto 20 auto;
+}
+
+.fw .title a{
+    color: #fff;
+    font-size: 70;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.fw .projects{
+    width: 100%;
+    height: 200;
+    background-color: aqua;
+}
+
+.fw .projects a{
+
+}
+
 @keyframes blink-caret {
     50% {
         opacity: 0;
