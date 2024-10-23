@@ -187,11 +187,14 @@ position: relative;
 }
 
 .part2{
-    height: 100%;
+    height: 250;
     width: 100%;
     align-content: center;
     display: flex;
-    
+    margin: auto;
+    border-radius: 30px 30px 30px 30px;
+    border: 2px solid #ff0042;
+
 }
 
 .part2 ul{
@@ -256,6 +259,7 @@ position: relative;
     font-size: 65;
     font-weight: bold;
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-shadow: 3px 3px 1px #000000;
 
 }
 
@@ -343,6 +347,8 @@ position: relative;
     margin: 10 auto 0 auto;
     font-weight: 800;
     height: auto;
+    text-shadow: 2px 2px 1px #000000;
+
 }
 
 .info li a{
