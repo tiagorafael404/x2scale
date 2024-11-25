@@ -57,7 +57,7 @@ body {
 
 
 .introducion{
-    display: flex;
+    display: none;
     flex-direction: column;
     background-image: url('../navbarsky.png');
     background-size: contain;
@@ -65,6 +65,12 @@ body {
     width: 100%;
     position: absolute;
     margin: 0 0 0 0;
+}
+
+.screen{
+    background: linear-gradient(180deg, rgb(20, 31, 91) 0%, rgba(15,20,41,1) 21%, rgba(10,10,10,1) 39%, rgba(17,17,17,1) 75%, rgba(24,24,24,1) 100%);
+
+
 }
 
 .navbar {
@@ -167,7 +173,9 @@ position: relative;
     margin: 20 auto auto auto;
     /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
     position: relative;
+    
 }
+
 
 
 .part1{
