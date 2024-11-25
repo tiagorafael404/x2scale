@@ -22,6 +22,7 @@ body {
 *{
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .navbar a{
@@ -252,6 +253,7 @@ position: relative;
     display: flex;
     flex-direction: column;
     
+    
 }
 
 .fw .title{
@@ -262,13 +264,19 @@ position: relative;
     margin: 20 auto 20 auto;
 }
 
+.fw div a{
+    text-decoration: none;
+    align-items: center;
+    align-content: center;
+}
+
 .fw .title a{
     color: #fff;
     font-size: 65;
     font-weight: bold;
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     text-shadow: 3px 3px 1px #000000;
-
+    
 }
 
 .fw .projects{
@@ -279,6 +287,7 @@ position: relative;
     justify-content: space-between;
     width: 90%;
     margin: auto auto 60 auto;
+    background-color: #000000;
 }
 
 .first{
@@ -346,6 +355,9 @@ position: relative;
     height: 100%;
     width: 100%;
     display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
 }
 
 .info li h1{
@@ -359,12 +371,13 @@ position: relative;
 
 }
 
-.info li a{
+.info li h2{
     font-size: 30;
     justify-content: center;
-
-    display: flex;
-    margin:  0 auto auto auto;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  margin: 0 auto auto auto;
 
 }
 
