@@ -36,6 +36,10 @@ body {
 
 @media screen and (min-width: 1251px) {
 
+    .menu2{
+        display: none;
+    }
+
     .dm-phone{
         display: none;
     }
@@ -398,10 +402,31 @@ position: relative;
         display: flex;
         flex-direction: row;
     
-    height: 80px;
-    /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/
+    height: 100px;
+    /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
+    position: relative;
     
-       
+    }
+    
+    
+    .navbar .logotitle{
+        display: flex;
+        flex-direction: row;
+        margin: auto auto auto 0;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .navbar .domain a{
+          text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
     }
     
     .navbar .logo{
@@ -409,7 +434,6 @@ position: relative;
         aspect-ratio: 1/1;
         margin: auto auto auto 0;
         background-size: cover;
-    
     }
     
     .navbar .menu{
@@ -419,7 +443,6 @@ position: relative;
         flex-direction: row;
         margin: auto 0 auto auto;
         align-items: center;
-    
     }
     
     .navbar .menu ul{
@@ -429,6 +452,8 @@ position: relative;
         justify-content: center;
         height: 100%;
         width: auto;
+        text-transform: none;
+    
         
     }
     
@@ -437,22 +462,29 @@ position: relative;
         /*background-color: rgba(16, 16, 16); colocar background em cada item*/
         border-radius: 15px;
         list-style: none;
-        height: 100%;
-        width: 120px;
+        height: 70%;
+        width: 130px;
+        text-transform: none;
+        margin: auto;
        
     }
     
+    .navbar li:hover {
+        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+    }
     
     .navbar a{
         text-decoration: none;
         color: #fff;
-        font-size: 16px;
+        font-size: 18px;
         margin: auto;
         height: 100%;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        text-transform: none;
+    
     }
 
     .content {
@@ -465,7 +497,50 @@ position: relative;
     }
     
     
+    .part1{
+        height: 200px;
+        aspect-ratio: 1/1;
+        background-image: url('../myphoto.png');
+        background-size: cover;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        margin: auto 70 auto 70;
+        
+    }
     
+    .part1:hover{
+        border: 4px solid #ff0042;
+    
+    }
+    
+    .part2{
+        height: 250;
+        width: 100%;
+        align-content: center;
+        display: flex;
+        margin: auto;
+        border-radius: 30px 30px 30px 30px;
+        border: 2px solid #ff0042;
+    
+    }
+    
+    .part2 ul{
+        display: flex;
+        flex-direction: column;
+        text-transform: none;
+        text-decoration: none;
+        list-style: none;
+        margin: auto 50 auto 50;
+        width: auto;
+    }
+    
+    
+    .part2 a{
+        color: #fff;
+        font-size: 20;
+        font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+    }
     
     
 
@@ -500,20 +575,18 @@ position: relative;
         margin: 0 0 0 0;
     }
     
+ 
     
     .navbar {
         display: flex;
         flex-direction: row;
-    width: 100%;
-    height: 50px;
-    justify-content: space-between;
-    margin: 0 0 0 0;
+    
+    height: 100px;
+    /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
+    position: relative;
     
     }
-
-    .navbar2{
-        height: 50px;
-    }
+    
     
     .navbar .logotitle{
         display: flex;
@@ -526,7 +599,6 @@ position: relative;
     .navbar .domain a{
           text-decoration: none;
         color: #fff;
-        font-size: 18px;
         text-transform: uppercase;
         margin: auto;
         height: 100%;
@@ -539,36 +611,18 @@ position: relative;
     .navbar .logo{
         height: 90%;
         aspect-ratio: 1/1;
-        background-size: cover;
         margin: auto auto auto 0;
- 
+        background-size: cover;
     }
     
     .navbar .menu{
 
-        height: 100%;
-        width: auto;
-    
+        display: none;
+
     }
     
-    .navbar .menu ul{
-       
-        display: flex;
-        flex-direction: row;
-        height: 50px;
-        width: auto;
-        margin: auto auto auto auto;
-        justify-content: right;
-        
-    }
     
-    .navbar .menu ul li{
-        /*background-color: rgba(16, 16, 16); colocar background em cada item*/
-        border-radius: 15px;
-        list-style: none;
-        height: 50;
-        width: 60px;
-    }
+
     
     .navbar li:hover {
         background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
@@ -577,421 +631,245 @@ position: relative;
     .navbar a{
         text-decoration: none;
         color: #fff;
-        font-size: 10px;
-        text-transform: uppercase;
+        font-size: 18px;
         margin: auto;
         height: 100%;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        text-transform: none;
+    
     }
-    
-    
-   .dm-area{
-    display: none;
-   }
-    
-   .dm{
-    background-color: rgb(16, 16, 16);
-    border-radius: 15px;
 
-    display: flex;
-    flex-direction: row;
-    height: 120;
-    width: 95%;
-    /*background-color: rgba(16, 16, 16, 0.5); colocar background no dm*/
-    margin: 0 auto 0 auto;
-}
-    
-    .dm1{
-        height: 80%;
-        aspect-ratio: 1/1;
-        margin: auto 0 auto 10;
+    .menu2{
+        width: 150px;
+        height: 100%;
+        display: flex;
     }
     
-    .dm2{
+    .menu2 i{
+        display: flex;
+        font-size: 30;
+        margin: auto 20% auto auto;
         height: 100%;
-        width: 80%;
+        align-content: center;
+        width: auto;
+        align-items: center;
+
+
+    }
+
+    .content{
         display: flex;
         flex-direction: column;
-        margin: auto auto auto 10;
-        border-radius: 15px;
-        
     }
-    
-    .pp{
-        background-image: url('pp.gif');
+
+    .part1{
+        height: 200px;
+        aspect-ratio: 1/1;
+        background-image: url('../myphoto.png');
         background-size: cover;
-        background-position-x: 50%;
-        height: 100%;
-        width: 100%;
         border-radius: 50%;
+        border: 4px solid #fff;
+        margin: 15 auto 15 auto;
+        
     }
     
-    .dm-info{
-        height: 30%;
-        width: auto;
-        
+    .part1:hover{
+        border: 4px solid #ff0042;
+    
+    }
+    
+    .part2{
+        height: auto;
+        width: 90%;
+        align-content: center;
         display: flex;
-        flex-direction: row;
+        margin: auto;
+        border-radius: 30px 30px 30px 30px;
+        border: 2px solid #ff0042;
+    
     }
     
-    .dm-msg{
-        height: 70%;
-        width: 98%;
-        border-radius: 10px;
-    }
-    
-    .dm-name{
-        height: auto;
-        margin: auto 0 2 0;
+    .part2 ul{
+        display: flex;
+        flex-direction: column;
+        text-transform: none;
+        text-decoration: none;
+        list-style: none;
+        margin: 20 auto 20 10;
         width: auto;
-        border-radius: 10px;
-        padding: 0;
-        
     }
     
-    .dm-date{
-        height: auto;
-        width: auto;
-        margin: auto 0 4 10;
-        border-radius: 10px;
-        
-    }
     
-    .dm-name a{
-       text-align: center;
+    .part2 a{
         color: #fff;
-        font-size: 16px;
-        text-transform: uppercase;
-        font-weight: bold;
-       font-family: sans-serif;
-      margin: auto 0 auto 0;
+        font-size: 18;
+        font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
     }
     
-    .dm-date a{
-        
-        color: #b8b8b8;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: bold;
-       font-family: sans-serif;
-     
-       margin: auto 0 auto 0;
+    .red{
+        color: red;
     }
     
-    
-    .dm-text{
-        height: 100%;
-        width: 100%;
-        margin: 10 auto auto 0;
-        
+    .orange{
+        color: rgb(195, 139, 83);
     }
     
-    .dm-text a{
-        color: #fff;
-        font-size: 12px;
-        text-transform: uppercase;
-        font-family: sans-serif;
-        line-height: 1.5;
+    .blue{
+        color: rgb(92, 134, 224);
     }
     
-    .dm-text a::after {
-        content: "|";
-        animation: blink-caret 1s step-end infinite;
+    .bblue{
+        color:rgb(77, 222, 198);
     }
     
-    @keyframes blink-caret {
-        50% {
-            opacity: 0;
-        }
+    .grey{
+        color: grey;
     }
-    
 
 
-
-
-
-
-
-.content {
-    display: flex;
-    flex-direction: column-reverse;
+.fw{
     width: 100%;
-    margin: 10 auto auto auto;
-    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
-}
-
-
-
-
-
-
-
-
-
-.activity{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(22, 22, 22);
-    width: 100%;
-    height: 100%;
-    margin: auto auto 0 auto;
-
-}
-
-.activity .title{
-    height: 80;
-    width: 90%;
-    margin: 0 auto 0 auto;
-    border-bottom: 2px solid #f5f5f5;
-    display: flex;
-    flex-direction: column;
-}
-
-.activity .p0{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: row;
-}
-
-.activity .p1{
-    width: auto;
-    height: 100%;
-    align-content:end;
-}
-
-.activity .p1 a{
-    color: #ff0042;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    line-height: 1.5;
-    font-weight: bold;
-}
-
-.activity .p2{
-    width: auto;
-    height: 100%;
-    align-content: end;
-    margin: auto auto auto 10;
-}
-
-.activity .p2 a{
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    line-height: 1.5;
-}
-
-.activity .p3{
-    width: 100%;
-    height: 100%;
-    align-content: end;
-    margin: auto auto auto 10;
-
-}
-
-.activity .p3 a{
-    color: #fff;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    line-height: 1.5;
-}
-
-.activity .p4{
-    width: 100%;
-    height: 50%;
-    align-content: center;
-
-}
-
-.activity .p4 a{
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    line-height: 1.5;
-}
-
-.activity .summary{
-    width: 90%;
     height: auto;
-    margin: 0 auto 15 20;
-}
-
-.activity .summary ul{
+    background-color: #292f5e;
     display: flex;
     flex-direction: column;
-    list-style: none;
-    padding-left: 1em;
-
+    margin: 20 auto auto auto;
+    
+    
 }
 
-.activity .summary li{
-   
-}
-
-.activity .summary li a{
-    color: #fff;
-    justify-content: left;
-    letter-spacing: 0.5;
-    line-height: 1.5;
-}
-
-.summary li:before {
-    content: "-";
-    color: white;
-    position: absolute;
-    margin-left: -0.8em; 
-
-  }
-
-
-.projects{
-
-    background-color: rgb(22, 22, 22);
+.fw .title{
     width: 100%;
-    height: 100%;
-    margin: 0 auto 15 auto;
-    display: flex;
-    flex-direction: column;
+    aspect-ratio: 20/1;
+    align-content: center;
+    text-align: center;
+    margin: 15 auto 15 auto;
 }
 
-.projects .title{
-    width: 100%;
-    height: 50px;
-    margin: 15 auto 5 auto;
+.fw div a{
+    text-decoration: none;
+    align-items: center;
     align-content: center;
 }
 
-
-.projects .title a{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    text-transform: uppercase;
+.fw .title a{
+    color: #fff;
+    font-size: 30;
     font-weight: bold;
-   font-family: sans-serif;
-   height: 100%;
-   width: 100%;
-   justify-content: left;
-   align-items: center;
-   justify-content: center;
-   text-shadow: 2px 2px 1px #ff0042;
-    margin: auto auto auto 15;
-    letter-spacing: 0.5;
-
-} 
-
-li .fodass{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-shadow: 3px 3px 1px #000000;
+    
 }
 
-.projects ul{
+.fw .projects{
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0 auto auto 0;
 
+    align-items: center;
+    width: 90%;
+    margin: auto auto auto auto;
 }
 
-
-
-.projects li{
-    background-size: cover;
-    height: 100px;
+.first{
     width: 100%;
-    margin: auto auto 15 0;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-
+    height: auto;
+    margin: 0 auto 20 auto;
 }
 
-
-
-
-
-
-
-.projects li:hover {
-    background-color: rgb(16, 16, 16, 0.5);
-}
-
-
-
-
-.projects li .imagem{
-    height: 80%;
-    aspect-ratio: 1/1;
-    background-size: cover;
-    margin: 0 0 auto 5;
-}
-
-.projects .info{
-height: 100%;
-width: 70%;
-margin: auto auto auto 0;
-display: flex;
-flex-direction: column;
-
-}
-
-.projects .info .title2{
-    height: 50;
+.second{
     width: 100%;
-    margin: 10 auto auto auto;
-    display: flex;
+    height: auto;
+    margin: 0 auto 20 auto;
+
 }
 
-.projects .info .title2 a{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: bold;
-   font-family: sans-serif;
-   height: auto;
-   width: 100%;
-   justify-content: left;
-   align-items: center;;
-   text-shadow: 2px 2px 1px #ff0042;
-    margin: 5 auto auto 10;
-    letter-spacing: 0.5;
-}
-
-.projects .info .text{
-    height: 100%;
+.third{
     width: 100%;
+    height: auto;
+    margin: 0 auto 20 auto;
+
+}
+
+.screenshot{
     margin: 0 auto auto auto;
+    background-color: aqua;
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-radius: 30px 30px 0 0;
 }
 
-.projects .text a{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
+.info{
+    background-color: #292f5e;
+    width: 100%;
+    height: 80;
+    border-radius: 0 0 30px 30px;
+
+}
+
+.first .info{
+    background-color: rgb(105, 174, 119);
+}
+
+.second .info{
+    background-color: rgb(153, 144, 192);
+}
+
+.third .info{
+    background-color: rgb(105, 185, 214);
+}
+
+.first .screenshot{
+    background-image: url('project1.png');
+    background-size: contain;
+}
+
+.info ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    height: 100%;
+    width: 100%;
     margin: auto;
-   font-family: sans-serif;
-   height: 100%;
-   width: 100%;
-   display: flex;
-   justify-content: left;
-   letter-spacing: 0.5;
-   line-height: 1.5;
-   margin: auto auto auto 10;
+
 }
 
+.info li{
+    color: #292f5e;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    height: 100%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.info li h1{
+    font-size: 30;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    font-weight: 800;
+    height: auto;
+    text-shadow: 2px 2px 1px #000000;
+
+}
+
+.info li h2{
+    font-size: 20;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  margin: 0 auto auto auto;
+
+}
+    
 }
