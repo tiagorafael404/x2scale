@@ -40,6 +40,10 @@ body {
         display: none;
     }
 
+    .part2 .phone{
+        display: none;
+    }
+
     .dm-phone{
         display: none;
     }
@@ -871,5 +875,12 @@ position: relative;
   margin: 0 auto auto auto;
 
 }
+
+.part2 .pc{
+    display: none;
+}
     
+.part2 .phone{
+}
+
 }
