@@ -581,7 +581,7 @@ position: relative;
         display: flex;
         flex-direction: row;
     
-    height: 100px;
+    height: 80px;
     /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
     position: relative;
     
@@ -591,7 +591,7 @@ position: relative;
     .navbar .logotitle{
         display: flex;
         flex-direction: row;
-        margin: auto auto auto 0;
+        margin: auto auto auto 5%;
         align-items: center;
         height: 100%;
     }
