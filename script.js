@@ -17,3 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+document.getElementById("more").addEventListener("click", function() {
+    var divmenu = document.getElementById("menu");
+    
+    if (divmenu.style.display === "block") {
+      divmenu.style.display = "none";  // Mostrar a div
+    } else {
+      divmenu.style.display = "block";   // Esconder a div
+    }
+  });
