@@ -36,6 +36,11 @@ body {
 
 @media screen and (min-width: 1251px) {
 
+    .menu3{
+        display: none;
+
+       }
+
     .menu2{
         display: none;
     }
