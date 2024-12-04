@@ -869,6 +869,8 @@ margin: auto;
         background-color: rgb(16, 16, 16);
         position: absolute;
         border-radius: 0 0 50px 50px;
+        border-bottom: solid 2px #fff;
+
        }
 
        .menu3 ul li a{
