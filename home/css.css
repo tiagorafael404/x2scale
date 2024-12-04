@@ -190,7 +190,157 @@ position: relative;
     
 }
 
+.contact{
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    margin: auto auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: none;
 
+}
+
+.contact-window{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(17, 16, 31);
+    position: absolute;
+    margin: auto auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    border: solid 5px #fff;
+    border-radius: 25px 25px 25px 25px;
+
+}
+
+.contact-header{
+    height: 25%;
+    width: 100%;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+
+}
+
+.contact-form{
+    height: 75%;
+    width: 80%;
+    margin: auto auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto auto auto;
+}
+
+.contact-form label{
+    color: #fff;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: bold;
+
+}
+
+.contact-form input{
+    height: 50px;
+    width: 750px;
+    font-weight: bold;
+    margin: auto auto 20 auto;
+}
+
+.contact-form button{
+    all: unset;
+    width: 250px;
+    height: 50px;
+    background-color: #ff0042;
+    color: #fff;
+    text-align: center;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+
+
+.contact .close{
+    width: 100px;
+    height: 100px;
+    margin: auto 0 auto auto;
+    text-align: center;
+
+}
+
+.contact .space{
+    width: 100px;
+    height: 100px;
+    margin: auto auto auto 0;
+
+}
+
+.contact .title{
+    width: 250px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+
+.contact .title1{
+    width: 250px;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+
+}
+
+.contact .title2{
+    width: 250px;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+
+}
+
+.contact a{
+    color: #fff;
+    font-size: 30;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.contact .title i{
+    color: #fff;
+    font-size: 32px;
+}
+
+.contact .close i{
+    color: #fff;
+    font-size: 32px;
+    border: solid 5px;
+    border-radius: 100%;
+    border-style: solid;
+    padding: 5px;
+    cursor: pointer;
+}
 
 .part1{
     height: 200px;

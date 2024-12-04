@@ -47,3 +47,22 @@ document.getElementById("more").addEventListener("click", function() {
 });
 
 
+document.getElementById("contactme").addEventListener("click", function() {
+    var divmenu = document.getElementById("contact");
+    
+    if (divmenu.style.display === "block") {
+      divmenu.style.display = "none";  // Mostrar a div
+    } else {
+      divmenu.style.display = "block";   // Esconder a div
+    }
+  });
+
+  document.getElementById("close").addEventListener("click", function() {
+    var divmenu = document.getElementById("contact");
+    
+    if (divmenu.style.display === "block") {
+      divmenu.style.display = "none";  // Mostrar a div
+    } else {
+      divmenu.style.display = "block";   // Esconder a div
+    }
+  });
