@@ -272,7 +272,22 @@ margin: auto;
     width: 750px;
     font-weight: bold;
     margin: auto auto 20 auto;
+    padding: 10px;
 }
+
+.contact-form textarea{
+    font-size: 16px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    height: 100px;
+    width: 750px;
+
+    padding: 10px;
+    margin: auto auto 15 auto;
+    resize: none; /* Impede o redimensionamento */
+    box-sizing: border-box;
+
+}
+
 
 .contact-form button{
     all: unset;
@@ -286,14 +301,13 @@ margin: auto;
     font-weight: bold;
     font-size: 30px;
     cursor: pointer;
-
 }
 
 
 .contact .close{
     width: 100px;
     height: 100px;
-    margin: auto 0 auto auto;
+    margin: auto 20 auto auto;
     text-align: center;
 
 }
@@ -301,7 +315,7 @@ margin: auto;
 .contact .space{
     width: 100px;
     height: 100px;
-    margin: auto auto auto 0;
+    margin: auto auto auto 20;
 
 }
 
@@ -350,12 +364,18 @@ margin: auto;
 
 .contact .close i{
     color: #fff;
+    font-weight: normal;
     font-size: 32px;
     border: solid 5px;
     border-radius: 100%;
     border-style: solid;
     padding: 5px;
     cursor: pointer;
+    height: 45px;
+    width: 45px;
+    display: flex; /* Usado para centralizar o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
 }
 
 
