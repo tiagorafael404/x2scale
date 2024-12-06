@@ -1237,6 +1237,7 @@ margin: auto;
     font-weight: bold;
     margin: auto auto 20 auto;
     font-size: 16px;
+    padding: 10px;
 }
 
 .contact-form textarea{
@@ -1244,6 +1245,11 @@ margin: auto;
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     height: 70px;
     padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    margin: auto auto 15 auto;
+    height: 70px;
+    width: 100%;
 }
 
 .contact-form button{
