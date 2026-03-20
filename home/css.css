@@ -768,14 +768,38 @@ margin: auto;
     
     }
 
-    .content {
-        display: flex;
-        flex-direction: row;
-        width: 70%;
-        margin: 0 auto auto auto;
-        /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
-    }
+    .wave{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20preserveAspectRatio%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M%200%20200%20L%200%20100%20Q%200%20100%2060%20102.93892626146237%20Q%20120%20105.87785252292473%20180%20107.69420884293814%20Q%20240%20109.51056516295154%20300%20109.51056516295154%20Q%20360%20109.51056516295154%20420%20107.69420884293814%20Q%20480%20105.87785252292473%20540%20102.93892626146237%20Q%20600%20100%20660%2097.06107373853763%20Q%20720%2094.12214747707527%20780%2092.30579115706186%20Q%20840%2090.48943483704846%20900%2090.48943483704846%20Q%20960%2090.48943483704846%201020%2092.30579115706186%20Q%201080%2094.12214747707526%201140%2097.06107373853763%20L%201200%20100%20L%201200%20200%20Z%22%20fill%3D%22%23292f5e%22%20%2F%3E%0A%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+    top: 200;
+}
+
+
+
+.content {
+    display: flex;
+   
+
+    margin: 10 auto 90 auto;
+    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
+}
+
+.display {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 70%;
+    height: auto;
+    margin: 0 auto auto auto;
+    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
     
+}
     .screen{
         width: 100%;
     }
@@ -789,55 +813,157 @@ margin: auto;
         margin: 80 auto auto auto
     }
     
-    .part1{
-        height: 200px;
-        aspect-ratio: 1/1;
-        background-image: url('../myphoto.png');
-        background-size: cover;
-        border-radius: 50%;
-        border: 4px solid #fff;
-        margin: auto 70 auto 70;
-        
-    }
+
+.part1{
+    height: 220px;
+    aspect-ratio: 1/1;
+    background-image: url('../myphoto.png');
+    background-size: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin: auto 100 auto 150;
+    position: relative;
     
-    .part1:hover{
-        border: 4px solid #ff0042;
+}
+
+.part1:hover{
+    border: 4px solid #ff0042;
+
+
+}
+
+.part2{
+    height: auto;
+    width: 100%;
+    align-content: center;
+    display: flex;
+    margin: 35 auto auto auto;
+    border-radius: 30px 30px 30px 30px;
+    border: 2px solid #ff0042;
+     
+    position: relative;
+
+
+}
+
+.part2 ul{
+    display: flex;
+    flex-direction: column;
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+    margin: 30 20 0 45;
+    height: 100%;
+
+}
+
+
+
+.part2 .title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+
+}
+
+.part2 .title li{
     
-    }
-    
-    .part2{
-        height: 250;
-        width: 100%;
-        align-content: center;
-        display: flex;
-        margin: auto;
-        border-radius: 30px 30px 30px 30px;
-        border: 2px solid #ff0042;
-    
-    }
-    
-    .part2 ul{
-        display: flex;
-        flex-direction: column;
-        text-transform: none;
-        text-decoration: none;
-        list-style: none;
-        margin: auto 50 auto 50;
-        width: auto;
-    }
-    
-    
-    .part2 a{
-        color: #fff;
-        font-size: 20;
-        font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    
-    }
-    
+    margin: 0 auto 0 0;
+
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.part2 .subtitle{
+    width: 100%;
+    height: auto;
+    margin: 10 auto 40 auto;
     
 
+
+}
+
+.part2 .subtitle li{
+    
+    margin: 0 auto 0 0;
+
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+
+.part2 .title a{
+    color: #fff;
+    font-size:60px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+
+.part2 .subtitle a{
+    color: #fff;
+    font-size:30px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}   
+    
   
 }
+
+@media screen and (max-width: 1400px) {
+
+.part2{
+    height: auto;
+    width: 100%;
+    align-content: center;
+    display: flex;
+    margin: 35 auto auto auto;
+    border-radius: 30px 30px 30px 30px;
+    border: 2px solid #ff0042;
+     
+    position: relative;
+}
+
+.content {
+    display: flex;
+   
+
+    margin: 10 auto 90 auto;
+    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
+}
+
+.display {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80%;
+    height: auto;
+    margin: 0 auto auto auto;
+    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
+    
+}
+   
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+height: 100px;
+/*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
+position: relative; 
+margin: auto;
+
+}
+
+}
+
 }
 
 
