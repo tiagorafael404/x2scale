@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background-color: #f6f6f6;
+    background-color: #e8e8e8;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -87,6 +87,7 @@ body {
         justify-content: space-between;
         text-decoration: none;
         text-transform: none;
+        background-color: #494a7e;
 
     }
 
@@ -130,7 +131,7 @@ body {
 
     .navbar a {
         text-decoration: none;
-        color: black;
+        color: rgb(255, 255, 255);
         font-size: 20px;
         text-transform: none;
         margin: auto;
@@ -180,7 +181,7 @@ body {
 
     .more a {
         text-decoration: none;
-        color: black;
+        color: rgb(255, 255, 255);
         font-size: 20px;
         text-transform: none;
         margin: auto;

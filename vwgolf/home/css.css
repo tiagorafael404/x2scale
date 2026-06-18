@@ -45,7 +45,7 @@ a{
         justify-content: space-between;
         width: 70%;
         height: auto;
-        margin: auto;
+        margin: auto auto 10 auto;
         list-style: none;
     }
 
@@ -55,7 +55,7 @@ a{
         justify-content: space-between;
         width: 100%;
         height: auto;
-        margin: auto;
+        margin: auto auto auto auto;
         list-style: none;
     }
 
@@ -63,7 +63,7 @@ a{
         list-style: none;
         padding: 10px;
         border-radius: 0px;
-        margin: 02 0 02 0; /* Espaço entre as linhas */
+        margin: 02 0 10 0; /* Espaço entre as linhas */
         width: 48%;
         height: 50px;
         text-transform: none;
