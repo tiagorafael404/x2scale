@@ -622,6 +622,11 @@ margin: auto;
     background-size: contain;
 }
 
+.second .screenshot{
+    background-image: url('project2.png');
+    background-size: contain;
+}
+
 .info ul{
     display: flex;
     flex-direction: column;

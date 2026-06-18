@@ -1,6 +1,24 @@
 {
     "liveServer.settings.port": 5501,
+
     "html.autoClosingTags": false,
     "editor.autoClosingBrackets": "never",
-    "editor.autoClosingQuotes": "never"
+    "editor.autoClosingQuotes": "never",
+
+    // Prevent automatic HTML insertions (e.g. <div>)
+    "editor.snippetSuggestions": "none",
+    "editor.quickSuggestions": {
+        "strings": false,
+        "comments": false,
+        "other": false
+    },
+    "editor.suggestOnTriggerCharacters": false,
+
+    // Disable Emmet auto-expansion in HTML
+    "emmet.triggerExpansionOnTab": false,
+    "emmet.showExpandedAbbreviation": "never",
+
+    // Avoid formatter/auto-format changing content while typing
+    "editor.formatOnType": false,
+    "editor.formatOnSave": false
 }
