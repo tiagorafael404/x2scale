@@ -99,7 +99,7 @@ a{
 
     .products .image {
         width: 100%;
-        aspect-ratio: 8/9;
+        aspect-ratio: 1/1;
         background-color: #ffffff;
         border-radius: 15px;
         margin: auto;
