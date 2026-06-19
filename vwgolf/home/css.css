@@ -326,10 +326,12 @@ a{
 
 @media screen and (max-width: 1251px) {
 
+
+
     body{
         display: flex;
         flex-direction: column;
-        background-color: #191919;
+        background-color: #f6f6f6;
        }
     
        .mypage {
@@ -356,7 +358,7 @@ a{
         .products {
             width: 90%;
             height: auto;
-            background-color: #202020;
+            background-color: #ffffff;
             text-transform: none;
             margin: auto;
         }
@@ -419,7 +421,7 @@ a{
     
         .price{
             text-align: left;
-            color: #fff;
+            color: #000000;
             font-size: 20px;
             text-transform: none;
             font-weight: bold;
@@ -431,7 +433,7 @@ a{
     
         .name a{
             text-decoration: none;
-            color: #fff;
+            color: #000000;
             font-size: 16px;
             text-transform: none;
             font-weight: bold;
@@ -444,7 +446,7 @@ a{
     
         .price a{
             text-decoration: none;
-            color: #fbfbfb;
+            color: #000000;
             font-size: 16px;
             text-transform: none;
             font-weight: lighter;
@@ -456,6 +458,53 @@ a{
             font-family: "Space Mono", monospace;
             
         }
+
+
+    .categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        height: auto;
+        margin: auto auto 10 auto;
+        list-style: none;
+    }
+
+    .categories ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        margin: auto auto auto auto;
+        list-style: none;
+    }
+
+    .categories li {
+        list-style: none;
+        padding: 10px;
+        border-radius: 0px;
+        margin: 02 0 5 0; /* Espaço entre as linhas */
+        width: 48%;
+        height: 50px;
+        text-transform: none;
+        border-radius: 7px;
+        background-color: #494a7e;
+
+    }
+
+    .categories a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        text-transform: none;
+        font-weight: lighter;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 100%;
+    }
 
 
 
