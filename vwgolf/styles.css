@@ -614,7 +614,7 @@ body {
         margin: auto;
         height: 100%;
         width: 100%;
-        font-size: 18;
+        font-size: 20;
         font-weight: normal;
         display: flex;
         justify-content: left;
@@ -670,7 +670,9 @@ body {
         width: 100%;
         height: auto;
         margin: auto auto 10 0;
-                color: black;
+        color: black;
+        text-transform: none;
+        text-decoration: none;
 
     }
 
@@ -679,6 +681,11 @@ body {
         height: auto;
         margin: auto auto 10 0;
         color: black;
+        text-transform: none;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20;
+
     }
 
 .options .options_list a {
@@ -728,7 +735,7 @@ body {
         align-items: center;
         font-size: 18;
         font-weight: normal;
-
+        text-shadow: 1px 2px 1px rgb(0, 0, 0);
     }
 
     .p-container .buy_button {
