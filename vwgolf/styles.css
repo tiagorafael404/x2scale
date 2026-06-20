@@ -51,13 +51,12 @@ body {
 
 }
 
-.choice_title a{
+.options a{
     font-family: "Space Mono", monospace;
-    text-shadow: 1px 2px 1px white;
 
 }
 
-.choice li a{
+.options li a{
     font-family: "Space Mono", monospace;
 }
 
@@ -659,22 +658,30 @@ body {
 
     }
 
-    .p-container .choice {
+.options {
         width: 100%;
         height: auto;
-        margin: 10 auto 15 0;
-        border-radius: 10px;
-        display: none;
+        margin: auto auto 15 auto;
+        Display: flex;
         flex-direction: column;
     }
 
-    .p-container .choice_title {
+.options .options_title {
         width: 100%;
         height: auto;
         margin: auto auto 10 0;
+                color: black;
+
     }
 
-    .p-container .choice_title a {
+.options .options_title a {
+        width: 100%;
+        height: auto;
+        margin: auto auto 10 0;
+        color: black;
+    }
+
+.options .options_list a {
         text-decoration: none;
         color: #fff;
         text-transform: uppercase;
@@ -687,12 +694,8 @@ body {
         font-weight: normal;
     }
 
-    .p-container .choices {
-        width: 100%;
-        height: auto;
-    }
 
-    .p-container .choices ul {
+.options .options_list ul {
         list-style: none;
         width: 100%;
         height: auto;
@@ -701,11 +704,11 @@ body {
         margin: auto auto auto 0;
     }
 
-    .p-container .choices li {
+.options .options_list li {
 
-        width: 70;
-        height: 45;
-        background-color: rgb(21, 21, 21);
+        width: 120px;
+        height: 45px;
+        background-color: #494a7e;
         margin: auto;
         border-style: solid;
         border-color: black;
@@ -714,14 +717,13 @@ body {
         margin: 0 5 10 0;
     }
 
-    .p-container .choices li a {
+.options .options_list li a {
         text-decoration: none;
         color: #fff;
         text-transform: uppercase;
         margin: auto;
         height: 100%;
         width: 100%;
-        display: flex;
         justify-content: center;
         align-items: center;
         font-size: 18;
@@ -1503,7 +1505,7 @@ body {
 
     }
 
-    .p-container .choice {
+    .p-container .options {
         width: 100%;
         height: auto;
         margin: 10 auto 15 0;
@@ -1512,13 +1514,13 @@ body {
         flex-direction: column;
     }
 
-    .p-container .choice_title {
+    .p-container .options {
         width: 100%;
         height: auto;
         margin: auto auto 10 0;
     }
 
-    .p-container .choice_title a {
+    .p-container .options a {
         text-decoration: none;
         color: #fff;
         text-transform: uppercase;
@@ -1531,12 +1533,12 @@ body {
         font-weight: normal;
     }
 
-    .p-container .choices {
+    .p-container .options {
         width: 100%;
         height: auto;
     }
 
-    .p-container .choices ul {
+    .p-container .options ul {
         list-style: none;
         width: 100%;
         height: auto;
@@ -1545,7 +1547,7 @@ body {
         margin: auto auto auto 0;
     }
 
-    .p-container .choices li {
+    .p-container .options li {
 
         width: 60;
         height: 40;
@@ -1558,7 +1560,7 @@ body {
         margin: 0 5 10 0;
     }
 
-    .p-container .choices li a {
+    .p-container .options li a {
         text-decoration: none;
         color: #fff;
         text-transform: uppercase;
