@@ -250,4 +250,68 @@ document.getElementById("contactme").addEventListener("click", function() {
     }
   });
 
+  function loadProductItemsFromJson() {
+    const itemsUrl = 'items.json';
+
+    fetch(itemsUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Não foi possível carregar items.json: ' + response.status);
+        }
+        return response.json();
+      })
+      .then(items => {
+        const itemsById = new Map();
+        const itemsByUrl = new Map();
+
+        items.forEach(item => {
+          if (item.id !== undefined) {
+            itemsById.set(String(item.id), item);
+          }
+          if (item.url) {
+            itemsByUrl.set(item.url, item);
+          }
+        });
+
+        document.querySelectorAll('.products li').forEach(li => {
+          const itemId = li.dataset.itemId;
+          const itemUrl = li.dataset.itemUrl;
+          let item = null;
+
+          if (itemId && itemsById.has(itemId)) {
+            item = itemsById.get(itemId);
+          } else if (itemUrl && itemsByUrl.has(itemUrl)) {
+            item = itemsByUrl.get(itemUrl);
+          }
+
+          if (!item) {
+            return;
+          }
+
+          const productLink = li.querySelector('.product-link');
+          const nameLink = li.querySelector('.name-link');
+          const priceText = li.querySelector('.price-text');
+          const imageDiv = li.querySelector('.image');
+
+          if (productLink) {
+            productLink.href = item.url || itemUrl || '#';
+          }
+          if (nameLink) {
+            nameLink.href = item.url || itemUrl || '#';
+            nameLink.textContent = item.name || '';
+          }
+          if (priceText) {
+            priceText.textContent = item.price || '';
+          }
+          if (imageDiv && item.image) {
+            imageDiv.style.backgroundImage = `url('${item.image}')`;
+          }
+        });
+      })
+      .catch(error => {
+        console.error('Erro ao carregar items.json:', error);
+      });
+  }
+
+  document.addEventListener('DOMContentLoaded', loadProductItemsFromJson);
  
