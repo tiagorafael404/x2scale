@@ -5,7 +5,8 @@
     "name": "babaui",
     "price": "6767€",
     "image": "golf4/gearshift/1/1.jpg",
-    "url": "golf4/gearshift/1.html"
+    "url": "golf4/gearshift/1.html",
+    "select": "Select Speed"
   },
   {
     "id": 2,
