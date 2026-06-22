@@ -250,8 +250,16 @@ document.getElementById("contactme").addEventListener("click", function() {
     }
   });
 
+  function getItemsJsonUrl() {
+    const documentScript = document.currentScript || document.querySelector('script[src$="script.js"]');
+    if (documentScript && documentScript.src) {
+      return new URL('items.json', documentScript.src).href;
+    }
+    return 'items.json';
+  }
+
   function loadProductItemsFromJson() {
-    const itemsUrl = 'items.json';
+    const itemsUrl = getItemsJsonUrl();
 
     fetch(itemsUrl)
       .then(response => {
@@ -307,6 +315,25 @@ document.getElementById("contactme").addEventListener("click", function() {
             imageDiv.style.backgroundImage = `url('${item.image}')`;
           }
         });
+
+        const detailItemUrl = document.body.dataset.itemUrl;
+        const detailItem = detailItemUrl ? itemsByUrl.get(detailItemUrl) : null;
+
+        if (detailItem) {
+          const productName = document.querySelector('.product_name a');
+          const productPrice = document.querySelector('.product_price a');
+          const buyLink = document.getElementById('buyLink');
+
+          if (productName) {
+            productName.textContent = detailItem.name || productName.textContent;
+          }
+          if (productPrice) {
+            productPrice.textContent = detailItem.price || productPrice.textContent;
+          }
+          if (buyLink && detailItem.purchaseUrl) {
+            buyLink.href = detailItem.purchaseUrl;
+          }
+        }
       })
       .catch(error => {
         console.error('Erro ao carregar items.json:', error);
