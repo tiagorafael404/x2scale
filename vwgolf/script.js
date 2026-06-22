@@ -322,6 +322,7 @@ document.getElementById("contactme").addEventListener("click", function() {
         if (detailItem) {
           const productName = document.querySelector('.product_name a');
           const productPrice = document.querySelector('.product_price a');
+          const optionsTitle = document.querySelector('.options_title a');
           const buyLink = document.getElementById('buyLink');
 
           if (productName) {
@@ -329,6 +330,9 @@ document.getElementById("contactme").addEventListener("click", function() {
           }
           if (productPrice) {
             productPrice.textContent = detailItem.price || productPrice.textContent;
+          }
+          if (optionsTitle) {
+            optionsTitle.textContent = detailItem.select || optionsTitle.textContent;
           }
           if (buyLink && detailItem.purchaseUrl) {
             buyLink.href = detailItem.purchaseUrl;
