@@ -39,7 +39,7 @@ body {
 
 }
 
-.product_description a{
+.product_description_list a{
     font-family: "Space Mono", monospace;
 }
 
@@ -565,16 +565,16 @@ body {
 
     .p-container .product_name {
         width: 100%;
-        height: 60;
-        margin: auto auto auto auto;
+        height: auto;
+        margin: auto auto 15 auto;
     }
 
     .p-container .product_name a {
         text-decoration: none;
         color: black;
-        text-transform: uppercase;
+        text-transform: none;
         margin: auto;
-        height: 100%;
+        height: auto;
         width: 100%;
         font-size: 25;
         font-weight: bold;
@@ -583,28 +583,52 @@ body {
     .p-container .product_description {
 
         width: 100%;
-        height: 60;
-        margin: auto auto 35 auto;
+        height: auto;
+        margin: 0 auto 20 auto;
 
     }
 
     .p-container .product_description a {
         text-decoration: none;
         color: black;
-        text-transform: uppercase;
+        text-transform: none;
+        margin: auto;
+        height: auto;
+        width: 100%;
+        font-size: 18;
+        font-weight: normal;
+    }
+
+    .p-container .product_description_list {
+
+        width: 100%;
+        height: 60;
+        margin: 0 auto 35 auto;
+
+    }
+
+    .p-container .product_description_list a {
+        text-decoration: none;
+        color: black;
+        text-transform: none;
         margin: auto;
         height: 100%;
         width: 100%;
-        font-size: 20;
+        font-size: 18;
         font-weight: normal;
+
+    }
+
+    .p-container .product_description_list ul {
+        list-style: none;
+
     }
 
     .p-container .product_price {
 
         width: 100%;
-        height: 60;
-        margin: auto auto 25 auto;
-
+        height: auto;
+        margin: 20 auto 5 auto;
     }
 
     .p-container .product_price a {
@@ -612,7 +636,7 @@ body {
         color: black;
         text-transform: uppercase;
         margin: auto;
-        height: 100%;
+        height: auto;
         width: 100%;
         font-size: 20;
         font-weight: normal;
@@ -661,7 +685,7 @@ body {
 .options {
         width: 100%;
         height: auto;
-        margin: auto auto 15 auto;
+        margin: auto auto auto auto;
         Display: flex;
         flex-direction: column;
     }
@@ -741,7 +765,7 @@ body {
     .p-container .buy_button {
         width: 140;
         height: 40;
-        margin: 10 auto 15 35;
+        margin: 25 auto 0 35;
         border-radius: 7px;
         border-style: solid;
         border-color: black;
@@ -875,6 +899,58 @@ body {
     #declineBtn:hover {
         background-color: #4070f4;
         color: #fff;
+    }
+
+    .p-container .product_description_list {
+
+        width: 100%;
+        height: 60;
+        margin: 0 auto 22 auto;
+
+    }
+
+    .options {
+        width: 100%;
+        height: auto;
+        margin: auto auto auto auto;
+        Display: flex;
+        flex-direction: column;
+    }
+
+    .options .options_title {
+        width: 100%;
+        height: auto;
+        margin: auto auto 10 0;
+        color: black;
+        text-transform: none;
+        text-decoration: none;
+
+    }
+
+    .options .options_title a {
+        width: 100%;
+        height: auto;
+        margin: auto auto 10 0;
+        color: black;
+        text-transform: none;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20;
+
+    }
+
+
+    .options .options_list li {
+
+        width: 115px;
+        height: 45px;
+        background-color: #494a7e;
+        margin: auto;
+        border-style: solid;
+        border-color: black;
+        border-width: 2;
+        border-radius: 15px;
+        margin: 0 5 10 0;
     }
 
     }
@@ -1421,7 +1497,7 @@ body {
 
     .p-container .photo {
         width: 100%;
-        aspect-ratio: 5 / 6;
+        aspect-ratio: 1 / 1;
         background-image: url("photo.png");
         background-size: cover;
         border-radius: 10px;
@@ -1453,18 +1529,19 @@ body {
     .p-container .product_name {
         width: 100%;
         height: auto;
-        margin: auto auto auto auto;
+        margin: auto auto 15 auto;
     }
 
     .p-container .product_name a {
         text-decoration: none;
         color: #fff;
-        text-transform: uppercase;
+        text-transform: none;
         margin: auto;
-        height: 100%;
+        height: auto;
         width: 100%;
         font-size: 20;
         font-weight: bold;
+        
     }
 
     .p-container .product_description {
@@ -1478,7 +1555,29 @@ body {
     .p-container .product_description a {
         text-decoration: none;
         color: #fff;
-        text-transform: uppercase;
+        text-transform: none;
+        margin: auto;
+        height: auto;
+        width: 100%;
+        font-size: 14;
+        font-weight: normal;
+        letter-spacing: 1;
+        font-family: Muli, sans-serif;
+
+    }
+
+    .p-container .product_description_list {
+
+        width: 100%;
+        height: auto;
+        margin: auto auto 20 auto;
+
+    }
+
+    .p-container .product_description_list a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: none;
         margin: auto;
         height: 100%;
         width: 100%;
@@ -1486,6 +1585,11 @@ body {
         font-weight: normal;
         letter-spacing: 1;
         font-family: Muli, sans-serif;
+
+    }
+
+    .p-container .product_description_list ul {
+        list-style: none;
 
     }
 
@@ -1591,7 +1695,7 @@ body {
     .p-container .product_price a {
         text-decoration: none;
         color: #fff;
-        text-transform: uppercase;
+        text-transform: none;
         margin: auto;
         height: 100%;
         width: 100%;
@@ -1615,7 +1719,7 @@ body {
     .p-container .buy_button a {
         text-decoration: none;
         color: #ffffff;
-        text-transform: uppercase;
+        text-transform: none;
         margin: auto;
         height: 100%;
         width: 100%;
