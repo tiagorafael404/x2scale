@@ -1488,7 +1488,7 @@ body {
         width: 100%;
         height: 100;
         margin: 10 auto 10 auto;
-        background-color: rgb(42, 42, 42);
+        background-color: white;
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -1507,7 +1507,7 @@ body {
     .p-container .part2 {
         width: 100%;
         aspect-ratio: 5 / 5;
-        background-color: rgb(42, 42, 42);
+        background-color: white;
         border-radius: 10px;
     }
 
@@ -1519,7 +1519,7 @@ body {
 
     .p-container .info a {
         text-decoration: none;
-        color: #fff;
+        color: black;
         text-transform: uppercase;
         margin: auto;
         height: 100%;
@@ -1534,7 +1534,7 @@ body {
 
     .p-container .product_name a {
         text-decoration: none;
-        color: #fff;
+        color: black;
         text-transform: none;
         margin: auto;
         height: auto;
@@ -1554,7 +1554,7 @@ body {
 
     .p-container .product_description a {
         text-decoration: none;
-        color: #fff;
+        color: black;
         text-transform: none;
         margin: auto;
         height: auto;
@@ -1576,7 +1576,7 @@ body {
 
     .p-container .product_description_list a {
         text-decoration: none;
-        color: #fff;
+        color: black;
         text-transform: none;
         margin: auto;
         height: 100%;
@@ -1616,22 +1616,38 @@ body {
 
     }
 
-    .p-container .options {
+
+.options {
         width: 100%;
         height: auto;
-        margin: 10 auto 15 0;
-        border-radius: 10px;
-        display: none;
+        margin: auto auto auto auto;
+        Display: flex;
         flex-direction: column;
     }
 
-    .p-container .options {
+.options .options_title {
         width: 100%;
         height: auto;
         margin: auto auto 10 0;
+        color: black;
+        text-transform: none;
+        text-decoration: none;
+
     }
 
-    .p-container .options a {
+.options .options_title a {
+        width: 100%;
+        height: auto;
+        margin: auto auto 10 0;
+        color: black;
+        text-transform: none;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18;
+
+    }
+
+.options .options_list a {
         text-decoration: none;
         color: #fff;
         text-transform: uppercase;
@@ -1644,12 +1660,8 @@ body {
         font-weight: normal;
     }
 
-    .p-container .options {
-        width: 100%;
-        height: auto;
-    }
 
-    .p-container .options ul {
+.options .options_list ul {
         list-style: none;
         width: 100%;
         height: auto;
@@ -1658,43 +1670,42 @@ body {
         margin: auto auto auto 0;
     }
 
-    .p-container .options li {
+.options .options_list li {
 
-        width: 60;
-        height: 40;
-        background-color: rgb(21, 21, 21);
+        width: 100px;
+        height: 45px;
+        background-color: #494a7e;
         margin: auto;
         border-style: solid;
         border-color: black;
         border-width: 2;
         border-radius: 15px;
-        margin: 0 5 10 0;
+        margin: 0 5 0 0;
     }
 
-    .p-container .options li a {
+.options .options_list li a {
         text-decoration: none;
         color: #fff;
         text-transform: uppercase;
         margin: auto;
         height: 100%;
         width: 100%;
-        display: flex;
         justify-content: center;
         align-items: center;
         font-size: 16;
         font-weight: normal;
-
+        text-shadow: 1px 2px 1px rgb(0, 0, 0);
     }
 
     .p-container .product_price {
         width: 100%;
         height: 30;
-        margin: 0 auto 15 0;
+        margin: 20 auto 15 0;
     }
 
     .p-container .product_price a {
         text-decoration: none;
-        color: #fff;
+        color: black;
         text-transform: none;
         margin: auto;
         height: 100%;
@@ -1708,7 +1719,7 @@ body {
     .p-container .buy_button {
         width: 140;
         height: 40;
-        margin: 0 auto 0 30;
+        margin: 0 auto 30 30;
         border-radius: 7px;
         border-style: solid;
         border-color: black;
