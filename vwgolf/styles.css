@@ -743,9 +743,13 @@ body {
         margin: auto;
         border-style: solid;
         border-color: black;
-        border-width: 2;
+        border-width: 0;
         border-radius: 15px;
         margin: 0 5 10 0;
+    }
+
+.options .options_list li.selected {
+        border-width: 4px;
     }
 
 .options .options_list li a {
@@ -948,9 +952,13 @@ body {
         margin: auto;
         border-style: solid;
         border-color: black;
-        border-width: 2;
+        border-width: 0;
         border-radius: 15px;
         margin: 0 5 10 0;
+    }
+
+.options .options_list li.selected {
+        border-width: 4px;
     }
 
     }
@@ -1678,9 +1686,13 @@ body {
         margin: auto;
         border-style: solid;
         border-color: black;
-        border-width: 2;
+        border-width: 0;
         border-radius: 15px;
         margin: 0 5 0 0;
+    }
+
+.options .options_list li.selected {
+        border-width: 4px;
     }
 
 .options .options_list li a {
