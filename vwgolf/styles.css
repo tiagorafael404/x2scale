@@ -655,7 +655,7 @@ body {
         
     }
 
-    .p-container .photo {
+    .p-container .main_photo {
         width: 82%;
         aspect-ratio: 1 / 1;
         background-size: cover;
@@ -1495,10 +1495,10 @@ body {
         justify-content: space-between;
     }
 
-    .p-container .photo {
+    .p-container .main_photo {
         width: 100%;
         aspect-ratio: 1 / 1;
-        background-image: url("photo.png");
+        background-image: url("main_photo.png");
         background-size: cover;
         border-radius: 10px;
         margin: 0 auto auto auto;

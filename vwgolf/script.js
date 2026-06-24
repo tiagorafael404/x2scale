@@ -141,6 +141,9 @@ const executeCookiesLogic = () => {
   });
 };
 
+// Variável global para o item carregado na página
+let currentDetailItem = null;
+
 // Executa a lógica dos cookies
 executeCookiesLogic();
 
@@ -149,12 +152,24 @@ executeCookiesLogic();
 
 document.addEventListener("DOMContentLoaded", function() {
   const galleryItems = document.querySelectorAll('.gallery-item');
-  const photo = document.getElementById('photo');
+  const main_photo = document.getElementById('main_photo');
 
   galleryItems.forEach(item => {
       item.addEventListener('click', function() {
-          const newImage = item.getAttribute('qual-imagem');
-          photo.style.backgroundImage = `url(${newImage})`;
+          let newImage = item.getAttribute('photo');
+          if (currentDetailItem) {
+              if (item.id === 'photo1' && currentDetailItem.image) {
+                  newImage = currentDetailItem.image;
+              } else if (item.id === 'photo2' && currentDetailItem.image2) {
+                  newImage = currentDetailItem.image2;
+              } else if (item.id === 'photo3' && currentDetailItem.image3) {
+                  newImage = currentDetailItem.image3;
+              }
+          }
+          if (main_photo && newImage) {
+              const normalizedImage = new URL(newImage, getItemsJsonUrl()).href;
+              main_photo.style.backgroundImage = `url('${normalizedImage}')`;
+          }
       });
   });
 });
@@ -316,8 +331,24 @@ document.getElementById("contactme").addEventListener("click", function() {
           }
         });
 
-        const detailItemUrl = document.body.dataset.itemUrl;
-        const detailItem = detailItemUrl ? itemsByUrl.get(detailItemUrl) : null;
+        function getDetailItemFromPageUrl() {
+          const bodyUrl = document.body.dataset.itemUrl;
+          if (bodyUrl && itemsByUrl.has(bodyUrl)) {
+            return itemsByUrl.get(bodyUrl);
+          }
+
+          const path = window.location.pathname.replace(/\\/g, '/').replace(/^\/+/, '');
+          for (const [itemUrl, item] of itemsByUrl) {
+            const normalizedItemUrl = itemUrl.replace(/\\/g, '/').replace(/^\/+/, '');
+            if (path.endsWith(normalizedItemUrl)) {
+              return item;
+            }
+          }
+          return null;
+        }
+
+        const detailItem = getDetailItemFromPageUrl();
+        currentDetailItem = detailItem;
 
         if (detailItem) {
           const productName = document.querySelector('.product_name a');
@@ -336,6 +367,38 @@ document.getElementById("contactme").addEventListener("click", function() {
           }
           if (buyLink && detailItem.purchaseUrl) {
             buyLink.href = detailItem.purchaseUrl;
+          }
+
+          const main_photoElement = document.getElementById('main_photo');
+          if (main_photoElement && detailItem.image) {
+            const photoUrl = new URL(detailItem.image, itemsUrl).href;
+            main_photoElement.style.backgroundImage = `url('${photoUrl}')`;
+          }
+
+          // Update gallery item background images from image, image2, image3
+          if (detailItem.image) {
+            const photo1 = document.getElementById('photo1');
+            if (photo1) {
+              const photo1Url = new URL(detailItem.image, itemsUrl).href;
+              photo1.style.backgroundImage = `url('${photo1Url}')`;
+              photo1.setAttribute('photo', detailItem.image);
+            }
+          }
+          if (detailItem.image2) {
+            const photo2 = document.getElementById('photo2');
+            if (photo2) {
+              const photo2Url = new URL(detailItem.image2, itemsUrl).href;
+              photo2.style.backgroundImage = `url('${photo2Url}')`;
+              photo2.setAttribute('photo', detailItem.image2);
+            }
+          }
+          if (detailItem.image3) {
+            const photo3 = document.getElementById('photo3');
+            if (photo3) {
+              const photo3Url = new URL(detailItem.image3, itemsUrl).href;
+              photo3.style.backgroundImage = `url('${photo3Url}')`;
+              photo3.setAttribute('photo', detailItem.image3);
+            }
           }
         }
       })
