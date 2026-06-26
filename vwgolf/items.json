@@ -6,7 +6,7 @@
     "price": "10.99€",
     "image": "golf4/gearshift/1/1.jpg",
     "image2": "golf4/gearshift/1/2.jpg",
-    "url": "golf4/gearshift/1.html",
+    "url": "item.html?item=1",
     "select": "Select Speed"
   },
   {
@@ -15,7 +15,7 @@
     "price": "10.99€",
     "image": "golf4/gearshift/2/1.jpg",
     "image2": "golf4/gearshift/2/2.jpg",
-    "url": "golf4/gearshift/2.html",
+    "url": "item.html?item=2",
     "select": "Select Speed"
 
   },
@@ -26,7 +26,7 @@
     "image": "golf4/gearshift/3/1.jpg",
     "image2": "golf4/gearshift/3/2.jpg",
     "image3": "golf4/gearshift/3/3.jpg",
-    "url": "golf4/gearshift/3.html",
+    "url": "item.html?item=3",
     "select": "Select Speed"
 
     
@@ -37,7 +37,7 @@
     "price": "10.99€",
     "image": "golf4/gearshift/4/1.jpg",
     "image2": "golf4/gearshift/4/2.jpg",
-    "url": "golf4/gearshift/4.html",
+    "url": "item.html?item=4",
     "select": "Select Speed"
   },
   {
@@ -47,7 +47,7 @@
     "image": "golf4/gearshift/5/1.jpg",
     "image2": "golf4/gearshift/5/2.jpg",
     "image3": "golf4/gearshift/5/3.jpg",
-    "url": "golf4/gearshift/5.html",
+    "url": "item.html?item=5",
     "select": "Select Speed"
   }
 ]
