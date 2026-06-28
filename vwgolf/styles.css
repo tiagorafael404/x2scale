@@ -1609,7 +1609,7 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: left;
         margin: auto;
 
     }
@@ -1621,8 +1621,11 @@ body {
         background-size: cover;
         align-items: center;
         justify-content: space-around;
+        background-position: center;
+        margin: 0 20 0 0;
 
     }
+
 
 
 .options {
