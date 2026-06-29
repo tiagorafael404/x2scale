@@ -7,7 +7,7 @@
     "price": "10.99€",
     "image": "golf4/gearshift/1/1.jpg",
     "image2": "golf4/gearshift/1/2.jpg",
-
+    "description": "This is a 5/6 speed gearshift for VW Golf 4. It is made of high-quality materials and designed for durability and performance.",
     "select": {
       "label": "Select Speed yo",
       "options": [
@@ -36,6 +36,8 @@
     "image": "golf4/gearshift/2/1.jpg",
     "image2": "golf4/gearshift/2/2.jpg",
     "url": "item.html?item=2",
+    "description": "This is a 5/6 speed gearshift for VW Golf 4. It is made of high-quality materials and designed for durability and performance.",
+
     "select": {
       "label": "Select Speed yo",
       "options": [
