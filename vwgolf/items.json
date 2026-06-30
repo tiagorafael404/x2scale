@@ -183,9 +183,9 @@
     "name": "Golf4: 2X LED Dynamic Side Marker",
     "description": "This is a set of 2 LED dynamic side markers for VW Golf 4. They are designed to enhance the appearance of your vehicle and provide better visibility.",
     "price": "12.99€",
-    "image": "golf4/sidemarker/2/1.jpg",
-    "image2": "golf4/sidemarker/2/2.jpg",
-    "image3": "golf4/sidemarker/2/3.jpg",
+    "image": "golf4/sidemarker/2/1.jpeg",
+    "image2": "golf4/sidemarker/2/2.jpeg",
+    "image3": "golf4/sidemarker/2/3.jpeg",
     "url": "item.html?item=7"
   }
 ]
