@@ -35,6 +35,7 @@
 
   {
     "id": 2,
+    "category": "gearshift",
     "ali": "https://pt.aliexpress.com/item/32972302289.html",
     "ali2": "https://pt.aliexpress.com/item/1005009468026024.html",
     "name": "Golf4: 5/6 Speed Gearshift",
@@ -71,6 +72,7 @@
 
   {
     "id": 3,
+    "category": "gearshift",
     "ali": "https://pt.aliexpress.com/item/32972302289.html",
     "name": "Golf4: 5/6 Speed Gearshift",
     "price": "14.99€",
@@ -105,6 +107,7 @@
 
   {
     "id": 4,
+    "category": "gearshift",
     "ali": "https://pt.aliexpress.com/item/32972302289.html",
     "name": "Golf4: 5/6 Speed Gearshift",
     "price": "14.99€",
@@ -137,6 +140,7 @@
   
   {
     "id": 5,
+    "category": "gearshift",
     "ali": "https://pt.aliexpress.com/item/32972302289.html",
     "name": "Golf4: 5/6 Speed Gearshift",
     "price": "14.99€",
@@ -168,6 +172,7 @@
   
   {
     "id": 6,
+    "category": "sidemarker",
     "ali": "https://pt.aliexpress.com/item/1005008660371316.html",
     "name": "Golf4: 2X LED Dynamic Side Marker",
     "description": "This is a set of 2 LED dynamic side markers for VW Golf 4. They are designed to enhance the appearance of your vehicle and provide better visibility.",
@@ -179,6 +184,7 @@
   },
     {
     "id": 7,
+    "category": "sidemarker",
     "ali": "https://pt.aliexpress.com/item/1005008660371316.html",
     "name": "Golf4: 2X LED Dynamic Side Marker",
     "description": "This is a set of 2 LED dynamic side markers for VW Golf 4. They are designed to enhance the appearance of your vehicle and provide better visibility.",
