@@ -4,7 +4,7 @@
     "ali": "https://pt.aliexpress.com/item/32972302289.html",
     "url": "item.html?item=1",
     "category": "gearshift",
-    "name": "5/6 Speed for VW Golf 4",
+    "name": "Golf4: 5/6 Speed Gearshift",
     "price": "14.99€",
     "image": "golf4/gearshift/1/1.jpg",
     "image2": "golf4/gearshift/1/2.jpg",
@@ -37,7 +37,7 @@
     "id": 2,
     "ali": "https://pt.aliexpress.com/item/32972302289.html",
     "ali2": "https://pt.aliexpress.com/item/1005009468026024.html",
-    "name": "5/6 S 2",
+    "name": "Golf4: 5/6 Speed Gearshift",
     "price": "14.99€",
     "image": "golf4/gearshift/2/1.jpg",
     "image2": "golf4/gearshift/2/2.jpg",
@@ -72,7 +72,7 @@
   {
     "id": 3,
     "ali": "https://pt.aliexpress.com/item/32972302289.html",
-    "name": "5/6 Speed for VW Golf 4 3",
+    "name": "Golf4: 5/6 Speed Gearshift",
     "price": "14.99€",
     "image": "golf4/gearshift/3/1.jpg",
     "image2": "golf4/gearshift/3/2.jpg",
@@ -106,7 +106,7 @@
   {
     "id": 4,
     "ali": "https://pt.aliexpress.com/item/32972302289.html",
-    "name": "5/6 Speed for VW Golf 4 4",
+    "name": "Golf4: 5/6 Speed Gearshift",
     "price": "14.99€",
     "image": "golf4/gearshift/4/1.jpg",
     "image2": "golf4/gearshift/4/2.jpg",
@@ -138,7 +138,7 @@
   {
     "id": 5,
     "ali": "https://pt.aliexpress.com/item/32972302289.html",
-    "name": "5/6 Speed for VW Golf 4 5",
+    "name": "Golf4: 5/6 Speed Gearshift",
     "price": "14.99€",
     "image": "golf4/gearshift/5/1.jpg",
     "image2": "golf4/gearshift/5/2.jpg",
@@ -164,5 +164,17 @@
         }
       ]
     }
+  },
+  
+  {
+    "id": 6,
+    "ali": "https://pt.aliexpress.com/item/1005008660371316.html",
+    "name": "Golf3 & Golf4: 2X LED Dynamic Side Marker",
+    "description": "This is a set of 2 LED dynamic side markers for VW Golf 4. They are designed to enhance the appearance of your vehicle and provide better visibility.",
+    "price": "12.99€",
+    "image": "golf4/sidemarker/1.jpg",
+    "image2": "golf4/sidemarker/2.jpg",
+    "image3": "golf4/sidemarker/3.jpg",
+    "url": "item.html?item=6"
   }
 ]
