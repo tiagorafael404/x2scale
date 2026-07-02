@@ -158,13 +158,19 @@ document.addEventListener("DOMContentLoaded", function() {
       item.addEventListener('click', function() {
           let newImage = item.getAttribute('photo');
           if (currentDetailItem) {
-              if (item.id === 'photo1' && currentDetailItem.image) {
-                  newImage = currentDetailItem.image;
-              } else if (item.id === 'photo2' && currentDetailItem.image2) {
-                  newImage = currentDetailItem.image2;
-              } else if (item.id === 'photo3' && currentDetailItem.image3) {
-                  newImage = currentDetailItem.image3;
-              }
+        if (item.id === 'photo1' && currentDetailItem.image) {
+          newImage = currentDetailItem.image;
+        } else if (item.id === 'photo2' && currentDetailItem.image2) {
+          newImage = currentDetailItem.image2;
+        } else if (item.id === 'photo3' && currentDetailItem.image3) {
+          newImage = currentDetailItem.image3;
+        } else if (item.id === 'photo4' && currentDetailItem.image4) {
+          newImage = currentDetailItem.image4;
+        } else if (item.id === 'photo5' && currentDetailItem.image5) {
+          newImage = currentDetailItem.image5;
+        } else if (item.id === 'photo6' && currentDetailItem.image6) {
+          newImage = currentDetailItem.image6;
+        }
           }
           if (main_photo && newImage) {
               const normalizedImage = new URL(newImage, getItemsJsonUrl()).href;
@@ -507,6 +513,30 @@ document.getElementById("contactme").addEventListener("click", function() {
               const photo3Url = new URL(detailItem.image3, itemsUrl).href;
               photo3.style.backgroundImage = `url('${photo3Url}')`;
               photo3.setAttribute('photo', detailItem.image3);
+            }
+          }
+          if (detailItem.image4) {
+            const photo4 = document.getElementById('photo4');
+            if (photo4) {
+              const photo4Url = new URL(detailItem.image4, itemsUrl).href;
+              photo4.style.backgroundImage = `url('${photo4Url}')`;
+              photo4.setAttribute('photo', detailItem.image4);
+            }
+          }
+          if (detailItem.image5) {
+            const photo5 = document.getElementById('photo5');
+            if (photo5) {
+              const photo5Url = new URL(detailItem.image5, itemsUrl).href;
+              photo5.style.backgroundImage = `url('${photo5Url}')`;
+              photo5.setAttribute('photo', detailItem.image5);
+            }
+          }
+          if (detailItem.image6) {
+            const photo6 = document.getElementById('photo6');
+            if (photo6) {
+              const photo6Url = new URL(detailItem.image6, itemsUrl).href;
+              photo6.style.backgroundImage = `url('${photo6Url}')`;
+              photo6.setAttribute('photo', detailItem.image6);
             }
           }
         }
