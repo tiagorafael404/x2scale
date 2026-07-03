@@ -292,8 +292,13 @@ document.getElementById("contactme").addEventListener("click", function() {
       .then(items => {
         const itemsById = new Map();
         const itemsByUrl = new Map();
+        const currentGolf = window.location.pathname.includes('golf3') ? 3 : window.location.pathname.includes('golf4') ? 4 : null;
 
-        items.forEach(item => {
+        const filteredItems = currentGolf === null
+          ? items
+          : items.filter(item => item.golf === currentGolf);
+
+        filteredItems.forEach(item => {
           if (item.id !== undefined) {
             itemsById.set(String(item.id), item);
           }
@@ -301,6 +306,8 @@ document.getElementById("contactme").addEventListener("click", function() {
             itemsByUrl.set(item.url, item);
           }
         });
+
+        let fallbackIndex = 0;
 
         document.querySelectorAll('.products li').forEach(li => {
           const itemId = li.dataset.itemId;
@@ -311,6 +318,9 @@ document.getElementById("contactme").addEventListener("click", function() {
             item = itemsById.get(itemId);
           } else if (itemUrl && itemsByUrl.has(itemUrl)) {
             item = itemsByUrl.get(itemUrl);
+          } else if (currentGolf !== null && fallbackIndex < filteredItems.length) {
+            item = filteredItems[fallbackIndex];
+            fallbackIndex += 1;
           }
 
           if (!item) {
