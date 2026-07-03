@@ -537,9 +537,10 @@
     "name": "Golf4: LED Interior Light Kit",
     "description": "This is a LED interior light kit for VW Golf 4. It is designed to fit perfectly in the interior of your vehicle and provide excellent lighting.",
     "price": "11.99€",
-    "image": "golf4/interior lighting/1.jpeg",
-    "image2": "golf4/interior lighting/2.jpeg",
-    "image3": "golf4/interior lighting/3.jpeg",
+    "image": "golf4/interior lighting/1/1.jpeg",
+    "image2": "golf4/interior lighting/1/2.jpeg",
+    "image3": "golf4/interior lighting/1/3.jpeg",
+    "image4": "golf4/interior lighting/1/4.jpeg",
     "url": "item.html?item=21",
     "golf": 4
   }
