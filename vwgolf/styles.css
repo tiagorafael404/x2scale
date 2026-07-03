@@ -692,7 +692,7 @@ body {
 .options .options_list a {
         text-decoration: none;
         color: #fff;
-        text-transform: uppercase;
+        text-transform: none;
         margin: auto;
         height: 100%;
         width: 100%;
@@ -722,6 +722,8 @@ body {
         border-width: 0;
         border-radius: 15px;
         margin: 0 5 10 0;
+        text-decoration: none;
+    text-transform: none;
     }
 
 .options .options_list li.selected {
@@ -731,7 +733,7 @@ body {
 .options .options_list li a {
         text-decoration: none;
         color: #fff;
-        text-transform: uppercase;
+        text-transform: none;
         margin: auto;
         height: 100%;
         width: 100%;
@@ -1606,7 +1608,7 @@ body {
 .options .options_list a {
         text-decoration: none;
         color: #fff;
-        text-transform: uppercase;
+        text-transform: none;
         margin: auto;
         height: 100%;
         width: 100%;
@@ -1646,7 +1648,7 @@ body {
 .options .options_list li a {
         text-decoration: none;
         color: #fff;
-        text-transform: uppercase;
+        text-transform: none;
         height: 100%;
         justify-content: center;
         align-items: center;
