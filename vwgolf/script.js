@@ -465,7 +465,11 @@ document.getElementById("contactme").addEventListener("click", function() {
             }
           }
 
-          if (optionsList && detailItem.select && Array.isArray(detailItem.select.options)) {
+          if (buyLink) {
+            buyLink.href = detailItem.buy || buyLink.getAttribute('href') || '#';
+          }
+
+          if (optionsList && detailItem.select && Array.isArray(detailItem.select.options) && detailItem.select.options.length > 0) {
             optionsList.innerHTML = '';
             detailItem.select.options.forEach((option, index) => {
               const li = document.createElement('li');
@@ -480,15 +484,15 @@ document.getElementById("contactme").addEventListener("click", function() {
                 event.preventDefault();
                 optionsList.querySelectorAll('li').forEach(el => el.classList.remove('selected'));
                 li.classList.add('selected');
-                if (buyLink && option.url) {
-                  buyLink.href = option.url;
+                if (buyLink) {
+                  buyLink.href = option.url || detailItem.buy || buyLink.getAttribute('href') || '#';
                 }
               });
 
               if (index === 0) {
                 li.classList.add('selected');
-                if (buyLink && option.url) {
-                  buyLink.href = option.url;
+                if (buyLink) {
+                  buyLink.href = option.url || detailItem.buy || buyLink.getAttribute('href') || '#';
                 }
               }
             });
