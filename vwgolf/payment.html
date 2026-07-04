@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento - VW Golf</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="back" href="/home.html">← Voltar</a>
+      <div class="brand">Pagamento VW Golf</div>
+    </header>
+
+    <section class="payment-layout">
+      <article class="product-summary">
+        <div class="summary-image" id="productImage"></div>
+        <div class="summary-details">
+          <h1 id="productName">Carregando produto...</h1>
+          <p id="productDescription">Aguarde enquanto buscamos o produto.</p>
+          <div class="summary-price">
+            <span>Preço</span>
+            <strong id="productPrice">—</strong>
+          </div>
+          <div class="options-section" id="optionsSection">
+            <div class="options-title">Opções do produto</div>
+            <div class="option-grid" id="optionsGrid"></div>
+          </div>
+        </div>
+      </article>
+
+      <aside class="form-panel">
+        <form id="paymentForm">
+          <div class="section-title">Seu contato</div>
+          <label>
+            Nome completo
+            <input type="text" name="fullName" required>
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Telefone
+            <input type="tel" name="phone" placeholder="912 345 678" required>
+          </label>
+
+          <div class="section-title">Endereço</div>
+          <label>
+            Rua e número
+            <input type="text" name="address" required>
+          </label>
+          <label>
+            Código postal
+            <input type="text" name="postal" required>
+          </label>
+          <label>
+            Cidade
+            <input type="text" name="city" required>
+          </label>
+          <label>
+            País
+            <input type="text" name="country" required>
+          </label>
+
+          <div class="total-row">
+            <span>Total a pagar</span>
+            <strong id="detailTotal">—</strong>
+          </div>
+
+          <button class="submit-button" type="submit">Continuar para pagamento</button>
+          <div class="notice">Depois de enviar os dados, você será levado ao Stripe para finalizar o pagamento.</div>
+          <div id="formError" class="form-error" hidden></div>
+        </form>
+      </aside>
+    </section>
+  </main>
+
+  <script src="payment.js"></script>
+</body>
+
+</html>

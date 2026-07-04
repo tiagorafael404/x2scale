@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - VW Golf</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a id="backLink" class="back" href="/home.html">← Voltar aos produtos</a>
+      <div class="brand">Checkout VW Golf</div>
+    </header>
+
+    <section class="checkout-layout">
+      <article class="product-panel">
+        <div class="image-preview">
+          <div id="mainImage" class="main-image"></div>
+          <div id="thumbs" class="thumbs"></div>
+        </div>
+
+        <div class="product-info">
+          <h1 id="productName">Carregando produto...</h1>
+          <p id="productDescription">Aguarde enquanto buscamos os detalhes.</p>
+
+          <div class="price-row">
+            <span>Preço</span>
+            <strong id="productPrice">—</strong>
+          </div>
+
+          <div class="variation-area">
+            <div class="variation-title">Escolha a opção</div>
+            <div class="option-list" id="optionsList"></div>
+          </div>
+        </div>
+      </article>
+
+      <aside class="summary-panel">
+        <div class="summary-card">
+          <div class="summary-header">Resumo do pedido</div>
+          <div class="summary-item">
+            <span>Produto</span>
+            <span id="detailPrice">—</span>
+          </div>
+          <div class="summary-item">
+            <span>Total</span>
+            <strong id="detailTotal">—</strong>
+          </div>
+          <a id="buyLink" class="buy-button" href="#" target="_blank">Pagar com Stripe</a>
+        </div>
+
+        <p class="notice">
+          Use este link para pagar pelo produto selecionado. As formas de pagamento aceitas dependem do Stripe.
+        </p>
+
+        <div id="errorMessage" class="error-message" style="display:none"></div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+
+</html>
