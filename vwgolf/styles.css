@@ -662,7 +662,7 @@ body {
 
         width: 100%;
         height: auto;
-        margin: 20 auto 5 auto;
+        margin: 5 auto 5 5;
     }
 
     .p-container .product_price a {
@@ -770,20 +770,20 @@ body {
     }
 
     .p-container .buy_button {
-        width: 140;
-        height: 40;
+        width: 200;
+        height: 50;
         margin: 25 auto 0 35;
-        border-radius: 7px;
+        border-radius: 12px;
         border-style: solid;
         border-color: black;
         border-width: 1;
-        background-color: rgb(227, 109, 69);
+        background-color: rgb(20, 137, 234);
     }
 
     .p-container .buy_button a {
         text-decoration: none;
         color: #ffffff;
-        text-transform: uppercase;
+        text-transform: none;
         margin: auto;
         height: 100%;
         width: 100%;
