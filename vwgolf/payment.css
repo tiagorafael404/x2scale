@@ -163,6 +163,71 @@ input:focus {
   box-shadow: 0 0 0 4px rgba(31, 126, 234, 0.12);
 }
 
+.country-picker {
+  position: relative;
+}
+
+.country-list {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.12);
+  display: none;
+}
+
+.country-list.show {
+  display: block;
+}
+
+.country-option {
+  width: 100%;
+  border: 0;
+  background: none;
+  padding: 12px 14px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.country-option:hover,
+.country-option.active {
+  background: #f3f7ff;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.payment-method {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.payment-method:hover {
+  transform: translateY(-1px);
+}
+
+.payment-method.selected {
+  border-color: var(--primary);
+  background: #eef6ff;
+}
+
 .submit-button {
   width: 100%;
   border: none;
@@ -205,7 +270,8 @@ input:focus {
     padding: 16px;
   }
 
-  .option-grid {
+  .option-grid,
+  .payment-methods {
     grid-template-columns: 1fr;
   }
 }
