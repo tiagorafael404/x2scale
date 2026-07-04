@@ -105,7 +105,7 @@ a{
         background-size: cover;
         aspect-ratio: 5 / 1;
         margin: 15 auto auto auto;
-        
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
     }
 
         
@@ -116,6 +116,8 @@ a{
         text-transform: none;
         margin: auto;
         position: relative;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);        
+
     }
     
     .products ul {
@@ -352,7 +354,7 @@ a{
             background-size: cover;
             aspect-ratio: 5 / 1;
             margin: 15 auto auto auto;
-
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
         }
 
         .products {
@@ -361,6 +363,7 @@ a{
             background-color: #ffffff;
             text-transform: none;
             margin: auto;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
         }
         
         .products ul {
@@ -468,6 +471,7 @@ a{
         height: auto;
         margin: 10 auto 10 auto;
         list-style: none;
+
     }
 
     .categories ul {
