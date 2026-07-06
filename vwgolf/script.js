@@ -292,7 +292,11 @@ document.getElementById("contactme").addEventListener("click", function() {
       .then(items => {
         const itemsById = new Map();
         const itemsByUrl = new Map();
-        const currentGolf = window.location.pathname.includes('golf3') ? 3 : window.location.pathname.includes('golf4') ? 4 : null;
+        const currentGolf = window.location.pathname.includes('golf3') ? 3
+          : window.location.pathname.includes('golf4') ? 4
+          : window.location.pathname.includes('golf5') ? 5
+          : window.location.pathname.includes('golf6') ? 6
+          : null;
 
         const filteredItems = currentGolf === null
           ? items
@@ -307,48 +311,57 @@ document.getElementById("contactme").addEventListener("click", function() {
           }
         });
 
-        let fallbackIndex = 0;
+        const productsList = document.querySelector('.products ul');
 
-        document.querySelectorAll('.products li').forEach(li => {
-          const itemId = li.dataset.itemId;
-          const itemUrl = li.dataset.itemUrl;
-          let item = null;
-
-          if (itemId && itemsById.has(itemId)) {
-            item = itemsById.get(itemId);
-          } else if (itemUrl && itemsByUrl.has(itemUrl)) {
-            item = itemsByUrl.get(itemUrl);
-          } else if (currentGolf !== null && fallbackIndex < filteredItems.length) {
-            item = filteredItems[fallbackIndex];
-            fallbackIndex += 1;
+        if (productsList) {
+          while (productsList.children.length < filteredItems.length) {
+            const li = document.createElement('li');
+            li.innerHTML = `
+              <a class="product-link" href="#">
+                <div class="image"></div>
+              </a>
+              <div class="info">
+                <div class="name"><a class="name-link" href="#"></a></div>
+                <div class="price"><a class="price-text"></a></div>
+              </div>
+            `;
+            productsList.appendChild(li);
           }
 
-          if (!item) {
-            li.style.display = 'none';
-            return;
+          while (productsList.children.length > filteredItems.length) {
+            productsList.removeChild(productsList.lastElementChild);
           }
 
-          li.style.display = '';
+          Array.from(productsList.children).forEach((li, index) => {
+            const item = filteredItems[index] || null;
 
-          const productLink = li.querySelector('.product-link');
-          const nameLink = li.querySelector('.name-link');
-          const priceText = li.querySelector('.price-text');
-          const imageDiv = li.querySelector('.image');
+            if (!item) {
+              li.style.display = 'none';
+              return;
+            }
 
-          if (productLink) {
-            productLink.href = item.url || itemUrl || '#';
-          }
-          if (nameLink) {
-            nameLink.href = item.url || itemUrl || '#';
-            nameLink.textContent = item.name || '';
-          }
-          if (priceText) {
-            priceText.textContent = item.price || '';
-          }
-          if (imageDiv && item.image) {
-            imageDiv.style.backgroundImage = `url('${item.image}')`;
-          }
-        });
+            li.style.display = '';
+
+            const productLink = li.querySelector('.product-link');
+            const nameLink = li.querySelector('.name-link');
+            const priceText = li.querySelector('.price-text');
+            const imageDiv = li.querySelector('.image');
+
+            if (productLink) {
+              productLink.href = item.url || '#';
+            }
+            if (nameLink) {
+              nameLink.href = item.url || '#';
+              nameLink.textContent = item.name || '';
+            }
+            if (priceText) {
+              priceText.textContent = item.price || '';
+            }
+            if (imageDiv && item.image) {
+              imageDiv.style.backgroundImage = `url('${item.image}')`;
+            }
+          });
+        }
 
         function normalizeItemReference(reference) {
           if (reference === undefined || reference === null) {
