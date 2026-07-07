@@ -1,7 +1,6 @@
 const paymentState = {
   item: null,
   selectedOption: null,
-  selectedPaymentMethod: 'creditcard',
   allItems: [],
 };
 
@@ -102,7 +101,6 @@ function setupPaymentMethods() {
     button.addEventListener('click', () => {
       paymentButtons.forEach(btn => btn.classList.remove('selected'));
       button.classList.add('selected');
-      paymentState.selectedPaymentMethod = button.dataset.method;
     });
   });
 }
@@ -124,62 +122,13 @@ function setupFormSubmit() {
       console.log('Produto selecionado:', paymentState.item);
       console.log('Opção selecionada:', paymentState.selectedOption);
       
-      if (paymentState.selectedPaymentMethod === 'paypal') {
-        // Redirect to PayPal payment
-        processPayPalPayment(data);
-      } else {
-        // Process credit card payment
-        processCreditCardPayment(data);
-      }
+      // Process credit card payment
+      processCreditCardPayment(data);
     } catch (error) {
       console.error('Erro ao processar pagamento:', error);
       alert('Erro ao processar o pagamento. Verifique os dados e tente novamente.');
     }
   });
-}
-
-function getPrice() {
-  if (!paymentState.item) return '0.00';
-  const priceStr = paymentState.item.price || '0.00€';
-  return priceStr.replace('€', '').trim();
-}
-
-function processPayPalPayment(formData) {
-  const price = getPrice();
-  const productName = paymentState.item?.name || 'Produto';
-  
-  // Get the base URL from the current page location
-  let baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
-  
-  // Ensure the base URL includes the domain
-  if (!baseUrl.includes('http')) {
-    baseUrl = window.location.origin + '/vwgolf';
-  }
-  
-  const returnUrl = encodeURIComponent(baseUrl + '/payment-success.html');
-  const cancelUrl = encodeURIComponent(baseUrl + '/payment-cancel.html');
-  
-  // Build PayPal payment URL with your API credentials
-  const paypalParams = new URLSearchParams({
-    cmd: '_xclick',
-    business: 'sb-w6ikh51956657@business.example.com',
-    item_name: productName,
-    amount: price,
-    currency_code: 'EUR',
-    return: returnUrl,
-    cancel_return: cancelUrl,
-    invoice: 'ITEM_' + paymentState.item?.id + '_' + Date.now(),
-    custom: JSON.stringify({
-      customer: formData,
-      item: paymentState.item?.id,
-      option: paymentState.selectedOption?.id
-    }),
-  });
-  
-  console.log('Redirecionando para PayPal com params:', paypalParams.toString());
-  
-  // Redirect to PayPal sandbox for testing
-  window.location.href = 'https://www.sandbox.paypal.com/cgi-bin/webscr?' + paypalParams.toString();
 }
 
 function processCreditCardPayment(formData) {
