@@ -114,21 +114,26 @@ function setupFormSubmit() {
   paymentForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const formData = new FormData(paymentForm);
-    const data = Object.fromEntries(formData);
-    
-    // Log the form data and selected payment method
-    console.log('Dados do formulário:', data);
-    console.log('Método de pagamento:', paymentState.selectedPaymentMethod);
-    console.log('Produto selecionado:', paymentState.item);
-    console.log('Opção selecionada:', paymentState.selectedOption);
-    
-    if (paymentState.selectedPaymentMethod === 'paypal') {
-      // Redirect to PayPal payment
-      processPayPalPayment(data);
-    } else {
-      // Process credit card payment
-      processCreditCardPayment(data);
+    try {
+      const formData = new FormData(paymentForm);
+      const data = Object.fromEntries(formData);
+      
+      // Log the form data and selected payment method
+      console.log('Dados do formulário:', data);
+      console.log('Método de pagamento:', paymentState.selectedPaymentMethod);
+      console.log('Produto selecionado:', paymentState.item);
+      console.log('Opção selecionada:', paymentState.selectedOption);
+      
+      if (paymentState.selectedPaymentMethod === 'paypal') {
+        // Redirect to PayPal payment
+        processPayPalPayment(data);
+      } else {
+        // Process credit card payment
+        processCreditCardPayment(data);
+      }
+    } catch (error) {
+      console.error('Erro ao processar pagamento:', error);
+      alert('Erro ao processar o pagamento. Verifique os dados e tente novamente.');
     }
   });
 }
@@ -141,34 +146,40 @@ function getPrice() {
 
 function processPayPalPayment(formData) {
   const price = getPrice();
+  const productName = paymentState.item?.name || 'Produto';
   
-  // Create PayPal order
-  fetch('/api/create-paypal-order', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      item: paymentState.item,
-      option: paymentState.selectedOption,
+  // Get the base URL from the current page location
+  let baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+  
+  // Ensure the base URL includes the domain
+  if (!baseUrl.includes('http')) {
+    baseUrl = window.location.origin + '/vwgolf';
+  }
+  
+  const returnUrl = encodeURIComponent(baseUrl + '/payment-success.html');
+  const cancelUrl = encodeURIComponent(baseUrl + '/payment-cancel.html');
+  
+  // Build PayPal payment URL with your API credentials
+  const paypalParams = new URLSearchParams({
+    cmd: '_xclick',
+    business: 'sb-w6ikh51956657@business.example.com',
+    item_name: productName,
+    amount: price,
+    currency_code: 'EUR',
+    return: returnUrl,
+    cancel_return: cancelUrl,
+    invoice: 'ITEM_' + paymentState.item?.id + '_' + Date.now(),
+    custom: JSON.stringify({
       customer: formData,
-      amount: price,
+      item: paymentState.item?.id,
+      option: paymentState.selectedOption?.id
     }),
-  })
-    .then(response => response.json())
-    .then(data => {
-      if (data.id) {
-        // Redirect to PayPal for payment
-        window.location.href = `https://www.sandbox.paypal.com/checkoutnow?token=${data.id}`;
-      } else {
-        console.error('Erro ao criar ordem PayPal:', data);
-        alert('Erro ao processar pagamento PayPal. Tente novamente.');
-      }
-    })
-    .catch(error => {
-      console.error('Erro:', error);
-      alert('Erro ao conectar com PayPal. Tente novamente.');
-    });
+  });
+  
+  console.log('Redirecionando para PayPal com params:', paypalParams.toString());
+  
+  // Redirect to PayPal sandbox for testing
+  window.location.href = 'https://www.sandbox.paypal.com/cgi-bin/webscr?' + paypalParams.toString();
 }
 
 function processCreditCardPayment(formData) {
