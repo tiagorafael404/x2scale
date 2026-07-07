@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagamento - VW Golf</title>
   <link rel="stylesheet" href="payment.css">
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAnmkoBodk5A1uTcyOiPjDO9M35yBgrtfYJmHzWBXoJ5MdeBk6L04O3MblcxfMTXTObCJOAvkcGwhVVX8&components=hosted-buttons&disable-funding=venmo&currency=EUR">
+  </script>
 </head>
 
 <body>
@@ -94,8 +97,12 @@
           </div>
 
           <div id="paypal-section" class="payment-section" hidden>
-            <button type="button" class="paypal-button" onclick="alert('Redirecionando para PayPal...')">Pagar com PayPal</button>
-            <p style="font-size: 0.85rem; color: #999; margin-top: 10px;">Será redirecionado para PayPal para completar a compra</p>
+            <div id="paypal-container-5KRXFY2C8KVXA"></div>
+            <script>
+              paypal.HostedButtons({
+                hostedButtonId: "5KRXFY2C8KVXA",
+              }).render("#paypal-container-5KRXFY2C8KVXA")
+            </script>
           </div>
 
           <div id="formError" class="form-error" hidden></div>
