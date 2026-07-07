@@ -88,16 +88,14 @@
             <strong id="detailTotal">—</strong>
           </div>
 
-          <div id="creditcard-section" class="payment-section" style="display: block;">
+          <div id="creditcard-section" class="payment-section">
             <button class="submit-button" type="submit">Continuar para pagamento</button>
             <div class="notice">Depois de enviar os dados, você será redirecionado para o link de pagamento da Stripe configurado para este produto.</div>
           </div>
 
-          <div id="paypal-section" class="payment-section" style="display: none;">
-            <div style="padding: 20px 0; text-align: center;">
-              <button type="button" class="paypal-button" onclick="alert('Redirecionando para PayPal...')">Pagar com PayPal</button>
-              <p style="font-size: 0.85rem; color: #999; margin-top: 10px;">Será redirecionado para PayPal para completar a compra</p>
-            </div>
+          <div id="paypal-section" class="payment-section" hidden>
+            <button type="button" class="paypal-button" onclick="alert('Redirecionando para PayPal...')">Pagar com PayPal</button>
+            <p style="font-size: 0.85rem; color: #999; margin-top: 10px;">Será redirecionado para PayPal para completar a compra</p>
           </div>
 
           <div id="formError" class="form-error" hidden></div>

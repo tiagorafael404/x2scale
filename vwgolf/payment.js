@@ -96,42 +96,29 @@ function renderProduct(item) {
 }
 
 function setupPaymentMethods() {
-  console.log('setupPaymentMethods() chamado');
-  
   const radioButtons = document.querySelectorAll('input[name="payment-method"]');
   const creditcardSection = document.getElementById('creditcard-section');
   const paypalSection = document.getElementById('paypal-section');
   
-  console.log('Radio buttons encontrados:', radioButtons.length);
-  console.log('creditcard-section:', creditcardSection);
-  console.log('paypal-section:', paypalSection);
-  
-  if (radioButtons.length === 0) {
-    console.error('Nenhum radio button encontrado!');
-    return;
+  function toggleSections() {
+    const selectedMethod = document.querySelector('input[name="payment-method"]:checked')?.value;
+    
+    if (selectedMethod === 'paypal') {
+      creditcardSection.hidden = true;
+      paypalSection.hidden = false;
+    } else {
+      creditcardSection.hidden = false;
+      paypalSection.hidden = true;
+    }
   }
   
-  radioButtons.forEach((radio, index) => {
-    console.log(`Radio ${index}:`, radio.value, radio.checked);
-    
-    const handleChange = () => {
-      console.log('EVENTO - Método selecionado:', radio.value);
-      
-      if (radio.value === 'paypal') {
-        console.log('Mostrando PayPal, escondendo Crédito/Débito');
-        creditcardSection.style.display = 'none';
-        paypalSection.style.display = 'block';
-      } else if (radio.value === 'creditcard') {
-        console.log('Mostrando Crédito/Débito, escondendo PayPal');
-        creditcardSection.style.display = 'block';
-        paypalSection.style.display = 'none';
-      }
-    };
-    
-    radio.addEventListener('change', handleChange);
-    radio.addEventListener('input', handleChange);
-    radio.addEventListener('click', handleChange);
+  // Event listener em cada radio button
+  radioButtons.forEach(radio => {
+    radio.addEventListener('change', toggleSections);
   });
+  
+  // Inicializar com o estado correto
+  toggleSections();
 }
 
 function setupFormSubmit() {
