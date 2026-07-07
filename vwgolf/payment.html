@@ -70,9 +70,17 @@
           </label>
 
           <div class="section-title">Método de pagamento</div>
-          <div class="payment-methods" role="list" aria-label="Métodos de pagamento">
-            <button type="button" class="payment-method selected" data-method="creditcard">Crédito/Débito</button>
-            <button type="button" class="payment-method" data-method="paypal">PayPal</button>
+          <div class="payment-methods" role="group" aria-label="Métodos de pagamento">
+            <label class="payment-option">
+              <input type="radio" name="payment-method" value="creditcard" checked>
+              <span class="radio-circle"></span>
+              <span class="option-text">Crédito/Débito</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment-method" value="paypal">
+              <span class="radio-circle"></span>
+              <span class="option-text">PayPal</span>
+            </label>
           </div>
 
           <div class="total-row">
@@ -80,8 +88,18 @@
             <strong id="detailTotal">—</strong>
           </div>
 
-          <button class="submit-button" type="submit">Continuar para pagamento</button>
-          <div class="notice">Depois de enviar os dados, você será redirecionado para o link de pagamento da Stripe configurado para este produto.</div>
+          <div id="creditcard-section" class="payment-section" style="display: block;">
+            <button class="submit-button" type="submit">Continuar para pagamento</button>
+            <div class="notice">Depois de enviar os dados, você será redirecionado para o link de pagamento da Stripe configurado para este produto.</div>
+          </div>
+
+          <div id="paypal-section" class="payment-section" style="display: none;">
+            <div style="padding: 20px 0; text-align: center;">
+              <button type="button" class="paypal-button" onclick="alert('Redirecionando para PayPal...')">Pagar com PayPal</button>
+              <p style="font-size: 0.85rem; color: #999; margin-top: 10px;">Será redirecionado para PayPal para completar a compra</p>
+            </div>
+          </div>
+
           <div id="formError" class="form-error" hidden></div>
         </form>
       </aside>

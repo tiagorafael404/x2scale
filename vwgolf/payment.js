@@ -96,12 +96,41 @@ function renderProduct(item) {
 }
 
 function setupPaymentMethods() {
-  const paymentButtons = document.querySelectorAll('.payment-method');
-  paymentButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      paymentButtons.forEach(btn => btn.classList.remove('selected'));
-      button.classList.add('selected');
-    });
+  console.log('setupPaymentMethods() chamado');
+  
+  const radioButtons = document.querySelectorAll('input[name="payment-method"]');
+  const creditcardSection = document.getElementById('creditcard-section');
+  const paypalSection = document.getElementById('paypal-section');
+  
+  console.log('Radio buttons encontrados:', radioButtons.length);
+  console.log('creditcard-section:', creditcardSection);
+  console.log('paypal-section:', paypalSection);
+  
+  if (radioButtons.length === 0) {
+    console.error('Nenhum radio button encontrado!');
+    return;
+  }
+  
+  radioButtons.forEach((radio, index) => {
+    console.log(`Radio ${index}:`, radio.value, radio.checked);
+    
+    const handleChange = () => {
+      console.log('EVENTO - Método selecionado:', radio.value);
+      
+      if (radio.value === 'paypal') {
+        console.log('Mostrando PayPal, escondendo Crédito/Débito');
+        creditcardSection.style.display = 'none';
+        paypalSection.style.display = 'block';
+      } else if (radio.value === 'creditcard') {
+        console.log('Mostrando Crédito/Débito, escondendo PayPal');
+        creditcardSection.style.display = 'block';
+        paypalSection.style.display = 'none';
+      }
+    };
+    
+    radio.addEventListener('change', handleChange);
+    radio.addEventListener('input', handleChange);
+    radio.addEventListener('click', handleChange);
   });
 }
 
