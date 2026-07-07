@@ -1,67 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-PT">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout - VW Golf</title>
-  <link rel="stylesheet" href="checkout.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Seguro</title>
+
+    <!-- PayPal Hosted Buttons -->
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAnmkoBodk5A1uTcyOiPjDO9M35yBgrtfYJmHzWBXoJ5MdeBk6L04O3MblcxfMTXTObCJOAvkcGwhVVX8&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #222;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        #paypal-container-QW57F8VPMGGMC {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
-
 <body>
-  <main class="page">
-    <header class="topbar">
-      <a id="backLink" class="back" href="/home.html">← Voltar aos produtos</a>
-      <div class="brand">Checkout VW Golf</div>
-    </header>
 
-    <section class="checkout-layout">
-      <article class="product-panel">
-        <div class="image-preview">
-          <div id="mainImage" class="main-image"></div>
-          <div id="thumbs" class="thumbs"></div>
-        </div>
+    <div class="container">
+        <h1>Pagamento Seguro</h1>
+        <p>Escolha o método de pagamento pretendido.</p>
 
-        <div class="product-info">
-          <h1 id="productName">Carregando produto...</h1>
-          <p id="productDescription">Aguarde enquanto buscamos os detalhes.</p>
+        <div id="paypal-container-QW57F8VPMGGMC"></div>
+    </div>
 
-          <div class="price-row">
-            <span>Preço</span>
-            <strong id="productPrice">—</strong>
-          </div>
+    <script>
+        paypal.HostedButtons({
+            hostedButtonId: "QW57F8VPMGGMC",
+        }).render("#paypal-container-QW57F8VPMGGMC");
+    </script>
 
-          <div class="variation-area">
-            <div class="variation-title">Escolha a opção</div>
-            <div class="option-list" id="optionsList"></div>
-          </div>
-        </div>
-      </article>
-
-      <aside class="summary-panel">
-        <div class="summary-card">
-          <div class="summary-header">Resumo do pedido</div>
-          <div class="summary-item">
-            <span>Produto</span>
-            <span id="detailPrice">—</span>
-          </div>
-          <div class="summary-item">
-            <span>Total</span>
-            <strong id="detailTotal">—</strong>
-          </div>
-          <a id="buyLink" class="buy-button" href="#" target="_blank">Pagar com Stripe</a>
-        </div>
-
-        <p class="notice">
-          Use este link para pagar pelo produto selecionado. As formas de pagamento aceitas dependem do Stripe.
-        </p>
-
-        <div id="errorMessage" class="error-message" style="display:none"></div>
-      </aside>
-    </section>
-  </main>
-
-  <script src="checkout.js"></script>
 </body>
-
 </html>
