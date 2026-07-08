@@ -55,7 +55,7 @@ a{
 .orders{
         display: flex;
         flex-direction: column;
-        width: auto;
+        width: fit-content;
     
 
 }
@@ -65,8 +65,9 @@ a{
 .orders .info{
         display: flex;
         flex-direction: row;
-        width: auto;
+        width: max-content;
         background: red;
+
     
 
 }
@@ -144,13 +145,18 @@ a{
 
 .orders .state{
     height: 50px;
-    width: 1000px;
+    width: 100%;
     margin: 5 auto 25 0;
+    background-color: white;
+    display: flex;
+
 }
 
 .orders .state a{
     font-size: 20px;
-    margin: 5 auto 5 50;
+    margin: auto auto auto 50;
+
+
 }
 
     @media screen and (max-width: 1600px) {
