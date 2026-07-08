@@ -52,43 +52,106 @@ a{
     }
 
     
-    .list{
-        background-color: red;
+.orders{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    
+
+}
+
+
+
+.orders .info{
         display: flex;
         flex-direction: row;
-        
-}
-
-.list ul{
-
+        width: auto;
+        background: red;
+    
 
 }
 
-.list ul li{
-    margin: auto auto auto auto;
-    list-style: none;
-    border-right: 3px solid white;
-    height: 50px;
-    width: 200px;
-    align-content: center;
+.orders .info ul {
     text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: auto;
+
+    
+}
+
+.orders .info ul li{
+    margin: 5 auto 5 auto;
+    list-style: none;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+
+
+    
 
 }
 
-.list ul li a{
+.orders .info ul li a{
     text-decoration: none;
     font-size: 20px;
+    
+}
+
+
+.orders .info .name{
+
+    width: 200px;
 
 }
 
-.list .name{
+.orders .info .product{
 
+    width: 490px;
+
+}
+
+.orders .info .price{
+
+    width: 150px;
+
+}
+
+.orders .info .email{
+
+    width: 320px;
+
+}
+
+.orders .info .adress{
+
+    width: 300px;
+
+}
+
+.orders .info .postalcode{
+
+    width: 200px;
+
+}
+
+.orders .info .id{
+
+    width: 100px;
+
+}
+
+.orders .state{
     height: 50px;
-    width: 2400px;
-
-    background-color: blue;
+    width: 1000px;
+    margin: 5 auto 25 0;
 }
 
+.orders .state a{
+    font-size: 20px;
+    margin: 5 auto 5 50;
+}
 
     @media screen and (max-width: 1600px) {
 
