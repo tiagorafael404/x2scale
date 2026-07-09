@@ -60,7 +60,22 @@ a{
 
 }
 
+.orders .title{
+        display: flex;
+        background: rgb(210, 208, 208);
+        margin: auto;
+    }
 
+.orders .title ul{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: auto;
+    display: flex;
+    flex-direction: row;   
+    
+}
 
 .orders .info{
         display: flex;
@@ -72,18 +87,37 @@ a{
 
 }
 
-.orders .info ul {
+.orders .info ul, .orders .title ul{
     text-align: center;
     padding: 0;
     margin: 0;
     list-style: none;
-    height: auto;
 
     
 }
 
+.orders .title ul li{
+    margin: auto;
+    list-style: none;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+
+}
+
+.orders .title ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    margin: auto;
+    font-weight: bold;
+}
+
 .orders .info ul li{
-    margin: 5 auto 5 auto;
+    margin: auto auto auto auto;
     list-style: none;
     border-right: 2px solid white;
     border-left: 2px solid white;
@@ -101,47 +135,49 @@ a{
 .orders .info ul li a{
     text-decoration: none;
     font-size: 16px;
-    margin: auto auto auto auto;
+    margin: auto;
 }
 
 
-.orders .info .name{
+
+
+.orders .info .name, .orders .title .name{
 
     width: 200px;
 
 }
 
-.orders .info .product{
+.orders .info .product, .orders .title .product{
 
     width: 440px;
 
 }
 
-.orders .info .price{
+.orders .info .price, .orders .title .price{
 
     width: 120px;
 
 }
 
-.orders .info .email{
+.orders .info .email, .orders .title .email{
 
     width: 320px;
 
 }
 
-.orders .info .adress{
+.orders .info .adress, .orders .title .adress{
 
     width: 300px;
 
 }
 
-.orders .info .postalcode{
+.orders .info .postalcode, .orders .title .postalcode{
 
     width: 150px;
 
 }
 
-.orders .info .id{
+.orders .info .id, .orders .title .id{
 
     width: 100px;
 
