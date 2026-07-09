@@ -67,13 +67,10 @@ a{
     }
 
 .orders .title ul{
-    text-align: center;
-    padding: 0;
-    margin: 0;
     list-style: none;
-    height: auto;
     display: flex;
-    flex-direction: row;   
+    flex-direction: row;
+    background: rgb(203, 158, 158);   
     
 }
 
@@ -114,6 +111,7 @@ a{
     font-size: 18px;
     margin: auto;
     font-weight: bold;
+text-shadow: -1px 0 0 #fff;
 }
 
 .orders .info ul li{
