@@ -832,7 +832,26 @@
 
     "golf": 3,
     "url": "item.html?item=34",
-    "buy": "https://buy.stripe.com/dRm3cufQ2cCwdPseGv5Ne0U"
+    "select": {
+      "label": "Select:",
+      "options": [
+        {
+          "id": 1,
+          "name": "white",
+          "url": "https://buy.stripe.com/7sY5kC6fsgSMeTw1TJ5Ne1r"
+        },
+        {
+          "id": 2,
+          "name": "red",
+          "url": "https://buy.stripe.com/bJebJ06fsbyscLo55V5Ne1s"
+        },
+        {
+          "id": 3,
+          "name": "black",
+          "url": "https://buy.stripe.com/8x228q0V86e812GdCr5Ne1t"
+        }
+      ]
+    }
     },
 
   {
@@ -849,7 +868,26 @@
 
     "golf": 4,
     "url": "item.html?item=35",
-    "buy": "https://buy.stripe.com/dRm4gy47kbys3aO0PF5Ne0V"
+    "select": {
+      "label": "Select:",
+      "options": [
+        {
+          "id": 1,
+          "name": "white",
+          "url": "https://buy.stripe.com/7sY5kC6fsgSMeTw1TJ5Ne1r"
+        },
+        {
+          "id": 2,
+          "name": "red",
+          "url": "https://buy.stripe.com/bJebJ06fsbyscLo55V5Ne1s"
+        },
+        {
+          "id": 3,
+          "name": "black",
+          "url": "https://buy.stripe.com/8x228q0V86e812GdCr5Ne1t"
+        }
+      ]
+    }
     },
 
 {
@@ -1017,7 +1055,26 @@
 
     "golf": 5,
     "url": "item.html?item=42",
-    "buy": "https://buy.stripe.com/3cI14m0V8bys26K7e35Ne16"
+    "select": {
+      "label": "Select:",
+      "options": [
+        {
+          "id": 1,
+          "name": "white",
+          "url": "https://buy.stripe.com/7sY5kC6fsgSMeTw1TJ5Ne1r"
+        },
+        {
+          "id": 2,
+          "name": "red",
+          "url": "https://buy.stripe.com/bJebJ06fsbyscLo55V5Ne1s"
+        },
+        {
+          "id": 3,
+          "name": "black",
+          "url": "https://buy.stripe.com/8x228q0V86e812GdCr5Ne1t"
+        }
+      ]
+    }
     },
 
   {
@@ -1254,7 +1311,7 @@
     "category": "sidemarker",
     "ali": "https://pt.aliexpress.com/item/1005004773712845.html",
     "golf": 6,
-    "name": "Golf4: 2X LED Dynamic Side Marker",
+    "name": "Golf6: 2X LED Dynamic Side Marker",
     "description": "This is a set of 2 LED dynamic side markers for VW Golf 6. They are designed to enhance the appearance of your vehicle and provide better visibility.",
     "price": "34.99€",
     "image": "golf6/sidemarker/1/1.jpeg",
@@ -1274,6 +1331,96 @@
           "id": 2,
           "name": "With Holes",
           "url": "https://buy.stripe.com/8x2eVcgU69qkcLo69Z5Ne1p"
+        }
+      ]
+    }
+    },
+
+ {
+    "id": 52,
+    "category": "interior trim",
+    "ali": "https://pt.aliexpress.com/item/1005011732351106.html",
+    "ali2": "https://pt.aliexpress.com/item/1005005871394119.html",
+    "name": "Golf6: Car Air Conditioner Trim Strips",
+    "description": "This is a set of car air conditioner trim strips for VW Golf 6. They are designed to enhance the appearance of your vehicle's interior and provide a stylish look.",
+    "price": "9.99€",
+    "image": "golf3/interior trim/1/1.jpg",
+    "image2": "golf3/interior trim/1/2.jpg",
+    "image3": "golf3/interior trim/1/3.jpg",
+    "image4": "golf3/interior trim/1/4.jpg",
+    "image5": "golf3/interior trim/1/5.jpg",
+    "golf": 6,
+    "url": "item.html?item=52",
+    "buy": "https://buy.stripe.com/6oU6oG6fs7ic6n00PF5Ne1e"
+  },
+
+  {
+    "id": 53,
+    "category": "exterior accessories",
+    "ali": "",
+    "name": "Golf6: Bumper Corner Protectors",
+    "description": "These bumper corner protectors fit perfectly on your vehicle and provide protection against minor impacts.",
+    "price": "11.99€",
+    "image": "golf3/exterior accessories/1/1.jpg",
+    "image2": "golf3/exterior accessories/1/2.jpg",
+    "image3": "golf3/exterior accessories/1/3.jpg",
+    "image4": "golf3/exterior accessories/1/4.jpg",
+
+    "golf": 6,
+    "url": "item.html?item=53",
+    "select": {
+      "label": "Select:",
+      "options": [
+        {
+          "id": 1,
+          "name": "white",
+          "url": "https://buy.stripe.com/7sY5kC6fsgSMeTw1TJ5Ne1r"
+        },
+        {
+          "id": 2,
+          "name": "red",
+          "url": "https://buy.stripe.com/bJebJ06fsbyscLo55V5Ne1s"
+        },
+        {
+          "id": 3,
+          "name": "black",
+          "url": "https://buy.stripe.com/8x228q0V86e812GdCr5Ne1t"
+        }
+      ]
+    }
+    },
+
+  {
+    "id": 54,
+    "category": "exterior door handles",
+    "ali": "https://pt.aliexpress.com/item/1005006039508318.html",
+    "name": "Golf6: Window Switch Stickers",
+    "description": "This is a set of window switch stickers for VW Golf 6. They are designed to fit perfectly on your window switches and provide a stylish look.",
+    "price": "6.99€",
+    "image": "golf3/interior trim/2/1.jpg",
+    "image2": "golf3/interior trim/2/2.jpeg",
+    "image3": "golf3/interior trim/2/3.jpeg",
+    "image4": "golf3/interior trim/2/4.jpg",
+
+    "golf": 6,
+    "url": "item.html?item=54",
+    "select": {
+      "label": "Select:",
+      "options": [
+        {
+          "id": 1,
+          "name": "green",
+          "url": "https://buy.stripe.com/14A5kC0V89qk12G1TJ5Ne1u"
+        },
+        {
+          "id": 2,
+          "name": "blue",
+          "url": "https://buy.stripe.com/14A00ibzMbys12G41R5Ne1v"
+        },
+        {
+          "id": 3,
+          "name": "red",
+          "url": "https://buy.stripe.com/5kQ6oGgU67iccLo69Z5Ne1w"
         }
       ]
     }
