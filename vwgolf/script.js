@@ -207,68 +207,85 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function showSlidingWindow(element) {
+  if (!element) {
+    return;
+  }
+
+  element.style.display = "block";
+  setTimeout(function() {
+    element.classList.add("show");
+  }, 10);
+}
+
+function hideSlidingWindow(element) {
+  if (!element) {
+    return;
+  }
+
+  element.classList.remove("show");
+  setTimeout(function() {
+    element.style.display = "none";
+  }, 500);
+}
+
+function toggleSlidingWindow(element) {
+  if (!element) {
+    return;
+  }
+
+  if (element.classList.contains("show")) {
+    hideSlidingWindow(element);
+  } else {
+    showSlidingWindow(element);
+  }
+}
+
+function openExclusiveSlidingWindow(elementToOpen, elementToClose) {
+  if (!elementToOpen) {
+    return;
+  }
+
+  if (elementToClose && elementToClose.classList.contains("show")) {
+    hideSlidingWindow(elementToClose);
+    setTimeout(function() {
+      showSlidingWindow(elementToOpen);
+    }, 500);
+    return;
+  }
+
+  toggleSlidingWindow(elementToOpen);
+}
+
 
 document.getElementById("contactme").addEventListener("click", function() {
     var divmenu = document.getElementById("contact");
-  
-    // Verifica se a div já está visível com a classe "show"
-    if (divmenu.classList.contains("show")) {
-      // Se a div estiver visível, remova a classe "show" para aplicar a animação de esconder
-      divmenu.classList.remove("show");
-  
-      // Espera o tempo da animação e depois coloca o display de volta para "none"
-      setTimeout(function() {
-        divmenu.style.display = "none"; // Esconde a div após a animação
-      }, 500); // Tempo de duração da animação (0.5s)
-    } else {
-      // Se a div não estiver visível, exibe a div e aplica a animação
-      divmenu.style.display = "block"; // Torna a div visível
-      setTimeout(function() {
-        divmenu.classList.add("show"); // Inicia a animação de exibição (de baixo para cima)
-      }, 10); // Pequeno delay para garantir que o display seja alterado antes de aplicar a animação
-    }
+    var authModal = document.getElementById("auth-modal");
+    openExclusiveSlidingWindow(divmenu, authModal);
   });
 
   document.getElementById("contactme-phone").addEventListener("click", function() {
     var divmenu = document.getElementById("contact");
-  
-    // Verifica se a div já está visível com a classe "show"
-    if (divmenu.classList.contains("show")) {
-      // Se a div estiver visível, remova a classe "show" para aplicar a animação de esconder
-      divmenu.classList.remove("show");
-  
-      // Espera o tempo da animação e depois coloca o display de volta para "none"
-      setTimeout(function() {
-        divmenu.style.display = "none"; // Esconde a div após a animação
-      }, 500); // Tempo de duração da animação (0.5s)
-    } else {
-      // Se a div não estiver visível, exibe a div e aplica a animação
-      divmenu.style.display = "block"; // Torna a div visível
-      setTimeout(function() {
-        divmenu.classList.add("show"); // Inicia a animação de exibição (de baixo para cima)
-      }, 10); // Pequeno delay para garantir que o display seja alterado antes de aplicar a animação
-    }
+    var authModal = document.getElementById("auth-modal");
+    openExclusiveSlidingWindow(divmenu, authModal);
   });
 
   document.getElementById("close").addEventListener("click", function() {
     var divmenu = document.getElementById("contact");
-  
-    // Verifica se a div já está visível com a classe "show"
-    if (divmenu.classList.contains("show")) {
-      // Se a div estiver visível, remova a classe "show" para aplicar a animação de esconder
-      divmenu.classList.remove("show");
-  
-      // Espera o tempo da animação e depois coloca o display de volta para "none"
-      setTimeout(function() {
-        divmenu.style.display = "none"; // Esconde a div após a animação
-      }, 500); // Tempo de duração da animação (0.5s)
-    } else {
-      // Se a div não estiver visível, exibe a div e aplica a animação
-      divmenu.style.display = "block"; // Torna a div visível
-      setTimeout(function() {
-        divmenu.classList.add("show"); // Inicia a animação de exibição (de baixo para cima)
-      }, 10); // Pequeno delay para garantir que o display seja alterado antes de aplicar a animação
-    }
+    hideSlidingWindow(divmenu);
+  });
+
+  document.querySelectorAll(".nav-login").forEach(function(button) {
+    button.addEventListener("click", function() {
+      var authModal = document.getElementById("auth-modal");
+      var contactModal = document.getElementById("contact");
+      openExclusiveSlidingWindow(authModal, contactModal);
+    });
+  });
+
+  document.getElementById("auth-close").addEventListener("click", function() {
+    var authModal = document.getElementById("auth-modal");
+    hideSlidingWindow(authModal);
   });
 
   function getItemsJsonUrl() {

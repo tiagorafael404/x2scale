@@ -522,6 +522,131 @@ body {
         /* Centraliza horizontalmente */
     }
 
+    #auth-modal {
+        display: none;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    #auth-modal.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .auth-modal {
+        height: auto;
+        width: 1000;
+        margin: auto auto auto auto;
+        justify-content: center;
+        justify-items: center;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    .auth-window {
+        height: auto;
+        width: 800px;
+        background-color: rgb(17, 16, 31);
+        margin: auto auto auto auto;
+        justify-content: center;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        border: solid 5px #fff;
+        border-radius: 25px 25px 25px 25px;
+    }
+
+    .auth-header {
+        height: 80px;
+        width: 100%;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        margin: 10 auto 0 auto;
+    }
+
+    .auth-content {
+        width: 100%;
+        margin: 0 auto 30px auto;
+        justify-content: center;
+        justify-items: center;
+        display: flex;
+        padding: 0 50px 20px 50px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .auth-modal .close {
+        width: 20px;
+        aspect-ratio: 1/1;
+        margin: 10 50 auto auto;
+        text-align: center;
+    }
+
+    .auth-modal .space {
+        width: 20px;
+        height: auto;
+        margin: auto auto auto 50;
+    }
+
+    .auth-modal .title {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .auth-modal .title1 {
+        width: 100%;
+        height: auto;
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+
+    .auth-modal .title2 {
+        width: 100%;
+        height: auto;
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+
+    .auth-modal a {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .auth-modal .title i {
+        color: #fff;
+        font-size: 22px;
+    }
+
+    .auth-modal .close i {
+        color: #fff;
+        font-size: 22px;
+        border: solid 5px #fff;
+        border-radius: 50%;
+        padding: 5px;
+        cursor: pointer;
+        height: 42px;
+        width: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .auth-content i {
+        margin: 20 auto 20 auto;
+        color: #fff;
+        font-size: 42px;
+    }
+
     /*Paginas "p/..." */
 
     .p-container {
@@ -1471,6 +1596,126 @@ body {
         /* Centraliza verticalmente */
         justify-content: center;
         /* Centraliza horizontalmente */
+    }
+
+    #auth-modal {
+        display: none;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    #auth-modal.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .auth-modal {
+        height: auto;
+        width: 100%;
+        margin: 100 auto auto auto;
+        justify-content: center;
+        justify-items: center;
+        display: none;
+        position: fixed;
+        top: 0px;
+    }
+
+    .auth-window {
+        height: auto;
+        width: 90%;
+        background-color: rgb(17, 16, 31);
+        margin: auto auto auto auto;
+        justify-content: center;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        border: solid 5px #fff;
+        border-radius: 25px 25px 25px 25px;
+    }
+
+    .auth-header {
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        margin: 10 auto 10 auto;
+    }
+
+    .auth-content {
+        width: 100%;
+        margin: 0 auto 25px auto;
+        justify-content: center;
+        justify-items: center;
+        display: flex;
+        padding: 0 30px 20px 30px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .auth-modal .close {
+        width: 20px;
+        height: auto;
+        margin: 10 30 auto auto;
+        text-align: center;
+    }
+
+    .auth-modal .space {
+        width: 20px;
+        height: auto;
+        margin: auto auto auto 30;
+    }
+
+    .auth-modal .title {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .auth-modal .title1 {
+        width: 100%;
+        height: auto;
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+
+    .auth-modal .title2 {
+        width: 100%;
+        height: auto;
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+
+    .auth-modal a {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .auth-modal .title i {
+        color: #fff;
+        font-size: 22px;
+    }
+
+    .auth-modal .close i {
+        color: #fff;
+        font-size: 22px;
+        border: solid 5px;
+        border-radius: 100%;
+        border-style: solid;
+        padding: 5px;
+        cursor: pointer;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 
