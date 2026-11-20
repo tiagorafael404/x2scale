@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guia de referência para configurar métodos de pagamento com Stripe, Firebase e Cloudflare.">
+  <title>Guia de pagamentos | X2Scale</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b1120;
+      color: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 48px 20px; }
+    main { width: min(100%, 980px); margin: 0 auto; }
+    header { margin-bottom: 24px; }
+    .eyebrow { color: #60a5fa; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 8px 0; color: #f8fafc; font-size: clamp(2rem, 5vw, 3rem); }
+    header p { margin: 0; color: #aab4c5; line-height: 1.6; }
+    pre { overflow-x: auto; margin: 0; padding: clamp(18px, 4vw, 32px); border: 1px solid #263449; border-radius: 14px; background: #111a2b; color: #d7e0ed; font: 14px/1.7 ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; white-space: pre-wrap; overflow-wrap: anywhere; tab-size: 2; }
+    .code { display: block; max-height: 500px; overflow-y: auto; padding: 12px 16px; border-radius: 8px; background: #18382f; }
+    @media (max-width: 600px) { body { padding: 32px 14px; } pre { font-size: 12px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">X2Scale · documentação</div>
+      <h1>Guia de pagamentos</h1>
+      <p>Referência para criar e integrar métodos de pagamento com Stripe, Firebase e Cloudflare. O conteúdo abaixo reúne as instruções e exemplos completos.</p>
+    </header>
+    <pre><code>Sistema de compras com cloudflare + stripe:
+
+stripe.com:
+criar uma API Key, em restricted keys
+o nome da key nao interessa, apenas a chave vai ser usada
+tipos de pagamento em: checkout &gt; payment methods
+
+firebase:
+criar projeto com nome do site
+criar app com o nome do site (vazerk-app)
+copiar a configuracao do SDK em Config e colocar em um arquivo firebase-config.js no site:
+
+<div class="code">
+const firebaseConfig = {
+  apiKey: 
+  authDomain: 
+  projectId: 
+  storageBucket: 
+  messagingSenderId:   
+  appId: 
+  measurementId: 
+};
+</div>
+
+Em Authentication, criar metodo de login com Google
+Em configracoes, Em Dominios Autorizados, adicionar todos os dominios do site possiveis, incluisive &quot;localhost&quot;
+
+No SQL, criar uma banco de dados no FireStore
+
+Nas regras, colocar como default para compras e carrinho:
+<div class="code">
+
+rules_version = &#39;2&#39;;
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/cartItems/{itemId} {
+      allow read, delete: if request.auth != null
+        &amp;&amp; request.auth.uid == userId;
+
+      allow create, update: if request.auth != null
+        &amp;&amp; request.auth.uid == userId
+        &amp;&amp; request.resource.data.keys().hasOnly([
+          &#39;productId&#39;,
+          &#39;optionId&#39;,
+          &#39;quantity&#39;,
+          &#39;updatedAt&#39;
+        ])
+        &amp;&amp; request.resource.data.keys().hasAll([
+          &#39;productId&#39;,
+          &#39;optionId&#39;,
+          &#39;quantity&#39;,
+          &#39;updatedAt&#39;
+        ])
+        &amp;&amp; request.resource.data.productId is string
+        &amp;&amp; (request.resource.data.optionId == null
+          || request.resource.data.optionId is string)
+        &amp;&amp; request.resource.data.quantity is int
+        &amp;&amp; request.resource.data.quantity &gt;= 1
+        &amp;&amp; request.resource.data.quantity &lt;= 99
+        &amp;&amp; request.resource.data.updatedAt is timestamp;
+    }
+  }
+}
+</div>
+
+
+cloudflare.com:
+build &gt; workers &amp; pages
+
+em variables e secrets, adicionar:
+- tipo: viariavel; nome: FIREBASE_PROJECT_ID, value: id do projeto do firebase (exemplo: vazerk-61e39)
+- tipo: secret; nome: nome do site; value: chave api do stripe; value encrypted
+
+Edit Code &gt; worker.js: usar codigo como referencia:
+<div class="code">
+
+let jwksCache = null;
+let jwksCacheExpiry = 0;
+
+async function getGoogleJwks() {
+  const now = Date.now();
+  if (jwksCache &amp;&amp; now &lt; jwksCacheExpiry) return jwksCache;
+const res = await fetch(&quot;https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com&quot;);
+  jwksCache = await res.json();
+  jwksCacheExpiry = now + 3600_000;
+  return jwksCache;
+}
+
+function base64UrlToUint8Array(str) {
+  let s = str.replace(/-/g, &quot;+&quot;).replace(/_/g, &quot;/&quot;);
+  while (s.length % 4) s += &quot;=&quot;;
+  const bin = atob(s);
+  const arr = new Uint8Array(bin.length);
+  for (let i = 0; i &lt; bin.length; i++) arr[i] = bin.charCodeAt(i);
+  return arr;
+}
+
+function base64UrlDecode(str) {
+  let s = str.replace(/-/g, &quot;+&quot;).replace(/_/g, &quot;/&quot;);
+  while (s.length % 4) s += &quot;=&quot;;
+  return atob(s);
+}
+
+async function verifyFirebaseToken(idToken, projectId) {
+  const parts = idToken.split(&quot;.&quot;);
+  if (parts.length !== 3) throw new Error(&quot;Formato de token inv&#225;lido&quot;);
+  const header = JSON.parse(base64UrlDecode(parts[0]));
+  const payload = JSON.parse(base64UrlDecode(parts[1]));
+  if (header.alg !== &quot;RS256&quot;) throw new Error(&quot;Algoritmo n&#227;o suportado&quot;);
+  
+  const jwks = await getGoogleJwks();
+  const availableKids = jwks.keys.map(k =&gt; k.kid);
+  const key = jwks.keys.find((k) =&gt; k.kid === header.kid);
+  if (!key) throw new Error(&quot;Chave p&#250;blica n&#227;o encontrada (kid: &quot; + header.kid + &quot;, dispon&#237;veis: &quot; + availableKids.join(&quot;, &quot;) + &quot;)&quot;);
+  
+  const cryptoKey = await crypto.subtle.importKey(
+    &quot;jwk&quot;, key,
+    { name: &quot;RSASSA-PKCS1-v1_5&quot;, hash: &quot;SHA-256&quot; },
+    false, [&quot;verify&quot;]
+  );
+  const data = new TextEncoder().encode(parts[0] + &quot;.&quot; + parts[1]);
+  const signature = base64UrlToUint8Array(parts[2]);
+  const valid = await crypto.subtle.verify(
+    { name: &quot;RSASSA-PKCS1-v1_5&quot;, hash: &quot;SHA-256&quot; },
+    cryptoKey, signature, data
+  );
+  if (!valid) throw new Error(&quot;Assinatura inv&#225;lida&quot;);
+  if (payload.aud !== projectId) throw new Error(&quot;Audi&#234;ncia inv&#225;lida (aud: &quot; + payload.aud + &quot;, esperado: &quot; + projectId + &quot;)&quot;);
+  if (payload.iss !== `https://securetoken.google.com/${projectId}`)
+    throw new Error(&quot;Emissor inv&#225;lido (iss: &quot; + payload.iss + &quot;)&quot;);
+  const nowSec = Date.now() / 1000;
+  if (typeof payload.exp !== &quot;number&quot; || nowSec &gt; payload.exp)
+    throw new Error(&quot;Token expirado&quot;);
+  if (!payload.sub) throw new Error(&quot;Token sem utilizador&quot;);
+  return payload;
+}
+
+function converterPreco(precoString) {
+  let limpo = String(precoString).replace(/[^0-9,]/g, &quot;&quot;);
+  limpo = limpo.replace(&quot;,&quot;, &quot;.&quot;);
+  const valor = parseFloat(limpo);
+  if (isNaN(valor)) throw new Error(`Pre&#231;o inv&#225;lido: ${precoString}`);
+  return Math.round(valor * 100);
+}
+
+const paisesEuropa = [
+  &quot;AL&quot;, &quot;AD&quot;, &quot;AT&quot;, &quot;BE&quot;, &quot;BA&quot;, &quot;BG&quot;, &quot;BY&quot;, &quot;CH&quot;, &quot;CY&quot;, &quot;CZ&quot;, &quot;DE&quot;, &quot;DK&quot;,
+  &quot;EE&quot;, &quot;ES&quot;, &quot;FI&quot;, &quot;FR&quot;, &quot;GB&quot;, &quot;GR&quot;, &quot;HR&quot;, &quot;HU&quot;, &quot;IE&quot;, &quot;IS&quot;, &quot;IT&quot;, &quot;LI&quot;,
+  &quot;LT&quot;, &quot;LU&quot;, &quot;LV&quot;, &quot;MC&quot;, &quot;MD&quot;, &quot;ME&quot;, &quot;MK&quot;, &quot;MT&quot;, &quot;NL&quot;, &quot;NO&quot;, &quot;PL&quot;, &quot;PT&quot;,
+  &quot;RO&quot;, &quot;RS&quot;, &quot;SE&quot;, &quot;SI&quot;, &quot;SK&quot;, &quot;SM&quot;, &quot;UA&quot;,
+];
+
+export default {
+  async fetch(request, env, ctx) {
+    const origin = request.headers.get(&quot;Origin&quot;);
+    const corsHeaders = {
+      &quot;Access-Control-Allow-Origin&quot;: origin || &quot;*&quot;,
+      &quot;Access-Control-Allow-Methods&quot;: &quot;POST, OPTIONS&quot;,
+      &quot;Access-Control-Allow-Headers&quot;: &quot;Content-Type, Authorization&quot;,
+    };
+
+    if (request.method === &quot;OPTIONS&quot;) {
+      return new Response(null, { headers: corsHeaders });
+    }
+    if (request.method !== &quot;POST&quot;) {
+      return new Response(&quot;Method not allowed&quot;, { status: 405, headers: corsHeaders });
+    }
+
+    const sites = {
+      &quot;https://vazerk.com&quot;: { stripeKey: env.vazerk, projectId: env.FIREBASE_PROJECT_ID },
+      &quot;https://rafapage.com&quot;: { stripeKey: env.rafapage, projectId: env.FIREBASE_PROJECT_ID_2 },
+    };
+
+    const siteConfig = sites[origin];
+    if (!siteConfig) {
+      return Response.json({ error: &quot;Site n&#227;o autorizado&quot; }, { status: 403, headers: corsHeaders });
+    }
+
+    const authHeader = request.headers.get(&quot;Authorization&quot;);
+    if (!authHeader || !authHeader.startsWith(&quot;Bearer &quot;)) {
+      return Response.json({ error: &quot;Autentica&#231;&#227;o necess&#225;ria&quot; }, { status: 401, headers: corsHeaders });
+    }
+
+    const idToken = authHeader.slice(7);
+    const projectId = siteConfig.projectId;
+    if (!projectId) {
+      return Response.json({ error: &quot;FIREBASE_PROJECT_ID n&#227;o configurado&quot; }, { status: 500, headers: corsHeaders });
+    }
+
+    try {
+      await verifyFirebaseToken(idToken, projectId);
+    } catch (err) {
+      return Response.json({ error: &quot;Token inv&#225;lido&quot;, details: err.message }, { status: 401, headers: corsHeaders });
+    }
+
+    let body;
+    try {
+      body = await request.json();
+    } catch {
+      return Response.json({ error: &quot;JSON inv&#225;lido&quot; }, { status: 400, headers: corsHeaders });
+    }
+
+    let items;
+    if (Array.isArray(body.items)) {
+      items = body.items;
+    } else if (body.productId != null) {
+      items = [{ productId: body.productId, optionId: body.optionId, quantity: 1 }];
+    } else {
+      return Response.json({ error: &quot;Carrinho vazio&quot; }, { status: 400, headers: corsHeaders });
+    }
+
+    if (items.length === 0) {
+      return Response.json({ error: &quot;Carrinho vazio&quot; }, { status: 400, headers: corsHeaders });
+    }
+
+    const itemsResponse = await fetch(`${origin}/items.json`);
+    if (!itemsResponse.ok) {
+      return Response.json({ error: &quot;Erro ao carregar produtos&quot; }, { status: 500, headers: corsHeaders });
+    }
+    const catalog = await itemsResponse.json();
+
+    const lineItems = [];
+    for (const item of items) {
+      const productId = item.productId;
+      if (productId == null) {
+        return Response.json({ error: &quot;Produto em falta no carrinho&quot; }, { status: 400, headers: corsHeaders });
+      }
+      const produto = catalog.find((p) =&gt; String(p.id) === String(productId));
+      if (!produto) {
+        return Response.json({ error: `Produto n&#227;o encontrado: ${productId}` }, { status: 404, headers: corsHeaders });
+      }
+      const quantity = item.quantity != null ? Number(item.quantity) : 1;
+      if (!Number.isInteger(quantity) || quantity &lt; 1 || quantity &gt; 99) {
+        return Response.json({ error: `Quantidade inv&#225;lida (${quantity}) para o produto ${productId}` }, { status: 400, headers: corsHeaders });
+      }
+      let nome = produto.name;
+      let precoCentimos;
+      const optionId = item.optionId;
+      if (optionId != null) {
+        const opcoes = produto.select?.options || produto.options || produto.opcoes || [];
+        const opcao = opcoes.find((o) =&gt; String(o.id) === String(optionId));
+        if (!opcao) {
+          return Response.json({ error: `Op&#231;&#227;o n&#227;o encontrada: ${optionId} no produto ${productId}` }, { status: 404, headers: corsHeaders });
+        }
+        const optName = opcao.name || opcao.nome || optionId;
+        nome = `${produto.name} — ${optName}`;
+        const optPrice = opcao.price != null ? opcao.price : opcao.preco != null ? opcao.preco : produto.price;
+        precoCentimos = converterPreco(optPrice);
+      } else {
+        precoCentimos = converterPreco(produto.price);
+      }
+
+      // URL p&#250;blica do produto no site (ex.: https://vazerk.com/item?item=2)
+      let urlProduto = `${origin}/item?item=${encodeURIComponent(productId)}`;
+      if (optionId != null) {
+        urlProduto += `&amp;option=${encodeURIComponent(optionId)}`;
+      }
+
+      lineItems.push({
+        quantity: String(quantity),
+        name: nome,
+        unitAmount: String(precoCentimos),
+        url: urlProduto,
+        productId: String(productId),
+      });
+    }
+
+    const params = new URLSearchParams({
+      &quot;mode&quot;: &quot;payment&quot;,
+      &quot;phone_number_collection[enabled]&quot;: &quot;true&quot;,
+      &quot;billing_address_collection&quot;: &quot;required&quot;,
+      &quot;customer_creation&quot;: &quot;always&quot;,
+      &quot;success_url&quot;: `${origin}/success.html`,
+      &quot;cancel_url&quot;: `${origin}/cancel.html`,
+    });
+
+    lineItems.forEach((li, i) =&gt; {
+      params.append(`line_items[${i}][quantity]`, li.quantity);
+      params.append(`line_items[${i}][price_data][currency]`, &quot;eur&quot;);
+      params.append(`line_items[${i}][price_data][unit_amount]`, li.unitAmount);
+      params.append(`line_items[${i}][price_data][product_data][name]`, li.name);
+      // URL do produto, vis&#237;vel no checkout por baixo do nome
+      params.append(`line_items[${i}][price_data][product_data][description]`, li.url);
+      // Tamb&#233;m em metadata, para consultares no Stripe / webhook
+      params.append(`line_items[${i}][price_data][product_data][metadata][url]`, li.url);
+      params.append(`line_items[${i}][price_data][product_data][metadata][productId]`, li.productId);
+    });
+
+    paisesEuropa.forEach((pais, index) =&gt; {
+      params.append(`shipping_address_collection[allowed_countries][${index}]`, pais);
+    });
+
+    const stripeResponse = await fetch(&quot;https://api.stripe.com/v1/checkout/sessions&quot;, {
+      method: &quot;POST&quot;,
+      headers: {
+        Authorization: `Bearer ${siteConfig.stripeKey}`,
+        &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,
+      },
+      body: params,
+    });
+
+    const session = await stripeResponse.json();
+    if (!session.url) {
+      return Response.json({ error: &quot;Erro Stripe&quot;, details: session }, { status: 500, headers: corsHeaders });
+    }
+    return Response.json({ url: session.url }, { headers: corsHeaders });
+  },
+};
+</div>
+
+DETALHE:
+na linha &quot;const sites = {&quot;, alterar o dominio do site pelo desejado
+na linha &quot;const params = new URLSearchParams(&quot; alterar a de pagamento cancelado ou feito com sucesso
+
+criar arquivo cloudflare.js:
+usar como base: (necessario alteracoes)
+
+<div class="code">
+
+function getFirebaseUserForCheckout() {
+  const auth = window.FirebaseAuth
+    || (window.firebase &amp;&amp; window.firebase.apps.length ? window.firebase.auth() : null);
+  const user = auth &amp;&amp; auth.currentUser;
+  if (!user) {
+    const error = new Error(&quot;Please sign in to continue.&quot;);
+    error.code = &quot;auth-required&quot;;
+    throw error;
+  }
+
+  return user;
+}
+
+async function criarSessaoCheckout(payload) {
+  const user = getFirebaseUserForCheckout();
+  const idToken = await user.getIdToken();
+  const res = await fetch(&quot;https://x2scale.tiagorgc2002.workers.dev&quot;, {
+    method: &quot;POST&quot;,
+    headers: {
+      &quot;Content-Type&quot;: &quot;application/json&quot;,
+      &quot;Authorization&quot;: `Bearer ${idToken}`,
+    },
+    body: JSON.stringify(payload),
+  });
+
+  let data;
+  try {
+    data = await res.json();
+  } catch (error) {
+    throw new Error(&quot;Invalid response from the payment service.&quot;);
+  }
+
+  if (!res.ok) {
+    throw new Error(data.error || &quot;Unable to create payment.&quot;);
+  }
+
+  if (!data || typeof data.url !== &quot;string&quot; || !data.url) {
+    throw new Error((data &amp;&amp; data.error) || &quot;The payment service did not return a checkout link.&quot;);
+  }
+
+  return data.url;
+}
+
+async function comprar(productId, optionId) {
+  if (productId === undefined || productId === null || String(productId).trim() === &quot;&quot;) {
+    throw new Error(&quot;Invalid product.&quot;);
+  }
+
+  const payload = { productId: String(productId) };
+  if (optionId !== undefined &amp;&amp; optionId !== null) {
+    payload.optionId = String(optionId);
+  }
+
+  window.location.href = await criarSessaoCheckout(payload);
+}
+
+async function comprarCarrinho(items) {
+  if (!Array.isArray(items) || items.length === 0) {
+    throw new Error(&quot;Your cart is empty.&quot;);
+  }
+
+  const payloadItems = items.map((item) =&gt; {
+    if (!item || item.productId === undefined || item.productId === null) {
+      throw new Error(&quot;Your cart contains an invalid product.&quot;);
+    }
+
+    if (!Number.isInteger(item.quantity) || item.quantity &lt; 1 || item.quantity &gt; 99) {
+      throw new Error(&quot;Your cart contains an invalid quantity.&quot;);
+    }
+
+    const payloadItem = {
+      productId: String(item.productId),
+      quantity: item.quantity,
+    };
+    if (item.optionId !== undefined &amp;&amp; item.optionId !== null) {
+      payloadItem.optionId = String(item.optionId);
+    }
+    return payloadItem;
+  });
+
+  window.location.href = await criarSessaoCheckout({ items: payloadItems });
+}
+</div>
+</code></pre>
+  </main>
+</body>
+</html>
