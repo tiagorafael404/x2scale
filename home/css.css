@@ -201,9 +201,9 @@ margin: auto;
   
 
 .contact{
-    height: 600px;
+    height: auto;
     width: 100%;
-    margin: 150 auto auto auto;
+    margin: 40 auto auto auto;
     justify-content: center;
     justify-items: center;
     display: none;
@@ -212,8 +212,8 @@ margin: auto;
 }
 
 .contact-window{
-    height: 100%;
-    width: 70%;
+    height: auto;
+    width: auto;
     background-color: rgb(17, 16, 31);
     margin: auto auto auto auto;
     justify-content: center;
@@ -227,20 +227,21 @@ margin: auto;
 }
 
 .contact-header{
-    height: 25%;
+    height: auto;
     width: 100%;
     justify-content: space-between;
     justify-items: center;
     align-items: center;
     align-content: center;
     display: flex;
+    margin: 10 auto 10 auto;
 
 }
 
 .contact-form{
-    height: 75%;
-    width: 80%;
-    margin: auto auto auto auto;
+    height: auto;
+    width: auto;
+    margin: 0 50 30 50;
     justify-content: center;
     justify-items: center;
     display: flex;
@@ -264,22 +265,26 @@ margin: auto;
 
 .contact-form input{
     height: 50px;
-    width: 750px;
+    width: 550px;
     font-weight: bold;
     margin: auto auto 20 auto;
     padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+
 }
 
 .contact-form textarea{
     font-size: 16px;
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     height: 100px;
-    width: 750px;
+    width: 550px;
 
     padding: 10px;
     margin: auto auto 15 auto;
     resize: none; /* Impede o redimensionamento */
     box-sizing: border-box;
+    border-radius: 10px;
 
 }
 
@@ -302,8 +307,8 @@ margin: auto;
 .contact .close{
     width: 100px;
     height: 100px;
-    margin: auto 20 auto auto;
-    text-align: center;
+    margin: 0 0 auto auto;
+    align-content: center;
 
 }
 
@@ -371,6 +376,26 @@ margin: auto;
     display: flex; /* Usado para centralizar o ícone */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
+}
+
+.contact-more{
+
+    margin: 0 auto 30 auto;
+
+}
+
+.contact-phone{
+
+    margin: 0 auto 10 auto;
+    text-align: center;
+
+}
+
+.contact-email{
+
+    margin: 0 auto 10 auto;
+    text-align: center;
+
 }
 
 .wave{
@@ -773,6 +798,206 @@ margin: auto;
     
     }
 
+
+    .contact{
+    height: auto;
+    width: 100%;
+    margin: 50 auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: none;
+    position: absolute;
+
+}
+
+.contact-window{
+    height: auto;
+    width: auto;
+    background-color: rgb(17, 16, 31);
+    margin: auto auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    border: solid 5px #fff;
+    border-radius: 25px 25px 25px 25px;
+
+
+}
+
+.contact-header{
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    margin: 10 auto 0 auto;
+    
+
+}
+
+.contact-form{
+    height: auto;
+    width: auto;
+    margin: 0 50 20 50;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto auto auto;
+}
+
+.contact-form label{
+    color: #fff;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 auto 5 5;
+
+}
+
+.contact-form input{
+    height: 50px;
+    width: 550px;
+    font-weight: bold;
+    margin: auto auto 10 auto;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
+
+.contact-form textarea{
+    font-size: 16px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    height: 100px;
+    width: 550px;
+
+    padding: 10px;
+    margin: auto auto 15 auto;
+    resize: none; /* Impede o redimensionamento */
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+
+.contact-form button{
+    all: unset;
+    width: 220px;
+    height: 40px;
+    background-color: #ff0042;
+    color: #fff;
+    text-align: center;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.contact .close{
+    width: 80px;
+    height: 80px;
+    margin: 0 0 auto auto;
+    align-content: center;
+
+}
+
+.contact .space{
+    width: 100px;
+    height: auto;
+    margin: auto auto auto 20;
+
+}
+
+.contact .title{
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.contact .title1{
+    width: 250px;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+
+}
+
+.contact .title2{
+    width: 250px;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+
+}
+
+.contact a{
+    color: #fff;
+    font-size: 20;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.contact .title i{
+    color: #fff;
+    font-size: 30px;
+}
+
+.contact .close i{
+    color: #fff;
+    font-weight: normal;
+    font-size: 30px;
+    border: solid 5px;
+    border-radius: 100%;
+    border-style: solid;
+    padding: 5px;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    display: flex; /* Usado para centralizar o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.contact-more{
+
+    margin: 0 auto 30 auto;
+
+}
+
+.contact-phone{
+
+    margin: 0 auto 10 auto;
+    text-align: center;
+
+}
+
+.contact-email{
+
+    margin: 0 auto 10 auto;
+    text-align: center;
+
+}
+
+
     .wave{
     height: 100%;
     width: 100%;
@@ -814,10 +1039,7 @@ margin: auto;
         width: 100%;
     }
 
-    .contact{
-        margin: 80 auto auto auto
-    }
-    
+
 
 .part1{
     height: 220px;
@@ -1394,7 +1616,7 @@ margin: auto;
 .contact{
     height: auto;
     width: 100%;
-    margin: 100 auto auto auto;
+    margin: 80 auto auto auto;
     justify-content: center;
     justify-items: center;
     display: none;
@@ -1418,7 +1640,7 @@ margin: auto;
 }
 
 .contact-header{
-    height: 80px;
+    height: auto;
     width: 100%;
     justify-content: space-between;
     justify-items: center;
@@ -1426,11 +1648,11 @@ margin: auto;
     align-content: center;
     display: flex;
 
-    margin: 0 auto 0 auto;
+    margin: 15 auto 10 auto;
 }
 
 .contact-form{
-    height: 75%;
+    height: auto;
     width: 100%;
     margin: 0 auto 0 auto;
     justify-content: center;
@@ -1479,8 +1701,8 @@ margin: auto;
 
 .contact-form button{
     all: unset;
-    width: 250px;
-    height: 50px;
+    width: 200px;
+    height: 45px;
     background-color: #ff0042;
     color: #fff;
     text-align: center;
@@ -1495,9 +1717,9 @@ margin: auto;
 
 
 .contact .close{
-    width: 20px;
+    width: auto;
     height: auto;
-    margin: 10 30 auto auto;
+    margin: 0 30 auto auto;
     text-align: center;
 
 }
@@ -1559,6 +1781,31 @@ margin: auto;
     border-style: solid;
     padding: 5px;
     cursor: pointer;
+}
+
+.contact-more{
+
+    margin: 0 auto 20 auto;
+
+}
+
+.contact-more a{
+
+    font-size: 20;
+
+}
+
+.contact-phone{
+
+    margin: 0 auto 10 auto;
+    text-align: center;
+
+}
+
+.contact-email{
+    margin: 0 auto 10 auto;
+    text-align: center;
+
 }
 
 .screen{

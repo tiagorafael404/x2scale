@@ -11,9 +11,9 @@
     "editor.quickSuggestions": {
         "strings": false,
         "comments": false,
-        "other": false
+        "other": true
     },
-    "editor.suggestOnTriggerCharacters": false,
+    "editor.suggestOnTriggerCharacters": true,
 
     // Disable Emmet auto-expansion in HTML
     "emmet.triggerExpansionOnTab": false,
