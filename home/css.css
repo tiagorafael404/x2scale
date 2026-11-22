@@ -189,27 +189,31 @@ margin: auto;
 #contact {
     display: none; /* Inicialmente invisível */
     opacity: 0; /* Torna a div invisível */
-    transform: translateY(100%); /* Coloca a div fora da tela, abaixo */
+    transform: translate(-50%, 100%); /* Coloca a div fora da tela, abaixo */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Animação suave de opacidade e movimento */
   }
   
   #contact.show {
     display: block; /* Torna a div visível */
     opacity: 1; /* Torna a div visível */
-    transform: translateY(0); /* Move a div para a posição original (de baixo para cima) */
+    transform: translate(-50%, 0); /* Move a div para a posição original (de baixo para cima) */
+
   }
   
 
 .contact{
     height: auto;
-    width: 100%;
+    width: auto;
     margin: 40 auto auto auto;
     justify-content: center;
     justify-items: center;
     display: none;
-    position: absolute;
+    position: absolute ;
+    left: 50%;
+
 
 }
+
 
 .contact-window{
     height: auto;
