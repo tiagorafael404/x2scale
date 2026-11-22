@@ -434,6 +434,44 @@ async function comprarCarrinho(items) {
   window.location.href = await criarSessaoCheckout({ items: payloadItems });
 }
 </div>
+
+Sistema de lista de compras reazidadas
+
+cloudflare &gt; workers &amp; pages &gt; bindings
+type D1 data base; name nome-orders (x2scale-orders); value nome-orders (x2scale-orders)
+
+no site: guardar os pedidos usando D1
+
+stripe.com &gt; developers &gt; workbench &gt; webhooks
+
+configuracoes: deixar tudo default
+your account &gt; snapshot &gt; api version default
+events:
+checkout.session.completed
+checkout.session.async_payment_succeeded
+
+destination type: webhook endpoint
+
+destination name: nome_do_site orders (nao importa)
+
+endpoint url:
+https://x2scale.tiagorgc2002.workers.dev/stripe-webhook
+(alterar pelo url do workers.dev do cloudflare)
+
+description: pode estar vazia
+
+Proximo Passo:
+
+copia o signing secret
+
+no terminal do VS Code, na pasta do projeto, executa:
+npx wrangler secret put STRIPE_WEBHOOK_SECRET
+
+quando o terminal pedir o valor, cola o Signing secret (whsec_...) e carrega em Enter.
+
+proximo passo:
+no terminal do VS Code, executa:
+npx wrangler deploy
 </code></pre>
   </main>
 </body>
