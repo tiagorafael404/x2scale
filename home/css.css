@@ -491,8 +491,18 @@ margin: auto;
     border: 2px solid #ff0042;
      
     position: relative;
+    animation: part2-enter 1s ease-out both;
 
 
+}
+
+@keyframes part2-enter {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .part2 ul{
