@@ -1,168 +1,187 @@
-<html>
-<head lang="en">
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-X2Scale
-</title>
-
-<link rel="stylesheet" href="home/css2.css">
-<link rel="icon" href="logo.ico" type="image/x-icon">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Tiago — web developer and video editor.">
+    <title>Tiago — Portfolio</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="home/css2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+    <div class="top-accent" aria-hidden="true"></div>
+    <header class="site-header">
+        <nav class="navbar page-width" aria-label="Main navigation">
+            <a class="brand" href="home.html" aria-label="Tiago home">
+                <span class="brand-mark" aria-hidden="true">T</span>
+                <span class="brand-copy">
+                    <strong>Tiago</strong>
+                    <span>Portfolio</span>
+                </span>
+            </a>
 
-
-
-
-<div class="line"></div>
-
-<div class="position-screen">  
-
-<div class="screen">  
-<div class="navbar">
-
-    <div class="logotitle"><div class="logo"  href="home.html" style="background-image: url('logo2.png');"><a href="http://x2scale.com"></a></div><div class="domain"><a>X2SCALE</a></div></div>
-    <div class="menu">
-<ul>
-
-<li><a href="home.html">Home</a></li>
-<li><a href="#projects">Projects</a></li>
-<li class="contactme" id="contactme"><a>Contact Me</a></li>
-
-</ul>
-</div>
-
-    <div class="menu2"  id="more">
-
-        <i class="material-icons" style="color:white">menu</i>
-
-    </div>
-
-</div>
-
-
-    <div class="menu3" id="menu">
-
-        <ul>
-            <li><a href="home.html" class="menubutton">Home</a></li>
-            <li><a href="#projects" class="menubutton">Projects</a></li>
-            <li class="contactme" id="contactme-phone"><a class="menubutton">Contact me</a></li>
-
-        </ul>
-
-
-    </div>
-
-
-      <div class="wave"></div>
-
-<div class="content">
-
-
-    <div class="display">
-    <div class="part1"></div>
-
-    <div class="part2">
-
-        <ul class="pc">
-            <div class="title">
-            <li><a>Welcome<span class="blue"> to my</span></a></li>
-            <li><a><span class="blue">Portfolio</span></a></li>
+            <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="#projects">Projects</a>
+                <button class="contactme nav-contact" id="contactme" type="button">
+                    Let's talk <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </button>
             </div>
-            <div class="subtitle">
-            <li><a>Web Developer & Video Editor</a></li>
+
+            <button class="menu2" id="more" type="button" aria-label="Open navigation menu">
+                <i class="material-icons" aria-hidden="true">menu</i>
+            </button>
+
+            <div class="menu3" id="menu">
+                <a href="home.html" class="menubutton">Home</a>
+                <a href="#projects" class="menubutton">Projects</a>
+                <button class="contactme" id="contactme-phone" type="button">
+                    Let's talk <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </button>
             </div>
-    
-        </ul>
+        </nav>
+    </header>
 
-        <ul class="phone">
-            <div class="title">
-            <li><a>Welcome<span class="blue"> to my</span></a></li>
-            <li><a><span class="blue">Portfolio</span></a></li>
+    <main>
+        <section class="hero page-width" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot"></span> Web developer <span class="eyebrow-divider">/</span> Video editor</p>
+                <h1>Digital work<br>with <span>personality.</span></h1>
+                <p class="hero-intro">
+                    I'm Tiago. I build thoughtful web experiences and bring stories to life through video.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">
+                        Explore my work <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="button button-quiet" href="mailto:x2scale@gmail.com">Get in touch</a>
+                </div>
+                <div class="hero-facts">
+                    <div class="hero-fact">
+                        <strong>02</strong>
+                        <span>Featured projects</span>
+                    </div>
+                    <div class="hero-fact">
+                        <strong>Web + video</strong>
+                        <span>Creative focus</span>
+                    </div>
+                </div>
             </div>
-            <div class="subtitle">
-            <li><a>Web Developer & Video Editor</a></li>
+
+            <div class="hero-visual">
+                <div class="portrait-frame">
+                    <img src="myphoto.png" alt="Portrait of Tiago">
+                    <div class="portrait-shade"></div>
+                </div>
+                <div class="portrait-label">
+                    <span class="portrait-label-mark"><i class="fa fa-code" aria-hidden="true"></i></span>
+                    <span><strong>Curious by nature</strong><small>Building what's next</small></span>
+                </div>
+                <span class="visual-orbit orbit-one" aria-hidden="true"></span>
+                <span class="visual-orbit orbit-two" aria-hidden="true"></span>
             </div>
-        </ul>
-    </div>
+        </section>
 
-    </div>
-</div>
-</div>
+        <section class="projects-section page-width" id="projects">
+            <div class="section-heading">
+                <div>
+                    <p class="section-kicker">01 <span>/</span> Selected work</p>
+                    <h2>Recent projects</h2>
+                </div>
+                <p class="section-note">A selection of digital experiences<br>I've helped bring to life.</p>
+            </div>
 
+            <div class="projects">
+                <div class="first">
+                    <a class="project-card" href="https://vazerk.com" target="_blank" rel="noopener noreferrer">
+                        <div class="project-image">
+                            <img src="home/project1.png" alt="Preview of the Vazerk online clothing store" loading="lazy">
+                            <span class="project-number">01</span>
+                            <span class="project-open" aria-label="Open Vazerk project"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="project-info">
+                            <div>
+                                <p class="project-type">E-commerce <span>·</span> Clothing</p>
+                                <h3>Vazerk</h3>
+                            </div>
+                            <span class="project-link">Visit project <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+                        </div>
+                    </a>
+                </div>
 
-<div class="fw" id="projects">
-    <div class="wave2"></div>
+                <div class="second">
+                    <a class="project-card" href="https://rafapage.com" target="_blank" rel="noopener noreferrer">
+                        <div class="project-image project-image-blue">
+                            <img src="home/project2.png" alt="Preview of the VW Golf parts and accessories store" loading="lazy">
+                            <span class="project-number">02</span>
+                            <span class="project-open" aria-label="Open VW Golf project"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="project-info">
+                            <div>
+                                <p class="project-type">E-commerce <span>·</span> Automotive</p>
+                                <h3>VW Golf</h3>
+                            </div>
+                            <span class="project-link">Visit project <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <div class="title"><a>Projects</a></div>
-    <div class="projects">
+        <section class="contact-cta page-width">
+            <div>
+                <p class="section-kicker">02 <span>/</span> Your next idea</p>
+                <h2>Let's make something<br><span>worth remembering.</span></h2>
+            </div>
+            <a class="button button-light" href="mailto:x2scale@gmail.com">
+                Start a conversation <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </section>
+    </main>
 
-        <div class="first"><a href="https://vazerk.com" target="_blank" class="clickable-div"><div class="screenshot"></div><div class="info"><ul><li><h1>Vazerk</h1></li><li><h2>an online clothing store</h2></li></ul></div></a></div>
-        <div class="second"><a href="https://rafapage.com" target="_blank" class="clickable-div"><div class="screenshot"></div><div class="info"><ul><li><h1>VW Golf</h1></li><li><h2>an online store for cars</h2></li></ul></div></a></div>
-        <div class="third"><div class="screenshot"></div><div class="info"></div></div>
-
-    </div>
-
-</div>
-</div>
+    <footer class="site-footer page-width">
+        <a class="footer-brand" href="home.html">Tiago<span>©</span></a>
+        <p>Made with care, one detail at a time.</p>
+        <a href="mailto:x2scale@gmail.com">x2scale@gmail.com <i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    </footer>
 
     <div class="contact" id="contact" style="display: none;">
-        <div class="contact-window">
-    
-        <div class="contact-header">
-            <div class="space"></div>
-            <div class="title"><div class="title1"><i class="fa fa-envelope"></i></div><div class="title2"><a>Contact me</a></div></div>
-            <div class="close"><i class="fa fa-close" id="close"></i></div>
-        </div>
+        <div class="contact-window" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+            <div class="contact-header">
+                <div>
+                    <p class="section-kicker">Let's work together</p>
+                    <h2 id="contact-title">Tell me about it.</h2>
+                </div>
+                <button class="close" id="close" type="button" aria-label="Close contact form">
+                    <i class="fa fa-close" aria-hidden="true"></i>
+                </button>
+            </div>
 
-        <div class="contact-form">
-    
-            <form action="https://formsubmit.co/x2scale@gmail.com" method="POST">
-                <label for="name">Name</label>
-                <input type="name" name="name" id="name" placeholder="Name" required>
-                <label for="email">E-mail</label>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" placeholder="..." required></textarea>                
-                
-                <button type="submit">Send</button>
+            <form class="contact-form" action="https://formsubmit.co/x2scale@gmail.com" method="POST">
+                <label for="name">Your name</label>
+                <input type="text" name="name" id="name" placeholder="Jane Smith" required>
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="email" placeholder="jane@example.com" required>
+                <label for="message">What are you thinking?</label>
+                <textarea name="message" id="message" placeholder="A few details about your project..." required></textarea>
+                <button class="button button-primary submit-button" type="submit">Send message <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 
                 <input type="hidden" name="_captcha" value="false">
-        
                 <input type="hidden" name="_next" value="https://x2scale.com">
-        
-                <input type="hidden" name="_subject" value="X2SCALE">
-        
-                <input type="text" name="_honey" style="display:none">
-        
+                <input type="hidden" name="_subject" value="Portfolio contact — Tiago">
                 <input type="hidden" name="_template" value="box">
-        
-                <input type="hidden" name="_blacklist" value="free money, buy now, click here, discount, cheap, viagra, make money, merda, onlyfans">
-        
-                <input type="hidden" name="_cc" value="tiagorgc2002@gmail.com">
-        
-           </form>
+                <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            </form>
 
-        </div>
-
-        <div class="contact-more">
-        <div class="contact-phone">
-            <a>+351 935601498</a>
-        </div>
-
-        <div class="contact-email">
-            <a>x2scale@gmail.com</a>
+            <div class="contact-details">
+                <a href="mailto:x2scale@gmail.com">x2scale@gmail.com</a>
+                <a href="tel:+351935601498">+351 935 601 498</a>
+            </div>
         </div>
     </div>
 
-        </div>
-    </div>
-
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
