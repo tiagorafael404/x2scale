@@ -1425,8 +1425,18 @@ margin: auto;
         border-radius: 50%;
         border: 4px solid #fff;
         margin: 15 auto 15 auto;
-        
+        animation: part1-enter 1s ease-out both;
+
     }
+
+    @keyframes part1-enter {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
     
     .part1:hover{
         border: 4px solid #ff0042;
@@ -1441,8 +1451,18 @@ margin: auto;
         margin: auto;
         border-radius: 30px 30px 30px 30px;
         border: 2px solid #ff0042;
-    
+        animation: part2-enter 1s ease-out both;
+
     }
+
+    @keyframes part2-enter {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
     
     .part2 ul{
         display: flex;
