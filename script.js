@@ -113,4 +113,20 @@ document.getElementById("contactme").addEventListener("click", function() {
     }
   });
 
+  const cat = document.querySelector(".cat");
+  if (cat) {
+    const catAnimations = ["cat-move1", "cat-move2", "cat-move3", "cat-move4"];
+    let catAnimationIndex = 0;
+
+    cat.addEventListener("animationend", event => {
+      if (event.animationName !== catAnimations[catAnimationIndex]) {
+        return;
+      }
+
+      catAnimationIndex = (catAnimationIndex + 1) % catAnimations.length;
+      cat.style.animationName = catAnimations[catAnimationIndex];
+    });
+  }
   
+
+

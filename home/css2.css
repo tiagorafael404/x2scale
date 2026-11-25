@@ -1,0 +1,1922 @@
+html {
+    padding: 0px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;           /* 100vw e 100vh para 100% da janela */
+    min-height: 100vh;
+    min-height: 100dvh;     
+    margin: auto;
+}
+
+body {
+
+    width: 100vw;
+    width-max: 10vw;
+    margin: 1 auto auto auto;
+      background-color: #0a0a0a;
+
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 2px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 2px, transparent 1px);
+
+  background-size: 60px 60px;
+}
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.navbar a{
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+}
+
+
+
+@media screen and (min-width: 1251px) {
+
+    .menu3{
+        display: none;
+
+       }
+
+    .menu2{
+        display: none;
+    }
+
+    .part2 .phone{
+        display: none;
+    }
+
+    .dm-phone{
+        display: none;
+    }
+
+    .mypage {
+        display: inherit;
+        height: inherit;
+        margin: auto;
+        width: 70%;
+        padding: 0px;
+        flex-direction: inherit;
+        justify-content: inherit;
+    }
+
+    .line{
+        height: 15px;
+        width: 100%;
+        background-color: #ff0042;
+        position: relative;
+
+    }
+
+
+
+
+.screen{
+    position: relative;
+
+}
+
+.position-screen{
+    position: absolute;
+    width: 100%;
+
+
+
+
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+height: 100px;
+/*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
+position: relative; 
+margin: auto;
+
+}
+
+
+.navbar .logotitle{
+    display: flex;
+    flex-direction: row;
+    margin: auto auto auto 0;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar .domain a{
+      text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.navbar .logo{
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin: auto auto auto 0;
+    background-size: cover;
+}
+
+.navbar .menu{
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    margin: auto 0 auto auto;
+    align-items: center;
+}
+
+.navbar .menu ul{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+    text-transform: none;
+
+    
+}
+
+.navbar .menu ul li{
+	
+    /*background-color: rgba(16, 16, 16); colocar background em cada item*/
+    border-radius: 15px;
+    list-style: none;
+    height: 70%;
+    width: 130px;
+    text-transform: none;
+    margin: auto;
+   
+}
+
+.navbar li:hover {
+    background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: none;
+
+}
+
+.contactme{
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+#contact {
+    display: none; /* Inicialmente invisível */
+    opacity: 0; /* Torna a div invisível */
+    transform: translate(-50%, 100%); /* Coloca a div fora da tela, abaixo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animação suave de opacidade e movimento */
+  }
+  
+  #contact.show {
+    display: block; /* Torna a div visível */
+    opacity: 1; /* Torna a div visível */
+    transform: translate(-50%, 0); /* Move a div para a posição original (de baixo para cima) */
+
+  }
+  
+
+.contact{
+    height: auto;
+    width: auto;
+    margin: 40 auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: none;
+    position: absolute ;
+    left: 50%;
+
+
+}
+
+
+.contact-window{
+    height: auto;
+    width: auto;
+    background-color: rgb(17, 16, 31);
+    margin: auto auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    border: solid 5px #fff;
+    border-radius: 25px 25px 25px 25px;
+
+
+}
+
+.contact-header{
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    margin: 10 auto 10 auto;
+
+}
+
+.contact-form{
+    height: auto;
+    width: auto;
+    margin: 0 50 30 50;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto auto auto;
+}
+
+.contact-form label{
+    color: #fff;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+.contact-form input{
+    height: 50px;
+    width: 550px;
+    font-weight: bold;
+    margin: auto auto 20 auto;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+
+}
+
+.contact-form textarea{
+    font-size: 16px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    height: 100px;
+    width: 550px;
+
+    padding: 10px;
+    margin: auto auto 15 auto;
+    resize: none; /* Impede o redimensionamento */
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+
+.contact-form button{
+    all: unset;
+    width: 250px;
+    height: 50px;
+    background-color: #ff0042;
+    color: #fff;
+    text-align: center;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.contact .close{
+    width: 100px;
+    height: 100px;
+    margin: 0 0 auto auto;
+    align-content: center;
+
+}
+
+.contact .space{
+    width: 100px;
+    height: 100px;
+    margin: auto auto auto 20;
+
+}
+
+.contact .title{
+    width: 250px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+
+.contact .title1{
+    width: 250px;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+
+}
+
+.contact .title2{
+    width: 250px;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+
+}
+
+.contact a{
+    color: #fff;
+    font-size: 30;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.contact .title i{
+    color: #fff;
+    font-size: 32px;
+}
+
+.contact .close i{
+    color: #fff;
+    font-weight: normal;
+    font-size: 32px;
+    border: solid 5px;
+    border-radius: 100%;
+    border-style: solid;
+    padding: 5px;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    display: flex; /* Usado para centralizar o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.contact-more{
+
+    margin: 0 auto 30 auto;
+
+}
+
+.contact-phone{
+
+    margin: 0 auto 10 auto;
+    text-align: center;
+
+}
+
+.contact-email{
+
+    margin: 0 auto 10 auto;
+    text-align: center;
+
+}
+
+.wave2{
+    display: none;
+}
+
+.wave{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20preserveAspectRatio%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M%200%20200%20L%200%20100%20Q%200%20100%2060%20102.93892626146237%20Q%20120%20105.87785252292473%20180%20107.69420884293814%20Q%20240%20109.51056516295154%20300%20109.51056516295154%20Q%20360%20109.51056516295154%20420%20107.69420884293814%20Q%20480%20105.87785252292473%20540%20102.93892626146237%20Q%20600%20100%20660%2097.06107373853763%20Q%20720%2094.12214747707527%20780%2092.30579115706186%20Q%20840%2090.48943483704846%20900%2090.48943483704846%20Q%20960%2090.48943483704846%201020%2092.30579115706186%20Q%201080%2094.12214747707526%201140%2097.06107373853763%20L%201200%20100%20L%201200%20200%20Z%22%20fill%3D%22%23292f5e%22%20%2F%3E%0A%3C%2Fsvg%3E");
+    background-repeat: repeat-x;
+    background-size: 100% auto;
+    background-position: bottom;
+    animation: wave-move 8s linear infinite;
+    top: 280;
+}
+
+@keyframes wave-move {
+    to {
+        background-position-x: 100vw;
+    }
+}
+
+.content {
+    display: flex;
+   
+
+    margin: 10 auto 90 auto;
+    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
+}
+
+.display {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 70%;
+    height: auto;
+    margin: 0 auto auto auto;
+    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
+    
+}
+
+
+.part1{
+    height: 220px;
+    aspect-ratio: 1/1;
+    background-image: url('../myphoto.png');
+    background-size: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin: auto 100 auto 150;
+    position: relative;
+    animation: part1-enter 1s ease-out both;
+    
+}
+
+@keyframes part1-enter {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.part1:hover{
+    border: 4px solid #ff0042;
+
+
+}
+
+.part2{
+    height: auto;
+    width: 100%;
+    align-content: center;
+    display: flex;
+    margin: 35 auto auto auto;
+    border-radius: 30px 30px 30px 30px;
+    border: 2px solid #ff0042;
+     
+    position: relative;
+    animation: part2-enter 1s ease-out both;
+
+
+}
+
+@keyframes part2-enter {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.part2 ul{
+    display: flex;
+    flex-direction: column;
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+    margin: 30 20 0 45;
+    height: 100%;
+
+}
+
+
+
+.part2 .title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+
+}
+
+.part2 .title li{
+    
+    margin: 0 auto 0 0;
+
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.part2 .subtitle{
+    width: 100%;
+    height: auto;
+    margin: 10 auto 40 auto;
+    
+
+
+}
+
+.part2 .subtitle li{
+    
+    margin: 0 auto 0 0;
+
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+
+.part2 .title a{
+    color: #fff;
+    font-size:60px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+
+.part2 .subtitle a{
+    color: #fff;
+    font-size:30px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+
+
+.red{
+    color: red;
+}
+
+.orange{
+    color: rgb(195, 139, 83);
+}
+
+.blue{
+    color: rgb(92, 134, 224);
+}
+
+.bblue{
+    color:rgb(77, 222, 198);
+}
+
+.grey{
+    color: grey;
+}
+
+
+.fw{
+    width: 100%;
+    height: auto;
+    background-color: #292f5e;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+    
+}
+
+.fw .title{
+    width: 100%;
+    aspect-ratio: 20/1;
+    align-content: center;
+    text-align: center;
+    margin: 20 auto 20 auto;
+}
+
+.fw div a{
+    text-decoration: none;
+    align-items: center;
+    align-content: center;
+
+}
+
+.fw .title a{
+    color: #fff;
+    font-size: 65;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-shadow: 3px 3px 1px #000000;
+
+}
+
+.fw .projects{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto auto 60 auto;
+    
+}
+
+.first{
+    width: 32%;
+    height: auto;
+
+}
+
+.second{
+    width: 32%;
+    height: auto;
+
+}
+
+.third{
+    width: 32%;
+    height: auto;
+}
+
+.screenshot{
+    margin: 0 auto auto auto;
+    background-color: aqua;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-radius: 30px 30px 0 0;
+
+}
+
+.info{
+    background-color: #292f5e;
+    width: 100%;
+    height: 140;
+    border-radius: 0 0 30px 30px;
+
+}
+
+.first .info{
+    background-color: rgb(105, 174, 119);
+}
+
+.second .info{
+    background-color: rgb(153, 144, 192);
+}
+
+.third .info{
+    background-color: rgb(105, 185, 214);
+}
+
+.first .screenshot{
+    background-image: url('project1.png');
+    background-size: cover;
+}
+
+.second .screenshot{
+    background-image: url('project2.png');
+    background-size: cover;
+}
+
+.info ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+
+}
+
+.info li{
+    color: #292f5e;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    height: 100%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.info li h1{
+    font-size: 50;
+    display: flex;
+    justify-content: center;
+    margin: 10 auto 0 auto;
+    font-weight: 800;
+    height: auto;
+    text-shadow: 2px 2px 1px #000000;
+
+}
+
+.info li h2{
+    font-size: 30;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  margin: 0 auto auto auto;
+
+}
+
+@keyframes blink-caret {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+    
+    height: 100px;
+    /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
+    position: relative;
+    
+    }
+    
+    
+    .navbar .logotitle{
+        display: flex;
+        flex-direction: row;
+        margin: auto auto auto 0;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .navbar .domain a{
+          text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+    
+    .navbar .logo{
+        height: 90%;
+        aspect-ratio: 1/1;
+        margin: auto auto auto 0;
+        background-size: cover;
+    }
+    
+    .navbar .menu{
+        height: 100%;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        margin: auto 0 auto auto;
+        align-items: center;
+    }
+    
+    .navbar .menu ul{
+       
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 100%;
+        width: auto;
+        text-transform: none;
+    
+        
+    }
+    
+    .navbar .menu ul li{
+        
+        /*background-color: rgba(16, 16, 16); colocar background em cada item*/
+        border-radius: 15px;
+        list-style: none;
+        height: 70%;
+        width: 130px;
+        text-transform: none;
+        margin: auto;
+       
+    }
+    
+    .navbar li:hover {
+        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+    }
+    
+    .navbar a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: none;
+    
+    }
+
+
+    .contact{
+    height: auto;
+    width: 100%;
+    margin: 50 auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: none;
+    position: absolute;
+
+}
+
+.contact-window{
+    height: auto;
+    width: auto;
+    background-color: rgb(17, 16, 31);
+    margin: auto auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    border: solid 5px #fff;
+    border-radius: 25px 25px 25px 25px;
+
+
+}
+
+.contact-header{
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    margin: 10 auto 0 auto;
+    
+
+}
+
+.contact-form{
+    height: auto;
+    width: auto;
+    margin: 0 50 20 50;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto auto auto;
+}
+
+.contact-form label{
+    color: #fff;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 auto 5 5;
+
+}
+
+.contact-form input{
+    height: 50px;
+    width: 550px;
+    font-weight: bold;
+    margin: auto auto 10 auto;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
+
+.contact-form textarea{
+    font-size: 16px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    height: 100px;
+    width: 550px;
+
+    padding: 10px;
+    margin: auto auto 15 auto;
+    resize: none; /* Impede o redimensionamento */
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+
+.contact-form button{
+    all: unset;
+    width: 220px;
+    height: 40px;
+    background-color: #ff0042;
+    color: #fff;
+    text-align: center;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.contact .close{
+    width: 80px;
+    height: 80px;
+    margin: 0 0 auto auto;
+    align-content: center;
+
+}
+
+.contact .space{
+    width: 100px;
+    height: auto;
+    margin: auto auto auto 20;
+
+}
+
+.contact .title{
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.contact .title1{
+    width: 250px;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+
+}
+
+.contact .title2{
+    width: 250px;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+
+}
+
+.contact a{
+    color: #fff;
+    font-size: 20;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.contact .title i{
+    color: #fff;
+    font-size: 30px;
+}
+
+.contact .close i{
+    color: #fff;
+    font-weight: normal;
+    font-size: 30px;
+    border: solid 5px;
+    border-radius: 100%;
+    border-style: solid;
+    padding: 5px;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    display: flex; /* Usado para centralizar o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.contact-more{
+
+    margin: 0 auto 30 auto;
+
+}
+
+.contact-phone{
+
+    margin: 0 auto 10 auto;
+    text-align: center;
+
+}
+
+.contact-email{
+
+    margin: 0 auto 10 auto;
+    text-align: center;
+
+}
+
+
+    .wave{
+    width: 100%;
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20preserveAspectRatio%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M%200%20200%20L%200%20100%20Q%200%20100%2060%20102.93892626146237%20Q%20120%20105.87785252292473%20180%20107.69420884293814%20Q%20240%20109.51056516295154%20300%20109.51056516295154%20Q%20360%20109.51056516295154%20420%20107.69420884293814%20Q%20480%20105.87785252292473%20540%20102.93892626146237%20Q%20600%20100%20660%2097.06107373853763%20Q%20720%2094.12214747707527%20780%2092.30579115706186%20Q%20840%2090.48943483704846%20900%2090.48943483704846%20Q%20960%2090.48943483704846%201020%2092.30579115706186%20Q%201080%2094.12214747707526%201140%2097.06107373853763%20L%201200%20100%20L%201200%20200%20Z%22%20fill%3D%22%23292f5e%22%20%2F%3E%0A%3C%2Fsvg%3E");
+    background-repeat: repeat-x;
+    background-size: 100% auto;
+    background-position: bottom;
+    top: 260;
+}
+
+
+
+.content {
+    display: flex;
+   
+
+    margin: 10 auto 90 auto;
+    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
+}
+
+.display {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 70%;
+    height: auto;
+    margin: 0 auto auto auto;
+    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
+    
+}
+    .screen{
+        width: 100%;
+    }
+
+    .position-screen{
+        position: absolute;
+        width: 100%;
+    }
+
+
+
+.part1{
+    height: 200px;
+    aspect-ratio: 1/1;
+    background-image: url('../myphoto.png');
+    background-size: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin: auto auto auto 150;
+    position: relative;
+    
+}
+
+.part1:hover{
+    border: 4px solid #ff0042;
+
+
+}
+
+.part2{
+    height: auto;
+    width: 100%;
+    align-content: center;
+    display: flex;
+    margin: 35 auto auto auto;
+    border-radius: 30px 30px 30px 30px;
+    border: 2px solid #ff0042;
+     
+    position: relative;
+
+
+}
+
+.part2 ul{
+    display: flex;
+    flex-direction: column;
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+    margin: 30 20 0 45;
+    height: 100%;
+
+}
+
+
+
+.part2 .title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+
+}
+
+.part2 .title li{
+    
+    margin: 0 auto 0 0;
+
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.part2 .subtitle{
+    width: 100%;
+    height: auto;
+    margin: 10 auto 40 auto;
+    
+
+
+}
+
+.part2 .subtitle li{
+    
+    margin: 0 auto 0 0;
+
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+
+.part2 .title a{
+    color: #fff;
+    font-size:50px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+
+.part2 .subtitle a{
+    color: #fff;
+    font-size:30px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+
+.fw .title a{
+    color: #fff;
+    font-size: 55;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-shadow: 3px 3px 1px #000000;
+
+}
+    
+  
+}
+
+@media screen and (max-width: 1400px) {
+
+.part2{
+    height: auto;
+    width: 100%;
+    align-content: center;
+    display: flex;
+    margin: 35 auto auto auto;
+    border-radius: 30px 30px 30px 30px;
+    border: 2px solid #ff0042;
+     
+    position: relative;
+}
+
+.content {
+    display: flex;
+   
+
+    margin: 10 auto 90 auto;
+    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
+}
+
+.display {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80%;
+    height: auto;
+    margin: 0 auto auto auto;
+    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
+    position: relative;
+    
+}
+   
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+height: 100px;
+/*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
+position: relative; 
+margin: auto;
+
+}
+
+}
+
+}
+
+
+/* --- phones --- */
+
+
+
+@media screen and (max-width: 1250px) {
+
+ 
+
+    .mypage {
+        display: inherit;
+        height: inherit;
+        margin: auto;
+        width: 100%;
+        padding: 0px;
+        flex-direction: inherit;
+        justify-content: inherit;
+    }
+
+    .introducion{
+        display: flex;
+        flex-direction: column;
+        background-image: url('../navbarsky.png');
+        background-size: contain;
+        margin: 0 0 0 0;
+    }
+    
+ 
+    
+    .navbar {
+        display: flex;
+        flex-direction: row;
+    
+    height: 80px;
+    /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
+    position: relative;
+    
+    }
+    
+    
+    .navbar .logotitle{
+        display: flex;
+        flex-direction: row;
+        margin: auto auto auto 5%;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .navbar .domain a{
+          text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+    
+    .navbar .logo{
+        height: 90%;
+        aspect-ratio: 1/1;
+        margin: auto auto auto 0;
+        background-size: cover;
+    }
+    
+    .navbar .menu{
+
+        display: none;
+
+    }
+    
+    
+
+    
+    .navbar li:hover {
+        background-color: rgb(16, 16, 16, 0.5); /* Nova cor de fundo quando o mouse está sobre o botão */
+    }
+    
+    .navbar a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: none;
+    
+    }
+
+    .menu2{
+        width: 150px;
+        height: 100%;
+        display: flex;
+    }
+    
+    .menu2 i{
+        display: flex;
+        font-size: 30;
+        margin: auto 20% auto auto;
+        height: 100%;
+        align-content: center;
+        width: auto;
+        align-items: center;
+
+
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu3{
+        display: none;
+        width: 100%;
+        height: 300;
+        background-color: rgb(16, 16, 16);
+        position: absolute;
+        border-radius: 0 0 50px 50px;
+        border-bottom: solid 2px #fff;
+
+       }
+
+       .menu3 ul li a{
+        color: white;
+        font-size: 20;
+        text-decoration: none;
+        text-transform: none;
+        width: 150px;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        margin: auto;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    }
+
+    .menu3 ul{
+        height: 50%;
+        width: 70%;
+        margin: 30 auto auto auto;
+
+    }
+
+    .menu3 li{
+        margin: auto auto 20 auto;
+        text-align: center;
+        border-bottom: 2px solid #ffffff;
+        height: 40px;
+        text-decoration: none;
+        text-transform: none;
+        list-style: none;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        
+    }
+
+    .part1{
+        height: 200px;
+        aspect-ratio: 1/1;
+        background-image: url('../myphoto.png');
+        background-size: cover;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        margin: 15 auto 15 auto;
+        animation: part1-enter 1s ease-out both;
+
+    }
+
+    @keyframes part1-enter {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+    
+    .part1:hover{
+        border: 4px solid #ff0042;
+    
+    }
+    
+    .part2{
+        height: auto;
+        width: 90%;
+        align-content: center;
+        display: flex;
+        margin: auto;
+        border-radius: 30px 30px 30px 30px;
+        border: 2px solid #ff0042;
+        animation: part2-enter 1s ease-out both;
+
+    }
+
+    @keyframes part2-enter {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+    
+    .part2 ul{
+        display: flex;
+        flex-direction: column;
+        text-transform: none;
+        text-decoration: none;
+        list-style: none;
+        margin: 20 10 20 10;
+        width: auto;
+    }
+
+    .part2 .title{
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10 auto;
+    }
+    
+    
+    .part2 .title a{
+        color: #fff;
+        font-size: 24;
+        font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        margin: 0 auto auto 10;
+    }
+
+    .part2 .subtitle a{
+        color: #fff;
+        font-size: 18;
+        font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        margin: auto auto auto 10;
+
+    }
+
+    .wave{
+        display: none;
+    }
+
+    .wave2{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-60px);
+    z-index: -1;
+    background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20preserveAspectRatio%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M%200%20200%20L%200%20100%20Q%200%20100%2060%20102.93892626146237%20Q%20120%20105.87785252292473%20180%20107.69420884293814%20Q%20240%20109.51056516295154%20300%20109.51056516295154%20Q%20360%20109.51056516295154%20420%20107.69420884293814%20Q%20480%20105.87785252292473%20540%20102.93892626146237%20Q%20600%20100%20660%2097.06107373853763%20Q%20720%2094.12214747707527%20780%2092.30579115706186%20Q%20840%2090.48943483704846%20900%2090.48943483704846%20Q%20960%2090.48943483704846%201020%2092.30579115706186%20Q%201080%2094.12214747707526%201140%2097.06107373853763%20L%201200%20100%20L%201200%20200%20Z%22%20fill%3D%22%23292f5e%22%20%2F%3E%0A%3C%2Fsvg%3E");
+    background-repeat: repeat-x;
+    background-size: 100% auto;
+    background-position: bottom;
+    animation: wave-move 8s linear infinite;
+}
+
+@keyframes wave-move {
+    to {
+        background-position-x: 100vw;
+    }
+}
+    
+    .red{
+        color: red;
+    }
+    
+    .orange{
+        color: rgb(195, 139, 83);
+    }
+    
+    .blue{
+        color: rgb(92, 134, 224);
+    }
+    
+    .bblue{
+        color:rgb(77, 222, 198);
+    }
+    
+    .grey{
+        color: grey;
+    }
+
+
+.fw{
+    width: 100%;
+    height: auto;
+    background-color: #292f5e;
+    display: flex;
+    flex-direction: column;
+    margin: 20 auto auto auto;
+    
+    
+}
+
+.fw .title{
+    width: 100%;
+    aspect-ratio: 20/1;
+    align-content: center;
+    text-align: center;
+    margin: 15 auto 15 auto;
+}
+
+.fw div a{
+    text-decoration: none;
+    align-items: center;
+    align-content: center;
+}
+
+.fw .title a{
+    color: #fff;
+    font-size: 30;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-shadow: 3px 3px 1px #000000;
+    
+}
+
+.fw .projects{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 90%;
+    margin: auto auto auto auto;
+}
+
+.first{
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20 auto;
+}
+
+.second{
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20 auto;
+
+}
+
+.third{
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20 auto;
+
+}
+
+.screenshot{
+    margin: 0 auto auto auto;
+    background-color: aqua;
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-radius: 30px 30px 0 0;
+}
+
+.info{
+    background-color: #292f5e;
+    width: 100%;
+    height: 80;
+    border-radius: 0 0 30px 30px;
+
+}
+
+.first .info{
+    background-color: rgb(105, 174, 119);
+}
+
+.second .info{
+    background-color: rgb(153, 144, 192);
+}
+
+.third .info{
+    background-color: rgb(105, 185, 214);
+}
+
+.first .screenshot{
+    background-image: url('project1.png');
+    background-size: cover;
+}
+
+.second .screenshot{
+    background-image: url('project2.png');
+    background-size: cover;
+}
+
+.info ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+
+}
+
+.info li{
+    color: #292f5e;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    height: 100%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.info li h1{
+    font-size: 30;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    font-weight: 800;
+    height: auto;
+    text-shadow: 2px 2px 1px #000000;
+
+}
+
+.info li h2{
+    font-size: 20;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  margin: 0 auto auto auto;
+
+}
+
+.part2 .pc{
+    display: none;
+}
+    
+.part2 .phone{
+}
+
+
+
+
+
+#contact {
+    display: none; /* Inicialmente invisível */
+    opacity: 0; /* Torna a div invisível */
+    transform: translateY(100%); /* Coloca a div fora da tela, abaixo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animação suave de opacidade e movimento */
+  }
+  
+  #contact.show {
+    display: block; /* Torna a div visível */
+    opacity: 1; /* Torna a div visível */
+    transform: translateY(0); /* Move a div para a posição original (de baixo para cima) */
+  }
+  
+
+.contact{
+    height: auto;
+    width: 100%;
+    margin: 80 auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: none;
+    position: absolute;
+
+}
+
+.contact-window{
+    height: 100%;
+    width: 90%;
+    background-color: rgb(17, 16, 31);
+    margin: auto auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    border: solid 5px #fff;
+    border-radius: 25px 25px 25px 25px;
+
+
+}
+
+.contact-header{
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+
+    margin: 15 auto 10 auto;
+}
+
+.contact-form{
+    height: auto;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto auto auto;
+    width: 80%;
+}
+
+.contact-form label{
+    color: #fff;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: bold;
+    font-size: 25px;
+    width: 90%;
+
+}
+
+.contact-form input{
+    height: 50px;
+    width: 100%;
+    font-weight: bold;
+    margin: auto auto 20 auto;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.contact-form textarea{
+    font-size: 16px;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    height: 70px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    margin: auto auto 15 auto;
+    height: 70px;
+    width: 100%;
+}
+
+.contact-form button{
+    all: unset;
+    width: 200px;
+    height: 45px;
+    background-color: #ff0042;
+    color: #fff;
+    text-align: center;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    margin: auto auto 20 auto;
+
+}
+
+
+.contact .close{
+    width: auto;
+    height: auto;
+    margin: 0 30 auto auto;
+    text-align: center;
+
+}
+
+.contact .space{
+    width: 20px;
+    height: auto;
+    margin: auto auto auto 30;
+
+}
+
+.contact .title{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+
+.contact .title1{
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+
+}
+
+.contact .title2{
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+
+
+}
+
+.contact a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.contact .title i{
+    color: #fff;
+    font-size: 22px;
+}
+
+.contact .close i{
+    color: #fff;
+    font-size: 22px;
+    border: solid 5px;
+    border-radius: 100%;
+    border-style: solid;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.contact-more{
+
+    margin: 0 auto 20 auto;
+
+}
+
+.contact-more a{
+
+    font-size: 20;
+
+}
+
+.contact-phone{
+
+    margin: 0 auto 10 auto;
+    text-align: center;
+
+}
+
+.contact-email{
+    margin: 0 auto 10 auto;
+    text-align: center;
+
+}
+
+.screen{
+    background: linear-gradient(180deg, rgb(20, 31, 91) 0%, rgba(15,20,41,1) 21%, rgba(10, 10, 10, 0) 39%, rgba(17, 17, 17, 0) 75%, rgba(24, 24, 24, 0) 100%);
+    position: relative;
+
+}
+
+.position-screen{
+    position: absolute;
+    width: 100%;
+}
+
+
+
+}
