@@ -564,18 +564,7 @@ margin: auto;
     object-position: center 38%;
     box-shadow: 0 0 0 1px #ff0042, 0 18px 70px rgba(0, 0, 0, 0.48);
 }
-.portrait-marker {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    right: -24px;
-    width: 9px;
-    height: 9px;
-    border: 2px solid var(--background);
-    border-radius: 50%;
-    background: var(--mint);
-    box-shadow: 0 0 12px #ff0042;
-}
+
 .portrait-caption {
     display: flex;
     width: min(100%, 470px);
@@ -1252,15 +1241,7 @@ margin: auto;
 }
 
 
-    .wave{
-    width: 100%;
-    position: absolute;
-    background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20preserveAspectRatio%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M%200%20200%20L%200%20100%20Q%200%20100%2060%20102.93892626146237%20Q%20120%20105.87785252292473%20180%20107.69420884293814%20Q%20240%20109.51056516295154%20300%20109.51056516295154%20Q%20360%20109.51056516295154%20420%20107.69420884293814%20Q%20480%20105.87785252292473%20540%20102.93892626146237%20Q%20600%20100%20660%2097.06107373853763%20Q%20720%2094.12214747707527%20780%2092.30579115706186%20Q%20840%2090.48943483704846%20900%2090.48943483704846%20Q%20960%2090.48943483704846%201020%2092.30579115706186%20Q%201080%2094.12214747707526%201140%2097.06107373853763%20L%201200%20100%20L%201200%20200%20Z%22%20fill%3D%22%23292f5e%22%20%2F%3E%0A%3C%2Fsvg%3E");
-    background-repeat: repeat-x;
-    background-size: 100% auto;
-    background-position: bottom;
-    top: 260;
-}
+
 
 
 
@@ -1283,43 +1264,25 @@ margin: auto;
     position: relative;
     
 }
-    .screen{
-        width: 100%;
-    }
-
-    .position-screen{
-        position: absolute;
-        width: 100%;
-    }
 
 
 
 .part1{
-    height: 200px;
     aspect-ratio: 1/1;
-    background-image: url('../myphoto.png');
-    background-size: cover;
     border-radius: 50%;
-    border: 4px solid #fff;
-    margin: auto auto auto 150;
-    position: relative;
+    height: 90%;
+    margin: auto auto auto 70;
     
 }
 
-.part1:hover{
-    border: 4px solid #ff0042;
 
-
-}
 
 .part2{
     height: auto;
     width: 100%;
     align-content: center;
     display: flex;
-    margin: 35 auto auto auto;
-    border-radius: 30px 30px 30px 30px;
-    border: 2px solid #ff0042;
+
      
     position: relative;
 
@@ -1333,7 +1296,6 @@ margin: auto;
     text-decoration: none;
     list-style: none;
     margin: 30 20 0 45;
-    height: 100%;
 
 }
 
@@ -1624,42 +1586,173 @@ margin: auto;
         
     }
 
-    .part1{
-        height: 200px;
-        aspect-ratio: 1/1;
-        background-image: url('../myphoto.png');
-        background-size: cover;
-        border-radius: 50%;
-        border: 4px solid #fff;
-        margin: 15 auto 15 auto;
-        animation: part1-enter 1s ease-out both;
+.part1{
+    height: 200px;
+    background-size: cover;
+    margin: 15 50 25 auto;
+    position: relative;
+    animation: part1-enter 1s ease-out both;
+    display: flex;
+    flex-direction: row;
+}
 
-    }
-
-    @keyframes part1-enter {
+@keyframes part1-enter {
     from {
-        transform: translateX(-300px);
+        transform: translateX(300px);
     }
     to {
         transform: translateX(0);
     }
 }
-    
-    .part1:hover{
-        border: 4px solid #ff0042;
-    
+
+
+
+.part1 .profile-pic{
+    height: 90%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    animation: part1-enter 1s ease-out both;
+    align-self: center;
+}
+
+.portrait-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 0;
+}
+
+.hero-visual {
+    display: grid;
+    min-width: 0;
+    place-items: center;
+}
+
+.portrait-ring {
+    position: absolute;
+    inset: 0;
+    display: block;
+    border: 1px solid #ff0042;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.ring-outer {
+    inset: -14px;
+    border-style: dashed;
+    border-width: 1px;
+    animation: orbit 32s linear infinite;
+}
+
+.ring-inner {
+    inset: -5px;
+    border-color: #ff0042;
+    box-shadow: 0 0 30px #ff00444b;
+}
+
+.portrait {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--background);
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 38%;
+    box-shadow: 0 0 0 1px #ff0042, 0 18px 70px rgba(0, 0, 0, 0.48);
+}
+
+.portrait-caption {
+    display: flex;
+    width: min(100%, 470px);
+    justify-content: space-between;
+    gap: 12px;
+    margin: 15px 0 0;
+    color: #a9bac5;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+.portrait-caption span:first-child {
+    color: var(--mint);
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
     }
+}
+
+.part1 .profile-icons{
+        display: flex;
+
+        width: auto;
+        height: 100%;
+        margin: auto;
+}
+
+.part1 .profile-icons .profile-glass-filter{
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        pointer-events: none;
+}
+
+.part1 .profile-icons ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: center;
+        aspect-ratio: 1/3;
+        height: 90%;
+        margin: 0 auto 0 auto;
+
+        
+}
+
+.part1 .profile-icons ul li{
+        list-style: none;
+        margin: 0;
+        text-transform: none;
+        aspect-ratio: 1/1;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 40px;
+        border-radius: 15px;
+        background: hsl(0 0% 0% / 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.35), inset 0 0 10px 4px rgba(255, 255, 255, 0.15), inset 0 4px 16px rgba(17, 17, 26, 0.05), inset 0 8px 24px rgba(17, 17, 26, 0.05), inset 0 6px 56px rgba(17, 17, 26, 0.05);
+        -webkit-backdrop-filter: blur(3px) saturate(1.2);
+        backdrop-filter: blur(3px) saturate(1.2);
+        -webkit-backdrop-filter: url(#profile-glass-filter) saturate(1.2);
+        backdrop-filter: url(#profile-glass-filter) saturate(1.2);
+    }
+
+.part1 .profile-icons .icon2{
+
+    transform: translateX(40px) rotate(7deg);
+}
+
+.part1 .profile-icons .icon3{
+
+    transform: translateX(-40px);
+}
     
     .part2{
         height: auto;
         width: 90%;
-        align-content: center;
-        display: flex;
-        margin: auto;
+        margin: 0 auto 10 auto;
         border-radius: 30px 30px 30px 30px;
         border: 2px solid #ff0042;
         animation: part2-enter 1s ease-out both;
-
     }
 
     @keyframes part2-enter {
@@ -1671,35 +1764,56 @@ margin: auto;
     }
 }
     
-    .part2 ul{
+    .part2 ul.pc{
+        display: none;
+    }
+
+    .part2 ul.phone{
         display: flex;
         flex-direction: column;
         text-transform: none;
         text-decoration: none;
         list-style: none;
-        margin: 20 10 20 10;
+        margin: 20 auto 20 0;
         width: auto;
     }
 
+  
     .part2 .title{
-    width: 100%;
+    width: auto;
     height: auto;
-    margin: 0 auto 10 auto;
+    margin: 0 auto 10 10;
+
     }
-    
+ 
+    .part2 .subtitle{
+    width: auto;
+    height: auto;
+    margin: 0 auto 10 10;
+
+
+    }
     
     .part2 .title a{
         color: #fff;
         font-size: 24;
         font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        margin: 0 auto auto 10;
+        margin: 0 auto 0 0;
+        width: auto;
+        height: auto;
     }
 
     .part2 .subtitle a{
         color: #fff;
         font-size: 18;
         font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        margin: auto auto auto 10;
+        margin: auto auto auto 0;
+        height: auto;
+        width: auto;
+    }
+
+    .cat{
+        display: none;
 
     }
 
@@ -1897,8 +2011,6 @@ margin: auto;
     display: none;
 }
     
-.part2 .phone{
-}
 
 
 
