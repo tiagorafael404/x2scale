@@ -1631,12 +1631,14 @@ margin: auto;
 
 .part1{
     height: 200px;
+    width: 90%;
     background-size: cover;
-    margin: 15 50 25 auto;
+    margin: 15 auto 25 auto;
     position: relative;
     animation: part1-enter 1s ease-out both;
     display: flex;
     flex-direction: row;
+    background-color: #000000;
 }
 
 @keyframes part1-enter {
@@ -1654,10 +1656,11 @@ margin: auto;
     height: 90%;
     aspect-ratio: 1/1;
     background-size: cover;
-    border-radius: 50%;
     position: relative;
     animation: part1-enter 1s ease-out both;
     align-self: center;
+    background-color: red;
+    margin: auto;
 }
 
 .portrait-wrap {
@@ -1734,7 +1737,9 @@ margin: auto;
 
         width: auto;
         height: 100%;
-        margin: auto;
+        margin: auto auto auto auto;
+        position: fixed;
+        right: 40;
 }
 
 .part1 .profile-icons .profile-glass-filter{
