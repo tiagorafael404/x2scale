@@ -307,14 +307,25 @@ body {
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: bold;
     font-size: 25px;
+    margin: 0 auto 10 0;
+}
+
+.contact-form input, .contact-form textarea{
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ff0042;
+    background-color: rgb(41, 41, 50);
+    color: rgb(255, 255, 255);
+    margin: auto auto 17 auto;
 
 }
+
 
 .contact-form input{
     height: 50px;
     width: 550px;
     font-weight: bold;
-    margin: auto auto 20 auto;
     padding: 10px;
     border-radius: 10px;
     font-size: 18px;
@@ -322,16 +333,12 @@ body {
 }
 
 .contact-form textarea{
-    font-size: 16px;
-    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     height: 100px;
     width: 550px;
 
     padding: 10px;
-    margin: auto auto 15 auto;
-    resize: none; /* Impede o redimensionamento */
+    resize: none;
     box-sizing: border-box;
-    border-radius: 10px;
 
 }
 
@@ -344,7 +351,7 @@ body {
     color: #fff;
     text-align: center;
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 8px;
     font-weight: bold;
     font-size: 30px;
     cursor: pointer;
