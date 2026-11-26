@@ -1582,6 +1582,8 @@ margin: auto;
         position: absolute;
         border-radius: 0 0 50px 50px;
         border-bottom: solid 2px #fff;
+        z-index: 1;
+
 
        }
 
@@ -1599,7 +1601,7 @@ margin: auto;
         justify-content: center;
         justify-items: center;
         margin: auto;
-    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
     }
 
@@ -2073,11 +2075,12 @@ margin: auto;
 .contact{
     height: auto;
     width: 100%;
-    margin: 80 auto auto auto;
+    margin: 70 auto auto auto;
     justify-content: center;
     justify-items: center;
     display: none;
     position: absolute;
+    top: 0;
 
 }
 
@@ -2271,10 +2274,7 @@ margin: auto;
 
 }
 
-.position-screen{
-    position: absolute;
-    width: 100%;
-}
+
 
 
 
