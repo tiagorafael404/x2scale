@@ -37,6 +37,13 @@ body {
 
 }
 
+.navbar-area{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
 
 
 @media screen and (min-width: 1251px) {
@@ -78,18 +85,46 @@ body {
 
 
 
+.seila{
+    width: 100%;
+    height: 500px;
+}
 
+.fakenavbar{
+    width: 70%;
+    height: 100px;
+}
+
+.navbar-area{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
 
 .navbar {
     display: flex;
     flex-direction: row;
-    width: 70%;
-height: 100px;
-/*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
-position: relative; 
-margin: auto;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 15;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1000;
+    
+}
+
+.navbar.scrolled {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
 
 }
+
 
 
 .navbar .logotitle{
@@ -182,35 +217,48 @@ margin: auto;
 
 
 #contact {
-    display: none; /* Inicialmente invisível */
-    opacity: 0; /* Torna a div invisível */
-    transform: translate(-50%, 100%); /* Coloca a div fora da tela, abaixo */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animação suave de opacidade e movimento */
-  }
-  
-  #contact.show {
-    display: block; /* Torna a div visível */
-    opacity: 1; /* Torna a div visível */
-    transform: translate(-50%, 0); /* Move a div para a posição original (de baixo para cima) */
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
 
-  }
+
+#contact.show .contact-window {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
   
 
 .contact{
-    height: auto;
-    width: auto;
-    margin: 40 auto auto auto;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto auto auto;
     justify-content: center;
     justify-items: center;
     display: none;
-    position: absolute ;
-    left: 50%;
+    position: fixed ;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
 
 }
 
 
 .contact-window{
+    position: absolute;
+    left: 50%;
+
+    transform: translate(-50%, 100%);
+    opacity: 0;
+
+    transition: opacity 0.5s ease, transform 0.5s ease;    
     height: auto;
     width: auto;
     background-color: rgb(17, 16, 31);
@@ -221,7 +269,7 @@ margin: auto;
     flex-direction: column;
     border: solid 5px #fff;
     border-radius: 25px 25px 25px 25px;
-
+    margin: 50 auto auto auto;
 
 }
 
@@ -259,14 +307,25 @@ margin: auto;
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: bold;
     font-size: 25px;
+    margin: 0 auto 10 0;
+}
+
+.contact-form input, .contact-form textarea{
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ff0042;
+    background-color: rgb(41, 41, 50);
+    color: rgb(255, 255, 255);
+    margin: auto auto 17 auto;
 
 }
+
 
 .contact-form input{
     height: 50px;
     width: 550px;
     font-weight: bold;
-    margin: auto auto 20 auto;
     padding: 10px;
     border-radius: 10px;
     font-size: 18px;
@@ -274,16 +333,12 @@ margin: auto;
 }
 
 .contact-form textarea{
-    font-size: 16px;
-    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     height: 100px;
     width: 550px;
 
     padding: 10px;
-    margin: auto auto 15 auto;
-    resize: none; /* Impede o redimensionamento */
+    resize: none;
     box-sizing: border-box;
-    border-radius: 10px;
 
 }
 
@@ -296,7 +351,7 @@ margin: auto;
     color: #fff;
     text-align: center;
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 8px;
     font-weight: bold;
     font-size: 30px;
     cursor: pointer;
@@ -361,20 +416,22 @@ margin: auto;
     font-size: 32px;
 }
 
-.contact .close i{
+.contact .close span{
     color: #fff;
     font-weight: normal;
-    font-size: 32px;
-    border: solid 5px;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1;
+    border: solid 1px;
     border-radius: 100%;
     border-style: solid;
-    padding: 5px;
     cursor: pointer;
     height: 45px;
     width: 45px;
-    display: flex; /* Usado para centralizar o ícone */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin: auto 20 30 auto;
 }
 
 .contact-more{
@@ -767,9 +824,6 @@ margin: auto;
 }
 
 
-.wave2{
-    display: none;
-}
 
 .wave{
     height: 40%;
@@ -799,6 +853,7 @@ margin: auto;
     flex-direction: column;
     position: relative;
     isolation: isolate;
+    margin: 0 auto 0px auto;
     
 }
 
@@ -952,13 +1007,20 @@ margin: auto;
 
 @media screen and (max-width: 1600px) {
 
+.navbar-area{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
     .navbar {
         display: flex;
         flex-direction: row;
     
     height: 100px;
     /*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
-    position: relative;
     
     }
     
@@ -1042,31 +1104,8 @@ margin: auto;
     }
 
 
-    .contact{
-    height: auto;
-    width: 100%;
-    margin: 50 auto auto auto;
-    justify-content: center;
-    justify-items: center;
-    display: none;
-    position: absolute;
-
-}
-
-.contact-window{
-    height: auto;
-    width: auto;
-    background-color: rgb(17, 16, 31);
-    margin: auto auto auto auto;
-    justify-content: center;
-    justify-items: center;
-    display: flex;
-    flex-direction: column;
-    border: solid 5px #fff;
-    border-radius: 25px 25px 25px 25px;
 
 
-}
 
 .contact-header{
     height: auto;
@@ -1204,10 +1243,12 @@ margin: auto;
     font-size: 30px;
 }
 
-.contact .close i{
+.contact .close span{
     color: #fff;
     font-weight: normal;
     font-size: 30px;
+    font-weight: 300;
+    line-height: 1;
     border: solid 5px;
     border-radius: 100%;
     border-style: solid;
@@ -1370,48 +1411,7 @@ margin: auto;
 
 @media screen and (max-width: 1400px) {
 
-.part2{
-    height: auto;
-    width: 100%;
-    align-content: center;
-    display: flex;
-    margin: 35 auto auto auto;
-    border-radius: 30px 30px 30px 30px;
-    border: 2px solid #ff0042;
-     
-    position: relative;
-}
 
-.content {
-    display: flex;
-   
-
-    margin: 10 auto 90 auto;
-    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
-    position: relative;
-}
-
-.display {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 80%;
-    height: auto;
-    margin: 0 auto auto auto;
-    /*margin: 20 auto auto auto; para diminuir o tamanho e deixar um espaço entre o header*/
-    position: relative;
-    
-}
-   
-.navbar {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-height: 100px;
-/*background-color: rgba(16, 16, 16, 0.5); colocar background no navbar todo*/  
-position: relative; 
-margin: auto;
-
-}
 
 }
 
@@ -1542,6 +1542,8 @@ margin: auto;
         position: absolute;
         border-radius: 0 0 50px 50px;
         border-bottom: solid 2px #fff;
+        z-index: 1;
+
 
        }
 
@@ -1559,7 +1561,7 @@ margin: auto;
         justify-content: center;
         justify-items: center;
         margin: auto;
-    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
     }
 
@@ -1588,8 +1590,9 @@ margin: auto;
 
 .part1{
     height: 200px;
+    width: 90%;
     background-size: cover;
-    margin: 15 50 25 auto;
+    margin: 15 auto 25 auto;
     position: relative;
     animation: part1-enter 1s ease-out both;
     display: flex;
@@ -1611,10 +1614,10 @@ margin: auto;
     height: 90%;
     aspect-ratio: 1/1;
     background-size: cover;
-    border-radius: 50%;
     position: relative;
     animation: part1-enter 1s ease-out both;
     align-self: center;
+    margin: auto;
 }
 
 .portrait-wrap {
@@ -1691,7 +1694,9 @@ margin: auto;
 
         width: auto;
         height: 100%;
-        margin: auto;
+        margin: auto auto auto auto;
+        position: fixed;
+        right: 40;
 }
 
 .part1 .profile-icons .profile-glass-filter{
@@ -1774,7 +1779,7 @@ margin: auto;
         text-transform: none;
         text-decoration: none;
         list-style: none;
-        margin: 20 auto 20 0;
+        margin: 20 auto 20 10;
         width: auto;
     }
 
@@ -1789,14 +1794,14 @@ margin: auto;
     .part2 .subtitle{
     width: auto;
     height: auto;
-    margin: 0 auto 10 10;
+    margin: 0 auto 10 13;
 
 
     }
     
     .part2 .title a{
         color: #fff;
-        font-size: 24;
+        font-size: 26;
         font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         margin: 0 auto 0 0;
         width: auto;
@@ -1817,22 +1822,19 @@ margin: auto;
 
     }
 
-    .wave{
-        display: none;
-    }
-
-    .wave2{
-    height: 100px;
-    width: 100%;
+.wave{
+    height: 50px;
+    width: 100vw;
     position: absolute;
-    transform: translateY(-60px);
-    z-index: -1;
     background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20preserveAspectRatio%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M%200%20200%20L%200%20100%20Q%200%20100%2060%20102.93892626146237%20Q%20120%20105.87785252292473%20180%20107.69420884293814%20Q%20240%20109.51056516295154%20300%20109.51056516295154%20Q%20360%20109.51056516295154%20420%20107.69420884293814%20Q%20480%20105.87785252292473%20540%20102.93892626146237%20Q%20600%20100%20660%2097.06107373853763%20Q%20720%2094.12214747707527%20780%2092.30579115706186%20Q%20840%2090.48943483704846%20900%2090.48943483704846%20Q%20960%2090.48943483704846%201020%2092.30579115706186%20Q%201080%2094.12214747707526%201140%2097.06107373853763%20L%201200%20100%20L%201200%20200%20Z%22%20fill%3D%22%23292f5e%22%20%2F%3E%0A%3C%2Fsvg%3E");
     background-repeat: repeat-x;
-    background-size: 100% auto;
+    background-size: 100% 50px;
     background-position: bottom;
     animation: wave-move 8s linear infinite;
+    top: 440px;
+
 }
+
 
 @keyframes wave-move {
     to {
@@ -2017,56 +2019,58 @@ margin: auto;
 
 
 #contact {
-    display: none; /* Inicialmente invisível */
-    opacity: 0; /* Torna a div invisível */
-    transform: translateY(100%); /* Coloca a div fora da tela, abaixo */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animação suave de opacidade e movimento */
-  }
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+
+#contact.show .contact-window {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
   
-  #contact.show {
-    display: block; /* Torna a div visível */
-    opacity: 1; /* Torna a div visível */
-    transform: translateY(0); /* Move a div para a posição original (de baixo para cima) */
-  }
   
 
 .contact{
     height: auto;
     width: 100%;
-    margin: 80 auto auto auto;
+    margin: 0 auto auto auto;
     justify-content: center;
     justify-items: center;
     display: none;
-    position: absolute;
-
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .contact-window{
-    height: 100%;
-    width: 90%;
+    position: absolute;
+    left: 50%;
+
+    transform: translate(-50%, 100%);
+    opacity: 0;
+
+    transition: opacity 0.5s ease, transform 0.5s ease;    
+    height: auto;
+    width: 95%;
     background-color: rgb(17, 16, 31);
-    margin: auto auto auto auto;
+    margin: 70px auto 250px auto;
     justify-content: center;
     justify-items: center;
     display: flex;
     flex-direction: column;
-    border: solid 5px #fff;
+    border: solid 2px #fff;
     border-radius: 25px 25px 25px 25px;
 
 
 }
 
-.contact-header{
-    height: auto;
-    width: 100%;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    display: flex;
-
-    margin: 15 auto 10 auto;
-}
 
 .contact-form{
     height: auto;
@@ -2083,15 +2087,16 @@ margin: auto;
     display: flex;
     flex-direction: column;
     margin: 0 auto auto auto;
-    width: 80%;
+    width: 85%;
 }
 
 .contact-form label{
-    color: #fff;
+    color: #ffffffe8;
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-weight: bold;
+    font-weight: normal;
     font-size: 25px;
     width: 90%;
+    margin: auto auto 5 0;
 
 }
 
@@ -2100,13 +2105,22 @@ margin: auto;
     width: 100%;
     font-weight: bold;
     margin: auto auto 20 auto;
-    font-size: 16px;
     padding: 10px;
+
+
 }
 
-.contact-form textarea{
-    font-size: 16px;
+.contact-form input, .contact-form textarea{
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ff0042;
+    background-color: rgb(41, 41, 50);
+    color: rgb(255, 255, 255);
+}
+
+
+.contact-form textarea{
     height: 70px;
     padding: 10px;
     box-sizing: border-box;
@@ -2124,7 +2138,7 @@ margin: auto;
     color: #fff;
     text-align: center;
     font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 6px;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
@@ -2132,20 +2146,40 @@ margin: auto;
 
 }
 
+.contact-header{
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: 15 auto 0 auto;
+}
 
 .contact .close{
-    width: auto;
-    height: auto;
-    margin: 0 30 auto auto;
-    text-align: center;
+    aspect-ratio: 1;
+    height: 100%;
+    margin: auto 10 auto auto;
+    justify-self: right;
+    align-self: center;
+    
+    position: absolute;
+    display: flex;
+    padding: 0px;
 
 }
 
 .contact .space{
+    display: none;
     width: 20px;
-    height: auto;
+    height: 20px;
     margin: auto auto auto 30;
-
+    background-color: blue;
 }
 
 .contact .title{
@@ -2153,7 +2187,8 @@ margin: auto;
     height: auto;
     display: flex;
     flex-direction: column;
-
+    position: absolute;
+    align-self: center;
 
 }
 
@@ -2190,15 +2225,25 @@ margin: auto;
     font-size: 22px;
 }
 
-.contact .close i{
-    color: #fff;
-    font-size: 22px;
-    border: solid 5px;
+.contact .close span{
+    
+    color: #ffffffd0;
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1;
+    border: solid 1px;
     border-radius: 100%;
     border-style: solid;
-    padding: 5px;
     cursor: pointer;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    aspect-ratio: 1;
+    height: 40px;
+    margin: 0 10 auto auto;
 }
+
 
 .contact-more{
 
@@ -2231,10 +2276,7 @@ margin: auto;
 
 }
 
-.position-screen{
-    position: absolute;
-    width: 100%;
-}
+
 
 
 
